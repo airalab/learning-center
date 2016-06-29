@@ -63,7 +63,7 @@
 
 #### Пример выполнения
 - TO DO: Eugene пример с Ethereum wallet
--[Пример выполнения урока с geth](https://github.com/airalab/learning-center/blob/master/lessons%20passage.md#%D1%83%D1%80%D0%BE%D0%BA-3)
+- [Пример выполнения урока с geth](https://github.com/airalab/learning-center/blob/master/lessons%20passage.md#%D1%83%D1%80%D0%BE%D0%BA-3)
 
 ## Урок 4: Эмиссируйте новые акции привлекая финансирование в эфирах.
 Уровень сложности урока: средний.
