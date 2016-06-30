@@ -73,6 +73,7 @@ firstLesson.execute(dao_addr, shares_addr, {from:web3.eth.accounts[0], gas:90000
 ![фото 3](https://raw.githubusercontent.com/airalab/learning-center/master/img/3.png)
 
 Проверяем баланс air
+
 ![фото 4](https://raw.githubusercontent.com/airalab/learning-center/master/img/4.png)
 
 ## Урок 2
@@ -109,6 +110,7 @@ secondLesson.execute(dao_addr, shares_addr, {from:web3.eth.accounts[0], gas:9000
 ![фото 6](https://raw.githubusercontent.com/airalab/learning-center/master/img/6.png)
 
 Проверяем баланс air
+
 ![фото 7](https://raw.githubusercontent.com/airalab/learning-center/master/img/7.png)
 
 ## Урок 3
@@ -151,6 +153,10 @@ thirdLesson.execute(credits_addr, {from:web3.eth.accounts[0], gas:900000})
 ```
 
 ![фото 10](https://raw.githubusercontent.com/airalab/learning-center/master/img/10.png)
+
+Проверяем баланс air
+
+![фото 11](https://raw.githubusercontent.com/airalab/learning-center/master/img/11.png)
 
 ## Урок 4
 
