@@ -24,14 +24,17 @@
 
 Ядро ДАО позволяет хранить реестр всех используемых организацией автономных контрактов. Для управления данным реестром (внесения/изменения/удаления записей) совместно с ядром необходимо создать контракт, который будет хранить реестр акционеров организации.
 
-Для того, чтобы создать ядро и токен акций необходимо выполнить компиляцию исходного кода следующих контрактов:
+Для того, чтобы создать ядро и токен акций существует 2 варианта.
 
+### Вариант 1: выполнить компиляцию исходного кода контрактов
+
+Необходимы следующие контракты:
 - [Core.sol](https://github.com/airalab/core/blob/master/sol/dao/Core.sol)
 - [TokenEmission.sol](https://github.com/airalab/core/blob/master/sol/token/TokenEmission.sol)
 
 > Обратите внимание, что вам требуется собрать все дополнительные контракты, которые используются ядром и реестром акционеров.
 
-или обратиться к фабрике ДАО отправив транзакцию со своего аккаунта к сборщику ядра [BuilderDAO](https://github.com/airalab/core/wiki/API-Reference#builderdao) следующего формата:
+### Вариант 2: обратиться к фабрике ДАО отправив транзакцию со своего аккаунта к сборщику ядра [BuilderDAO](https://github.com/airalab/core/wiki/API-Reference#builderdao) следующего формата:
 
 ```js
 var factory = eth.contract(Core).at("0x4b94c11ff4b118cad6d0d1831ecb60586a9241df")
@@ -40,7 +43,16 @@ builder.create(_dao_name, _dao_description, _shares_name, _shares_symbol, _share
                {from: eth.accounts[0], gas: 1000000, value: builder.buildingCost()})
 ```
 
-Здесь `_dao_name, _dao_description, _shares_name, _shares_symbol, _shares_count` это параметры нового DAO.
+#### Входные параметры
+
+Параметр | Описание | Пример
+---------|----------|-------
+`_dao_name` | Название вашей организации | "Martian colony"
+`_dao_description` | Краткое описание | "DAO for first human colony on Mars"
+`_shares_name` | Название акций | Mars colony shares
+`_shares_symbol` | Символ для акций, обычно 1 - 3 символа | MRS
+`_shares_count` | Количество акций, эмиссируемых при создании ДАО | 10000
+
 
 **Чтобы успешно выполнить данный урок необходимо:**
 - обратиться к контракту `Lesson 1` для вызова функции `Execute()` указав `адрес контракта ядра ДАО`.
