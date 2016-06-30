@@ -12,10 +12,12 @@ contract SecondLesson is Lesson {
     }
 	
     function execute(address _dao) {
+		if (accountOf[msg.sender]) throw;
 		// проверяем что дан approve 1 акции
 		TokenEmission shares = TokenEmission(Core(_dao).getModule('shares'));
 		if (shares.allowance(msg.sender, airalab_learning_center) == 1) {			
-			ownerAir.deal(msg.sender, 100);
+			ownerAir.deal(msg.sender, 50);
+			accountOf[msg.sender] = true;
 		}
     }
 }

@@ -11,10 +11,12 @@ contract ThirdLesson is Lesson {
 	{}
 	
     function execute(address _token) {
+		if (accountOf[msg.sender]) throw;
 		// проверяем что баланс 0.1
 		TokenEther token = TokenEther(_token);
 		if (token.balanceOf(msg.sender) == 100000000000000000) {			
-			ownerAir.deal(msg.sender, 100);
+			ownerAir.deal(msg.sender, 50);
+			accountOf[msg.sender] = true;
 		}
     }
 }
