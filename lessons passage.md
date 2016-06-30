@@ -28,7 +28,7 @@ airalab.ping({from:web3.eth.accounts[0], gas:200000});
 
 ## Урок 1
 
-- обращаемся к BuilderDAO для создания dao
+### Обращаемся к BuilderDAO для создания dao
 
 <details> 
 <summary>var BuilderDAO = .....;</summary>
@@ -45,40 +45,40 @@ var BuilderDAO = .....;
 var Core = .....;
 var factory = eth.contract(Core).at("0x4b94c11ff4b118cad6d0d1831ecb60586a9241df")
 var builder = eth.contract(BuilderDAO).at(factory.getModule("Aira BuilderDAO"))
-builder.create('My DAO', 'DAO', 'shares', 'S', 10,
+builder.create('Martian colony', 'DAO for first human colony on Mars', 'Mars colony shares', 'MRS', 10000,
                {from: eth.accounts[0], gas: 3000000, value: builder.buildingCost()})
 			   
 var dao_addr = builder.getLastContract()
 var core = web3.eth.contract(Core).at(dao_addr);
-var shares_addr = core.getModule('shares');
+var shares_addr = core.getModule('Mars colony shares');
 ```
 
-![фото 1](https://raw.githubusercontent.com/airalab/learning-center/master/img/1.png)
-![фото 2](https://raw.githubusercontent.com/airalab/learning-center/master/img/2.png)
+![фото 1](https://raw.githubusercontent.com/airalab/learning-center/master/img/11.png)
+![фото 2](https://raw.githubusercontent.com/airalab/learning-center/master/img/12.png)
 
-- обращаемся к "first lesson->Execute" и передаем адрес dao в ответ получаем 100air
+### Обращаемся к "first lesson->Execute" и передаем адрес dao в ответ получаем 50air
 
 <details> 
 <summary>var FirstLesson = .....;</summary>
-*var FirstLesson = [{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"accountOf","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"ownerAir","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_dao","type":"address"},{"name":"_shares","type":"address"}],"name":"execute","outputs":[],"type":"function"},{"inputs":[{"name":"_ownerAir","type":"address"}],"type":"constructor"}];*
+*var FirstLesson = [{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"accountOf","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"ownerAir","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_dao","type":"address"},{"name":"_shares","type":"address"},{"name":"_shares_name","type":"string"}],"name":"execute","outputs":[],"type":"function"},{"inputs":[{"name":"_ownerAir","type":"address"}],"type":"constructor"}];*
 </details>
 
 ```
-var firstLesson_addr = '0x0b5fccb581f9f1b50ed15660f28819af1c588563';
+var firstLesson_addr = '0x03faf42f3a97aa86aa27ccbe099fdff8f51ec574';
 var FirstLesson = .....;
 var firstLesson = web3.eth.contract(FirstLesson).at(firstLesson_addr);
-firstLesson.execute(dao_addr, shares_addr, {from:web3.eth.accounts[0], gas:900000})
+firstLesson.execute(dao_addr, shares_addr, "Mars colony shares", {from:web3.eth.accounts[0], gas:900000})
 ```
 
-![фото 3](https://raw.githubusercontent.com/airalab/learning-center/master/img/3.png)
+![фото 3](https://raw.githubusercontent.com/airalab/learning-center/master/img/13.png)
 
 Проверяем баланс air
 
-![фото 4](https://raw.githubusercontent.com/airalab/learning-center/master/img/4.png)
+![фото 4](https://raw.githubusercontent.com/airalab/learning-center/master/img/14.png)
 
 ## Урок 2
 
-- даем approve на 1 акцию (контракт урока ожидает approve на адрес 0xc9b6815b47a14b20599ea814c2fb10260d1abdb9)
+### Даем approve на 1 акцию (контракт урока ожидает approve на адрес 0xc9b6815b47a14b20599ea814c2fb10260d1abdb9)
 
 <details> 
 <summary>var TokenEmission = .....;</summary>
@@ -91,31 +91,31 @@ var shares = web3.eth.contract(TokenEmission).at(shares_addr);
 shares.approve('0xc9b6815b47a14b20599ea814c2fb10260d1abdb9', 1, {from:web3.eth.accounts[0], gas:900000})
 ```
 
-![фото 5](https://raw.githubusercontent.com/airalab/learning-center/master/img/5.png)
+![фото 5](https://raw.githubusercontent.com/airalab/learning-center/master/img/21.png)
 
-- обращаемся к "second lesson->Execute" и передаем адрес dao в ответ получаем 100air
+### Обращаемся к "second lesson->Execute" и передаем адрес dao в ответ получаем 50air
 
 <details> 
 <summary>var SecondLesson = .....;</summary>
-*var SecondLesson = [{"constant":false,"inputs":[{"name":"_dao","type":"address"}],"name":"execute","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"accountOf","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"ownerAir","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[],"name":"airalab_learning_center","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[{"name":"_ownerAir","type":"address"},{"name":"_airalab_learning_center","type":"address"}],"type":"constructor"}];*
+*var SecondLesson = [{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"accountOf","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":false,"inputs":[{"name":"_dao","type":"address"},{"name":"_shares_name","type":"string"}],"name":"execute","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"ownerAir","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[],"name":"airalab_learning_center","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[{"name":"_ownerAir","type":"address"},{"name":"_airalab_learning_center","type":"address"}],"type":"constructor"}];*
 </details>
 
 ```
-var secondLesson_addr = '0x6da7a120a505eb0872d8dc72d0c2544868905d43';
+var secondLesson_addr = '0x67eb3824613dd4e05b6a442811564f2697bc3f43';
 var SecondLesson = .....;
 var secondLesson = web3.eth.contract(SecondLesson).at(secondLesson_addr);
-secondLesson.execute(dao_addr, shares_addr, {from:web3.eth.accounts[0], gas:900000})
+secondLesson.execute(dao_addr, "Mars colony shares", {from:web3.eth.accounts[0], gas:900000})
 ```
 
-![фото 6](https://raw.githubusercontent.com/airalab/learning-center/master/img/6.png)
+![фото 6](https://raw.githubusercontent.com/airalab/learning-center/master/img/22.png)
 
 Проверяем баланс air
 
-![фото 7](https://raw.githubusercontent.com/airalab/learning-center/master/img/7.png)
+![фото 7](https://raw.githubusercontent.com/airalab/learning-center/master/img/23.png)
 
 ## Урок 3
 
-- создаем токен эзер с помощью билдера
+### Создаем токен эзер с помощью билдера
 
 <details> 
 <summary>var BuilderTokenEther = .....;</summary>
@@ -125,20 +125,22 @@ secondLesson.execute(dao_addr, shares_addr, {from:web3.eth.accounts[0], gas:9000
 ```
 var BuilderTokenEther = .....;
 var builder = eth.contract(BuilderTokenEther).at(factory.getModule("Aira BuilderTokenEther"))
-builder.create('credits', 'C', {from: eth.accounts[0], gas: 1000000, value: builder.buildingCost()})
+builder.create('Mars colony tokens', 'MCT', {from: eth.accounts[0], gas: 1000000, value: builder.buildingCost()})
 var credits_addr = builder.getLastContract()
 ```
 
-![фото 8](https://raw.githubusercontent.com/airalab/learning-center/master/img/8.png)
+![фото 8](https://raw.githubusercontent.com/airalab/learning-center/master/img/31.png)
+![фото 8](https://raw.githubusercontent.com/airalab/learning-center/master/img/32.png)
 
-- переводим на контракт токена 0.1
+### Переводим на контракт токена 0.1
+
 ```
 eth.sendTransaction({from:web3.eth.accounts[0], to:credits_addr, value: web3.toWei('0.1', 'ether')})
 ```
 
-![фото 9](https://raw.githubusercontent.com/airalab/learning-center/master/img/9.png)
+![фото 9](https://raw.githubusercontent.com/airalab/learning-center/master/img/33.png)
 
-- запускаем выполнение урока передав адрес токена
+### Запускаем выполнение урока передав адрес токена
 
 <details> 
 <summary>var ThirdLesson = .....;</summary>
@@ -146,68 +148,48 @@ eth.sendTransaction({from:web3.eth.accounts[0], to:credits_addr, value: web3.toW
 </details>
 
 ```
-var thirdLesson_addr = '0x52d98afa11cc6a2828793c147d17953d181a0353';
+var thirdLesson_addr = '0xea46b677f04e6e7128627edcb8baf21a60b65972';
 var ThirdLesson = .....;
 var thirdLesson = web3.eth.contract(ThirdLesson).at(thirdLesson_addr);
 thirdLesson.execute(credits_addr, {from:web3.eth.accounts[0], gas:900000})
 ```
 
-![фото 10](https://raw.githubusercontent.com/airalab/learning-center/master/img/10.png)
+![фото 10](https://raw.githubusercontent.com/airalab/learning-center/master/img/34.png)
 
 Проверяем баланс air
 
-![фото 11](https://raw.githubusercontent.com/airalab/learning-center/master/img/11.png)
+![фото 11](https://raw.githubusercontent.com/airalab/learning-center/master/img/35.png)
 
 ## Урок 4
 
-- ipo с помощью билдера
+### Создаем proposal
 
 <details> 
-<summary>var BuilderIPOStart = .....;</summary>
-*var BuilderIPOStart = [{"constant":false,"inputs":[{"name":"_credits","type":"address"},{"name":"_shares","type":"address"},{"name":"_start_time_sec","type":"uint256"},{"name":"_duration_sec","type":"uint256"},{"name":"_start_price","type":"uint256"},{"name":"_step","type":"uint256"},{"name":"_period_sec","type":"uint256"},{"name":"_min_value","type":"uint256"},{"name":"_end_value","type":"uint256"}],"name":"create","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_buildingCost","type":"uint256"}],"name":"setCost","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_owner","type":"address"}],"name":"delegate","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_proposal","type":"address"}],"name":"setProposal","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_cashflow","type":"address"}],"name":"setCashflow","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"buildingCost","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[],"name":"getLastContract","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"},{"name":"","type":"uint256"}],"name":"getContractsOf","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[{"name":"_buildingCost","type":"uint256"},{"name":"_cashflow","type":"address"},{"name":"_proposal","type":"address"}],"type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"name":"sender","type":"address"},{"indexed":true,"name":"instance","type":"address"}],"name":"Builded","type":"event"}];*
+<summary>var BuilderCashFlow = .....;</summary>
+*var BuilderCashFlow = [{"constant":false,"inputs":[{"name":"_credits","type":"address"},{"name":"_shares","type":"address"}],"name":"create","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_buildingCost","type":"uint256"}],"name":"setCost","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_owner","type":"address"}],"name":"delegate","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_proposal","type":"address"}],"name":"setProposal","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_cashflow","type":"address"}],"name":"setCashflow","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"buildingCost","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[],"name":"getLastContract","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"},{"name":"","type":"uint256"}],"name":"getContractsOf","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[{"name":"_buildingCost","type":"uint256"},{"name":"_cashflow","type":"address"},{"name":"_proposal","type":"address"}],"type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"name":"sender","type":"address"},{"indexed":true,"name":"instance","type":"address"}],"name":"Builded","type":"event"}];*
 </details>
 
-```
-var b_addr = '0x4d2469c4e02e0ee3101e97b5b902113821c71a72';
-var BuilderIPOStart = .....;
-var b = web3.eth.contract(BuilderIPOStart).at(b_addr);
-var credits_addr = '0x7f0e98146a268ab8e88dd48ac88dd562db226696'
-var shares_addr = '0xb18a1a650bc431d35079e4d8d0cb0cbd773f6102';
-var start_time = 1467096536;
-var duration = 600;
-var start_price = 10;
-var step = 10;
-var period = 60;
-var min = 100;
-var max = 500;
-b.create(credits_addr, shares_addr, start_time, duration, start_price, step, period, min, max, {from:web3.eth.accounts[0], gas:4700000})
-var ipo_addr = b.getLastContract()
-```
+var BuilderCashFlow = .....;
+var builder = web3.eth.contract(BuilderCashFlow).at(factory.getModule("Aira BuilderCashFlow"));
+builder.create(credits_addr, shares_addr, {from: eth.accounts[0], gas: 2000000, value: builder.buildingCost()})
+var cashflow_addr = builder.getLastContract()
 
-- переводим на контракт токена кредитов 5
-```
-var credits_addr = '0x7f0e98146a268ab8e88dd48ac88dd562db226696'
-eth.sendTransaction({from:web3.eth.accounts[0], to:credits_addr, value: web3.toWei('5', 'ether')})
-```
+![фото 12](https://raw.githubusercontent.com/airalab/learning-center/master/img/41.png)
+![фото 13](https://raw.githubusercontent.com/airalab/learning-center/master/img/42.png)
 
-- запускаем выполнение урока передав адрес токена
-
-<details> 
-<summary>var fourthLesson_abi = .....;</summary>
-*var fourthLesson_abi = [{"constant":false,"inputs":[{"name":"_ipo","type":"address"}],"name":"execute","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"ownerAir","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[{"name":"_ownerAir","type":"address"}],"type":"constructor"}];*
-</details>
+переводим токены эфиров на контракт cashflow
 
 ```
-var fourthLesson_addr = '0xf4a20b5cb8ac8d75090d901b9e94f8dba562a153';
-var fourthLesson_abi = .....;
-var fourthLesson = web3.eth.contract(fourthLesson_abi).at(fourthLesson_addr);
-var ipo_addr = '0x7ed7d00d34641167d63072a3f9ec53b657060175'
-fourthLesson.execute(ipo_addr, {from:web3.eth.accounts[0], gas:900000})
+var TokenEther = [{"constant":true,"inputs":[],"name":"name","outputs":[{"name":"","type":"string"}],"type":"function"},{"constant":false,"inputs":[{"name":"_address","type":"address"},{"name":"_value","type":"uint256"}],"name":"approve","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"getBalance","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[],"name":"totalSupply","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":false,"inputs":[{"name":"_from","type":"address"},{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transferFrom","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":false,"inputs":[{"name":"_value","type":"uint256"}],"name":"withdraw","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"decimals","outputs":[{"name":"","type":"uint8"}],"type":"function"},{"constant":false,"inputs":[],"name":"refill","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_owner","type":"address"}],"name":"delegate","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"balanceOf","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[],"name":"symbol","outputs":[{"name":"","type":"string"}],"type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transfer","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"},{"name":"","type":"address"}],"name":"allowance","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[{"name":"_address","type":"address"}],"name":"getBalance","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":false,"inputs":[{"name":"_address","type":"address"}],"name":"unapprove","outputs":[],"type":"function"},{"inputs":[{"name":"_name","type":"string"},{"name":"_symbol","type":"string"}],"type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_from","type":"address"},{"indexed":true,"name":"_to","type":"address"},{"indexed":false,"name":"_value","type":"uint256"}],"name":"Transfer","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_owner","type":"address"},{"indexed":true,"name":"_spender","type":"address"},{"indexed":false,"name":"_value","type":"uint256"}],"name":"Approval","type":"event"}];
+var credits = web3.eth.contract(TokenEther).at(credits_addr);
+credits.transfer(cashflow_addr, 100000000000000000, {from:web3.eth.accounts[0], gas:900000})
 ```
 
-## Урок 5
+![фото 12](https://raw.githubusercontent.com/airalab/learning-center/master/img/43.png)
 
-- создаем proposal
+credits.balanceOf(cashflow_addr)
+
+![фото 13](https://raw.githubusercontent.com/airalab/learning-center/master/img/44.png)
 
 <details> 
 <summary>var CashFlow = .....;</summary>
@@ -215,14 +197,16 @@ fourthLesson.execute(ipo_addr, {from:web3.eth.accounts[0], gas:900000})
 </details>
 
 ```
-var cashflow_addr = '0xc6345ef22c1f6d76eabcd672081b26fb2aa78b96';
 var CashFlow = .....;
 var cashflow = web3.eth.contract(CashFlow).at(cashflow_addr);
 cashflow.proposal(web3.eth.accounts[0], 1, "description", {from:web3.eth.accounts[0], gas:900000})
 var proposal_addr = cashflow.proposals(0)
 ```
 
-- даем approve для cashflow для снятия акций
+![фото 14](https://raw.githubusercontent.com/airalab/learning-center/master/img/45.png)
+![фото 15](https://raw.githubusercontent.com/airalab/learning-center/master/img/46.png)
+
+### Даем approve для cashflow для снятия акций
 
 <details> 
 <summary>var TokenEmission = .....;</summary>
@@ -230,20 +214,21 @@ var proposal_addr = cashflow.proposals(0)
 </details>
 
 ```
-var shares_addr = '0xb18a1a650bc431d35079e4d8d0cb0cbd773f6102';
 var TokenEmission = .....;
 var shares = web3.eth.contract(TokenEmission).at(shares_addr);
-var cashflow_addr = '0xc6345ef22c1f6d76eabcd672081b26fb2aa78b96';
 shares.approve(cashflow_addr, 1, {from:web3.eth.accounts[0], gas:900000});
 ```
 
-- голосуем за пропосал
+![фото 15](https://raw.githubusercontent.com/airalab/learning-center/master/img/47.png)
+
+### Голосуем за пропосал
 ```
-var proposal_addr = '0x0b43e23cd1ef4456d39c5c0416c486dce0ad8e03'
 cashflow.fund(proposal_addr, 1, {from:web3.eth.accounts[0], gas:3000000});
 ```
 
-- запускаем выполнение урока передав адрес proposal и сумму
+![фото 15](https://raw.githubusercontent.com/airalab/learning-center/master/img/48.png)
+
+### Запускаем выполнение урока передав адрес proposal и сумму
 
 <details> 
 <summary>var FifthLesson = .....;</summary>
@@ -254,6 +239,5 @@ cashflow.fund(proposal_addr, 1, {from:web3.eth.accounts[0], gas:3000000});
 var fifthLesson_addr = '0x5ec0f62b83b708a6dafc133f174ea965e99b3be5';
 var FifthLesson = .....;
 var fifthLesson = web3.eth.contract(FifthLesson).at(fifthLesson_addr);
-var proposal_addr = '0x0b43e23cd1ef4456d39c5c0416c486dce0ad8e03'
 fifthLesson.execute(proposal_addr, 1, {from:web3.eth.accounts[0], gas:900000})
 ```
