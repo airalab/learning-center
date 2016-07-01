@@ -321,3 +321,20 @@ TO DO: akru создать билдер и написать пример обр�
 #### Пример выполнения
 - TO DO: Eugene пример с Ethereum wallet
 - TO DO: vol4tim пример с geth
+
+## Финальная модель ДАО.
+
+Если были пройдены все уроки, описанные в данном документе, то финальная модель ДАО без учета контрактов `Crowdsale`, `ShareSale`, так как эти контракты, выполняли разовую функцию, будет следующей:
+
+- `DAO core`
+- `Shareholder token`
+- `Ether funds`
+- `Cashflow`
+- `DAO market`
+- `Market regulator`
+- `Market agent`
+- `Market agent builder`
+- `Emission regulator via Market`
+- `Token emission builder`
+- `Board of Directors`
+- `Voting token`
