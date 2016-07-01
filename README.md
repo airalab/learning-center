@@ -44,7 +44,7 @@
 ### Вариант 2: обратиться к фабрике ДАО `DAO factory` отправив транзакцию со своего аккаунта к сборщику ядра [Aira BuilderDAO](https://github.com/airalab/core/wiki/API-Reference#builderdao) следующего формата:
 
 ```js
-var factory = eth.contract(Core).at("0x4b94c11ff4b118cad6d0d1831ecb60586a9241df")
+var factory = eth.contract(Core).at("0xa76422591378d14fb6d94c9da48a42498d8b51da")
 var builder = eth.contract(BuilderDAO).at(factory.getModule("Aira BuilderDAO"))
 builder.create(_dao_name, _dao_description, _shares_name, _shares_symbol, _shares_count,
                {from: eth.accounts[0], gas: 1000000, value: builder.buildingCost()})
