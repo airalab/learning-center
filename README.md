@@ -115,8 +115,7 @@ builder.create(_dao_name, _dao_description, _shares_name, _shares_symbol, _share
 
 **При обращении к сборщику необходимо указать:**
 - адрес контракта [CashFlow](https://github.com/airalab/core/wiki/API-Reference#cashflow)
-- количество акций, которые продаются этим контрактом
-- количество эфиров требуемых для завершения сделки.
+- стоимость одной акции в `Wei`
 
 **После создания контракта `ShareSale` необходимо:**
 - Отправить на адрес контракта [ShareSale](https://github.com/airalab/core/wiki/API-Reference#sharesale) количество акций предлагаемых для продажи по контракту.
