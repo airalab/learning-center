@@ -15,7 +15,7 @@
 
 ### Пример выполнения
 - TO DO: Eugene с Ethereum wallet
-- [Пример выполнения урока с geth](https://github.com/airalab/learning-center/blob/master/lessons%20passage.md#%D1%83%D1%80%D0%BE%D0%BA-0)
+- [Пример выполнения урока с geth](https://github.com/airalab/learning-center/blob/master/lessons%20passage.md#Урок-0)
 
 ## Урок 1: создайте ядро децентрализованной автономной организации
 > Уровень сложности урока: низкий.
@@ -67,7 +67,7 @@ builder.create(_dao_name, _dao_description, _shares_name, _shares_symbol, _share
 
 ### Пример выполнения
 - TO DO: Eugene с Ethereum wallet
-- [Пример выполнения урока с geth](https://github.com/airalab/learning-center/blob/master/lessons%20passage.md#%D1%83%D1%80%D0%BE%D0%BA-1)
+- [Пример выполнения урока с geth](https://github.com/airalab/learning-center/blob/master/lessons%20passage.md#Урок-1)
 
 ## Урок 2: Распределите акции вашей организации
 > Уровень сложности урока: низкий.
@@ -89,7 +89,7 @@ builder.create(_dao_name, _dao_description, _shares_name, _shares_symbol, _share
 
 #### Пример выполнения
 - TO DO: Eugene с Ethereum wallet
-- [Пример выполнения урока с geth](https://github.com/airalab/learning-center/blob/master/lessons%20passage.md#%D1%83%D1%80%D0%BE%D0%BA-2)
+- [Пример выполнения урока с geth](https://github.com/airalab/learning-center/blob/master/lessons%20passage.md#Урок-2)
 
 ## Урок 3: Используйте общий контракт для хранения эфиров.
 > Уровень сложности урока: низкий.
@@ -115,7 +115,7 @@ builder.create(_dao_name, _dao_description, _shares_name, _shares_symbol, _share
 
 ### Пример выполнения
 - TO DO: Eugene пример с Ethereum wallet
-- [Пример выполнения урока с geth](https://github.com/airalab/learning-center/blob/master/lessons%20passage.md#%D1%83%D1%80%D0%BE%D0%BA-3)
+- [Пример выполнения урока с geth](https://github.com/airalab/learning-center/blob/master/lessons%20passage.md#Урок-3)
 
 ## Урок 4: Превратите акции ДАО в управленческий капитал фонда организации.
 > Уровень сложности урока: средний.
@@ -144,7 +144,7 @@ builder.create(_dao_name, _dao_description, _shares_name, _shares_symbol, _share
 
 #### Пример выполнения
 - TO DO: Eugene пример с Ethereum wallet
-- [Пример выполнения урока с geth](https://github.com/airalab/learning-center/blob/master/lessons%20passage.md#%D1%83%D1%80%D0%BE%D0%BA-5)
+- [Пример выполнения урока с geth](https://github.com/airalab/learning-center/blob/master/lessons%20passage.md#Урок-4)
 
 ## Урок 5: Эмиссируйте новые акции лично привлекая финансирование в эфирах.
 > Уровень сложности урока: средний.
@@ -177,7 +177,7 @@ builder.create(_dao_name, _dao_description, _shares_name, _shares_symbol, _share
 
 #### Пример выполнения
 - TO DO: Eugene пример с Ethereum wallet
-- TO DO: vol4tim пример с Ethereum wallet
+- [Пример выполнения урока с geth](https://github.com/airalab/learning-center/blob/master/lessons%20passage.md#Урок-5)
 
 ## Урок 6: Создайте внутренний рынок ДАО
 > Уровень сложности урока: средний.
@@ -207,11 +207,10 @@ TO DO: Eugene примеры запросов на добавление лото
 
 Чтобы успешно выполнить данный урок необходимо обратиться к контракту `Lesson 6` для вызова функции `Execute()` указав `адрес рынка`.
 > Важно: на вашем рынке должны быть минимум 2 лота.
-TO DO: vol4tim проверяй без учета активен или нет лот и того, что именно продаётся, главное наличие 2 лотов на рынке.
 
 ### Пример выполнения
 - TO DO: Eugene пример с Ethereum wallet
-- TO DO: vol4tim пример с geth
+- [Пример выполнения урока с geth](https://github.com/airalab/learning-center/blob/master/lessons%20passage.md#Урок-6)
 
 ## Урок 7: Добавьте регулятора внутреннего рынка ДАО
 > Уровень сложности урока: средний.
