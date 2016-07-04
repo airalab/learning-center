@@ -112,7 +112,7 @@ builder.create(_dao_name, _dao_description, _shares_name, _shares_symbol, _share
 - `Cashflow`
 
 **Используемые для взаимодействия в данном уроке модули ДАО:**
-- `Aira BuilderCashFlow` ([abi](https://github.com/airalab/core/blob/master/abi/builder/BuilderCashFlow.json)
+- `Aira BuilderCashFlow` ([abi](https://github.com/airalab/core/blob/master/abi/builder/BuilderCashFlow.json))
 - `DAO core` ([abi](https://raw.githubusercontent.com/airalab/core/master/abi/modules/Core.json))
 - `Cashflow` ([abi](https://raw.githubusercontent.com/airalab/core/master/abi/modules/Cashflow.json))
 - `Ether funds` ([abi](https://raw.githubusercontent.com/airalab/core/master/abi/modules/TokenEther.json))
@@ -142,10 +142,10 @@ builder.create(_dao_name, _dao_description, _shares_name, _shares_symbol, _share
 - `ShareSale`
 
 **Используемые для взаимодействия в данном уроке модули ДАО:**
-- Builder ?
-- `Shareholder token`
-- `ShareSale`
-- `Ether funds`
+- `Aira BuilderShareSale` ([abi](https://raw.githubusercontent.com/airalab/core/master/abi/builder/BuilderShareSale.json))
+- `Shareholder token` ([abi](https://raw.githubusercontent.com/airalab/core/master/abi/modules/TokenEmission.json))
+- `ShareSale` ([abi](https://raw.githubusercontent.com/airalab/core/master/abi/modules/ShareSale.json))
+- `Ether funds` ([abi](https://raw.githubusercontent.com/airalab/core/master/abi/modules/TokenEther.json))
 
 ### Описание урока
 Создатель ДАО на данном этапе может лично эмиссировать дополнительные акции на свой счёт. Это может быть полезно в том, случаи если к примеру основатель лично договорился с первым(ыми) инвесторами о вхождении их в состав акционеров за счёт привлечения финансирования с их стороны. Чтобы выполнить данный процесс безопасно для обеих сторон можно обратиться к `DAO factory` и найти сборщик с названием [BuilderShareSale](https://github.com/airalab/core/wiki/API-Reference#buildersharesale), адрес `0x56c58efbf174dc82b4311a68b84bdfd5db13a3db`.
@@ -176,9 +176,8 @@ builder.create(_dao_name, _dao_description, _shares_name, _shares_symbol, _share
 - `DAO market`
 
 **Используемые для взаимодействия в данном уроке модули ДАО:**
-- `DAO market`
-- `ShareSale`
-- `Ether funds`
+- `Aira BuilderMarket` ([abi](https://raw.githubusercontent.com/airalab/core/master/abi/builder/BuilderMarket.json))
+- `DAO market` ([abi](https://raw.githubusercontent.com/airalab/core/master/abi/builder/BuilderMarket.json))
 
 ### Описание урока
 Создайте рынок ДАО и наполните его предложениями. Для начала необходимо обратиться к сборщику DAO factory [BuilderMarket](https://github.com/airalab/core/wiki/API-Reference#buildermarket), адрес в тестовой сети: `0xf57af9978a68d4816cee271c30f0a7ed35142d56`.
