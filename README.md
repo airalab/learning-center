@@ -25,9 +25,9 @@
 - `Shareholder token`
 
 **Используемые для взаимодействия в данном уроке модули ДАО:**
-- `Aira BuilderDAO` ([abi](https://github.com/airalab/core/blob/master/abi/builder/BuilderCore.json))
-- `DAO core`
-- `Shareholder token`
+- `Aira BuilderDAO` ([abi](https://raw.githubusercontent.com/airalab/core/master/abi/builder/BuilderCore.json))
+- `DAO core` ([abi](https://raw.githubusercontent.com/airalab/core/master/abi/modules/Core.json))
+- `Shareholder token` ([abi](https://raw.githubusercontent.com/airalab/core/master/abi/modules/TokenEmission.json))
 
 ## Описание урока
 Ядро ДАО позволяет хранить реестр всех используемых организацией автономных контрактов. Для управления данным реестром (внесения/изменения/удаления записей) необходимо создать контракт, который будет хранить реестр акционеров организации `Shareholder token`.
@@ -64,7 +64,7 @@ builder.create(_dao_name, _dao_description, _shares_name, _shares_symbol, _share
 > Уровень сложности урока: низкий.
 
 **Используемые для взаимодействия в данном уроке модули ДАО:**
-- `Shareholder token`
+- `Shareholder token` ([abi](https://raw.githubusercontent.com/airalab/core/master/abi/modules/TokenEmission.json))
 
 ## Описание урока
 При создании ДАО на баланс адреса создателя `founder` было эмисировано заданное количество акций `Shareholder token`. Теперь время их распределить среди команды.
@@ -86,8 +86,8 @@ builder.create(_dao_name, _dao_description, _shares_name, _shares_symbol, _share
 
 **Используемые для взаимодействия в данном уроке модули ДАО:**
 - `Aira BuilderTokenEther` ([abi](https://github.com/airalab/core/blob/master/abi/builder/BuilderTokenEther.json)
-- `DAO core`
-- `Ether funds`
+- `DAO core` ([abi](https://raw.githubusercontent.com/airalab/core/master/abi/modules/Core.json))
+- `Ether funds` ([abi](https://raw.githubusercontent.com/airalab/core/master/abi/modules/TokenEther.json))
 
 ### Описание урока
 Первый шаг к объединению средств организации от акционеров можно выделить в использование общего контракта, на который акционеры передадут средства без учета соотношения вложений к общей сумме средств в эфирах на общем контракте хранения эфиров. Это означает, что все средства, которые будут переведены на контракт будут доступны для использования и вывода **только** владельцу аккаунта, с которого средства были отправлены на контракт.
@@ -113,9 +113,9 @@ builder.create(_dao_name, _dao_description, _shares_name, _shares_symbol, _share
 
 **Используемые для взаимодействия в данном уроке модули ДАО:**
 - `Aira BuilderCashFlow` ([abi](https://github.com/airalab/core/blob/master/abi/builder/BuilderCashFlow.json)
-- `DAO core`
-- `Cashflow`
-- `Ether funds`
+- `DAO core` ([abi](https://raw.githubusercontent.com/airalab/core/master/abi/modules/Core.json))
+- `Cashflow` ([abi](https://raw.githubusercontent.com/airalab/core/master/abi/modules/Cashflow.json))
+- `Ether funds` ([abi](https://raw.githubusercontent.com/airalab/core/master/abi/modules/TokenEther.json))
 
 ### Описание урока
 Теперь вам необходим модуль [Cashflow](https://github.com/airalab/core/wiki/API-Reference#cashflow) для дальнейшего управления средствами  в совместном финасировании расходов организации с использованием `пропорционального голосования` (3).
