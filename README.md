@@ -9,7 +9,7 @@
 После установки клиента сети необходимо выполнить синхронизацию с **тестовой сетью**. После синхронизации с сетью необходимо добыть крайне небольшую сумму токенов для отправки транзакции, требуемой для выполнения первого урока. Сделать это можно одним из следующих способов:
 - **Самый простой способ.** Мы создали [бесплатную раздачу 0,01 эфира на сайте aira.life](http://aira.life/tap/). Необходимо указать адрес аккаунта в тестовой сети и нажать кнопку "Send 0.01 ether". В течении ~ минуты данная сумма будет зачислена на баланс указанного аккаунта.
 - **Чтобы познакомитсья с майнингом поближе.** Cледуя [инструкциям в официальной документации Ethereum](http://www.ethdocs.org/en/latest/mining.html#using-geth) включить майнинг в тестовой сети примерно на 20 - 30 минут.
-- **Чтобы познакомитсья с Airalab поближе.** подключиться к каналу команды Airalab в Gitter: [Aira team friends](https://gitter.im/airalab/friends) и написать свой адрес в тестовой сети. Кто нибудь обязательно вам поможет!  
+- **Чтобы познакомитсья с Airalab поближе.** Подключиться к каналу команды Airalab в Gitter: [Aira team friends](https://gitter.im/airalab/friends) и написать свой адрес в тестовой сети. Кто нибудь обязательно вам поможет!  
 
 Добыв или получив от команды Airalab немного эфиров для первой транзакции в сеть можно обратиться к контракту Airalab в тестовой сети, который отправит вам в ответ **5 эфиров**, которых будет достаточно для выполнения всех 12 уроков.
 
@@ -25,23 +25,14 @@
 - `Shareholder token`
 
 **Используемые для взаимодействия в данном уроке модули ДАО:**
+- `Aira BuilderDAO` ([abi](https://github.com/airalab/core/blob/master/abi/builder/BuilderCore.json))
 - `DAO core`
 - `Shareholder token`
 
 ## Описание урока
-Ядро ДАО позволяет хранить реестр всех используемых организацией автономных контрактов. Для управления данным реестром (внесения/изменения/удаления записей) необходимо создатьконтракт, который будет хранить реестр акционеров организации `Shareholder token`.
+Ядро ДАО позволяет хранить реестр всех используемых организацией автономных контрактов. Для управления данным реестром (внесения/изменения/удаления записей) необходимо создать контракт, который будет хранить реестр акционеров организации `Shareholder token`.
 
-Для того, чтобы создать ядро и токен акций существует 2 варианта.
-
-### Вариант 1: выполнить компиляцию исходного кода контрактов
-
-Необходимы следующие контракты:
-- [Core.sol](https://github.com/airalab/core/blob/master/sol/dao/Core.sol)
-- [TokenEmission.sol](https://github.com/airalab/core/blob/master/sol/token/TokenEmission.sol)
-
-> Обратите внимание, что вам требуется собрать все дополнительные контракты, которые используются ядром и реестром акционеров.
-
-### Вариант 2: обратиться к фабрике ДАО `DAO factory` отправив транзакцию со своего аккаунта к сборщику ядра [Aira BuilderDAO](https://github.com/airalab/core/wiki/API-Reference#builderdao) следующего формата:
+Для того, чтобы создать ядро и токен акций необходимо обратиться к фабрике ДАО `DAO factory` отправив транзакцию со своего аккаунта к сборщику ядра `Aira BuilderDAO` следующего формата:
 
 ```js
 var factory = eth.contract(Core).at("0xa76422591378d14fb6d94c9da48a42498d8b51da")
@@ -72,10 +63,6 @@ builder.create(_dao_name, _dao_description, _shares_name, _shares_symbol, _share
 ## Урок 2: Распределите акции вашей организации
 > Уровень сложности урока: низкий.
 
-**Создаваемые на данном уроке модули ДАО:**
-
--
-
 **Используемые для взаимодействия в данном уроке модули ДАО:**
 - `Shareholder token`
 
@@ -98,6 +85,7 @@ builder.create(_dao_name, _dao_description, _shares_name, _shares_symbol, _share
 - `Ether funds`
 
 **Используемые для взаимодействия в данном уроке модули ДАО:**
+- `Aira BuilderTokenEther` ([abi](https://github.com/airalab/core/blob/master/abi/builder/BuilderTokenEther.json)
 - `DAO core`
 - `Ether funds`
 
@@ -124,6 +112,7 @@ builder.create(_dao_name, _dao_description, _shares_name, _shares_symbol, _share
 - `Cashflow`
 
 **Используемые для взаимодействия в данном уроке модули ДАО:**
+- `Aira BuilderCashFlow` ([abi](https://github.com/airalab/core/blob/master/abi/builder/BuilderCashFlow.json)
 - `DAO core`
 - `Cashflow`
 - `Ether funds`
@@ -133,7 +122,7 @@ builder.create(_dao_name, _dao_description, _shares_name, _shares_symbol, _share
 
 >Пропорциональное голосование выбрано, как начальная форма управления общим фондов организации в силу её наибольшей защищенности от влияния расходования средств отдельного акционера в общем бюджете организации.
 
-Имея общий бюджет и модуль ДАО [CashFlow](https://github.com/airalab/core/wiki/API-Reference#cashflow) можно создавать [proposal](https://github.com/airalab/core/wiki/API-Reference#proposal) указывая:
+Имея общий бюджет и модуль ДАО `CashFlow` можно создавать [proposal](https://github.com/airalab/core/wiki/API-Reference#proposal) указывая:
 - `Адрес в сети Ethereum - цель финансирования`.
 - Запрашиваемое финансирования, меньшее чем общая сумма средств на счету `Cashflow`.
 
@@ -153,6 +142,7 @@ builder.create(_dao_name, _dao_description, _shares_name, _shares_symbol, _share
 - `ShareSale`
 
 **Используемые для взаимодействия в данном уроке модули ДАО:**
+- Builder ?
 - `Shareholder token`
 - `ShareSale`
 - `Ether funds`
