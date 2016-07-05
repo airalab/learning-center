@@ -383,7 +383,7 @@ market.size()
 ![Урок 7 шаг 14](https://raw.githubusercontent.com/airalab/learning-center/master/img/714.png)
 ![Урок 7 шаг 15](https://raw.githubusercontent.com/airalab/learning-center/master/img/715.png)
 
-### Запускаем выполнение урока передав адрес Market
+### Запускаем выполнение урока передав адрес Market и адрес DAOMarketRegulator
 
 ```
 var seventhLesson_addr = '0x2c7b5fb3066bbbdd22f6c55bc29a735c90f9c6ab';
@@ -397,3 +397,45 @@ seventhLesson.execute(market_addr, DAOMarketRegulator_addr, {from:web3.eth.accou
 Проверяем баланс air
 
 ![Урок 7 шаг 717](https://raw.githubusercontent.com/airalab/learning-center/master/img/717.png)
+
+## Урок 8
+
+### Ловим события для новых контрактов DAOMarketAgent
+
+```
+var e = marketRegulator.MarketAgentSign({}, '', function(error,result){
+    console.log(result.args._agent);
+})
+```
+
+![Урок 8 шаг 1](https://raw.githubusercontent.com/airalab/learning-center/master/img/81.png)
+
+### Создаем контракт агента рынка DAOMarketAgent с помощью регулятора рынка
+
+```
+marketRegulator.sign({from:web3.eth.accounts[0], gas:900000});
+```
+
+![Урок 8 шаг 2](https://raw.githubusercontent.com/airalab/learning-center/master/img/82.png)
+
+Сохраняем адрес нового контракта из пойманого события
+
+```
+var DAOMarketAgent_addr = '0x9a821522a3bb778be20e48a2bfabdda1cd3f7d64';
+```
+
+### Запускаем выполнение урока передав адрес Market и адрес DAOMarketAgent
+
+```
+var eighthLesson_addr = '0x1ffde81ec93a7e84f0102c13e897caedf5489637';
+var EighthLesson = [{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"accountOf","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"ownerAir","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_market","type":"address"},{"name":"_agent","type":"address"}],"name":"execute","outputs":[],"type":"function"},{"inputs":[{"name":"_ownerAir","type":"address"}],"type":"constructor"}];
+var eighthLesson = web3.eth.contract(EighthLesson).at(eighthLesson_addr);
+eighthLesson.execute(market_addr, DAOMarketAgent_addr, {from:web3.eth.accounts[0], gas:900000})
+```
+
+![Урок 8 шаг 83](https://raw.githubusercontent.com/airalab/learning-center/master/img/83.png)
+
+Проверяем баланс air
+
+![Урок 8 шаг 84](https://raw.githubusercontent.com/airalab/learning-center/master/img/84.png)
+

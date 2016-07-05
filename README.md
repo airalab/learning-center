@@ -244,7 +244,7 @@ TO DO: Eugene примеры запросов на добавление лото
 
 ### Пример выполнения
 - TO DO: Eugene пример с Ethereum wallet
-- TO DO: vol4tim пример с geth
+- [Пример выполнения урока с geth](https://github.com/airalab/learning-center/blob/master/lessons%20passage.md#Урок-8)
 
 ## Урок 9: Добавьте регулятора эмиссии кредитов.
 > Уровень сложности урока: высокий.
