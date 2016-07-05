@@ -292,3 +292,108 @@ sixthLesson.execute(market_addr, {from:web3.eth.accounts[0], gas:900000})
 Проверяем баланс air
 
 ![Урок 6 шаг 5](https://raw.githubusercontent.com/airalab/learning-center/master/img/65.png)
+
+## Урок 7
+
+### Создаем контракт MarketRegulator с помощью билдера
+
+```
+var BuilderDAOMarketRegulator = [{"constant":false,"inputs":[{"name":"_buildingCost","type":"uint256"}],"name":"setCost","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_owner","type":"address"}],"name":"delegate","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_proposal","type":"address"}],"name":"setProposal","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_shares","type":"address"},{"name":"_core","type":"address"},{"name":"_market","type":"address"},{"name":"_dao_credits","type":"address"}],"name":"create","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_cashflow","type":"address"}],"name":"setCashflow","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"buildingCost","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[],"name":"getLastContract","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"},{"name":"","type":"uint256"}],"name":"getContractsOf","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[{"name":"_buildingCost","type":"uint256"},{"name":"_cashflow","type":"address"},{"name":"_proposal","type":"address"}],"type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"name":"sender","type":"address"},{"indexed":true,"name":"instance","type":"address"}],"name":"Builded","type":"event"}];
+var builder = web3.eth.contract(BuilderDAOMarketRegulator).at(factory.getModule("Aira BuilderDAOMarketRegulator"));
+builder.create(shares_addr, dao_addr, market_addr, credits_addr, {from: eth.accounts[0], gas: 2000000, value: builder.buildingCost()})
+var DAOMarketRegulator_addr = builder.getLastContract()
+```
+
+![Урок 7 шаг 1](https://raw.githubusercontent.com/airalab/learning-center/master/img/71.png)
+![Урок 7 шаг 2](https://raw.githubusercontent.com/airalab/learning-center/master/img/72.png)
+
+### Переводим рынок в закрытый режим
+
+```
+var Market = [{"constant":false,"inputs":[{"name":"_lot","type":"address"}],"name":"remove","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"first","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[],"name":"kill","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_seller","type":"address"},{"name":"_sale","type":"address"},{"name":"_buy","type":"address"},{"name":"_value","type":"uint256"},{"name":"_price","type":"uint256"}],"name":"append","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_owner","type":"address"}],"name":"delegate","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"_lot","type":"address"}],"name":"contains","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":false,"inputs":[{"name":"_open","type":"bool"}],"name":"setMode","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[],"name":"size","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[{"name":"_current","type":"address"}],"name":"next","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[],"name":"open","outputs":[{"name":"","type":"bool"}],"type":"function"}];
+var market = web3.eth.contract(Market).at(market_addr);
+market.setMode(false, {from: eth.accounts[0], gas: 100000});
+market.open();
+```
+
+![Урок 7 шаг 3](https://raw.githubusercontent.com/airalab/learning-center/master/img/73.png)
+![Урок 7 шаг 4](https://raw.githubusercontent.com/airalab/learning-center/master/img/74.png)
+
+### Делегируем рынок регулятору
+
+```
+market.delegate(DAOMarketRegulator_addr, {from: eth.accounts[0], gas: 100000});
+market.owner()
+```
+
+![Урок 7 шаг 5](https://raw.githubusercontent.com/airalab/learning-center/master/img/75.png)
+![Урок 7 шаг 6](https://raw.githubusercontent.com/airalab/learning-center/master/img/76.png)
+
+### Создаем новый токен, который будет отражать ценность на рынке
+
+```
+var BuilderTokenEmission = [{"constant":false,"inputs":[{"name":"_buildingCost","type":"uint256"}],"name":"setCost","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_owner","type":"address"}],"name":"delegate","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_proposal","type":"address"}],"name":"setProposal","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"string"},{"name":"_symbol","type":"string"},{"name":"_decimals","type":"uint8"},{"name":"_start_count","type":"uint256"}],"name":"create","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_cashflow","type":"address"}],"name":"setCashflow","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"buildingCost","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[],"name":"getLastContract","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"},{"name":"","type":"uint256"}],"name":"getContractsOf","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[{"name":"_buildingCost","type":"uint256"},{"name":"_cashflow","type":"address"},{"name":"_proposal","type":"address"}],"type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"name":"sender","type":"address"},{"indexed":true,"name":"instance","type":"address"}],"name":"Builded","type":"event"}];
+var builder = web3.eth.contract(BuilderTokenEmission).at(factory.getModule("Aira BuilderTokenEmission"));
+builder.create('Сoaching', 'C', 0, 100, {from: eth.accounts[0], gas: 1000000, value: builder.buildingCost()})
+var coaching_addr = builder.getLastContract()
+```
+
+![Урок 7 шаг 7](https://raw.githubusercontent.com/airalab/learning-center/master/img/77.png)
+![Урок 7 шаг 8](https://raw.githubusercontent.com/airalab/learning-center/master/img/78.png)
+
+### Проверяем количество лотов на рынке
+
+```
+market.size()
+```
+
+![Урок 7 шаг 9](https://raw.githubusercontent.com/airalab/learning-center/master/img/79.png)
+
+### Пробуем добавить лот
+
+```
+var DAOMarketRegulator = [{"constant":true,"inputs":[],"name":"shares","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_lot","type":"address"}],"name":"dealDone","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"credits","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[],"name":"sign","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[],"name":"kill","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_owner","type":"address"}],"name":"delegate","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"market","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_seller","type":"address"},{"name":"_sale","type":"address"},{"name":"_value","type":"uint256"},{"name":"_price","type":"uint256"}],"name":"append","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_asset","type":"address"},{"name":"_rule","type":"address"},{"name":"_count","type":"uint256"}],"name":"pollUp","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"core","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_asset","type":"address"},{"name":"_count","type":"uint256"}],"name":"pollDown","outputs":[],"type":"function"},{"inputs":[{"name":"_shares","type":"address"},{"name":"_core","type":"address"},{"name":"_market","type":"address"},{"name":"_dao_credits","type":"address"}],"type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"name":"sender","type":"address"},{"indexed":true,"name":"lot","type":"address"}],"name":"LotPlaced","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"_value","type":"uint256"}],"name":"DealDoneEmission","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_client","type":"address"},{"indexed":true,"name":"_agent","type":"address"}],"name":"MarketAgentSign","type":"event"}];
+var marketRegulator = web3.eth.contract(DAOMarketRegulator).at(DAOMarketRegulator_addr);
+marketRegulator.append(eth.accounts[0], coaching_addr, credits_addr, 1000, 5, {from:web3.eth.accounts[0], gas:900000})
+market.size()
+```
+
+![Урок 7 шаг 10](https://raw.githubusercontent.com/airalab/learning-center/master/img/710.png)
+![Урок 7 шаг 11](https://raw.githubusercontent.com/airalab/learning-center/master/img/711.png)
+
+### Добавляем лот в реестр DAO
+
+```
+var Core = [{"constant":true,"inputs":[],"name":"name","outputs":[{"name":"","type":"string"}],"type":"function"},{"constant":true,"inputs":[{"name":"_name","type":"string"}],"name":"getModule","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[{"name":"_module","type":"address"}],"name":"getModuleName","outputs":[{"name":"","type":"string"}],"type":"function"},{"constant":false,"inputs":[],"name":"kill","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"interfaceOf","outputs":[{"name":"","type":"string"}],"type":"function"},{"constant":true,"inputs":[],"name":"founder","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"string"}],"name":"removeModule","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_owner","type":"address"}],"name":"delegate","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"_module","type":"address"}],"name":"contains","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"firstModule","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[],"name":"description","outputs":[{"name":"","type":"string"}],"type":"function"},{"constant":true,"inputs":[{"name":"_name","type":"string"}],"name":"isConstant","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"string"},{"name":"_module","type":"address"},{"name":"_interface","type":"string"},{"name":"_constant","type":"bool"}],"name":"setModule","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"_current","type":"address"}],"name":"nextModule","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[{"name":"_name","type":"string"},{"name":"_description","type":"string"}],"type":"constructor"}];
+var core = eth.contract(Core).at(dao_addr)
+core.setModule('Сoaching token', coaching_addr, "github://airalab/core/token/TokenEmission.sol", true, {from:web3.eth.accounts[0], gas:300000})
+core.contains(coaching_addr)
+```
+
+![Урок 7 шаг 12](https://raw.githubusercontent.com/airalab/learning-center/master/img/712.png)
+![Урок 7 шаг 13](https://raw.githubusercontent.com/airalab/learning-center/master/img/713.png)
+
+### Снова добавляем лот
+
+```
+marketRegulator.append(eth.accounts[0], coaching_addr, credits_addr, 1000, 5, {from:web3.eth.accounts[0], gas:900000})
+market.size()
+```
+
+![Урок 7 шаг 14](https://raw.githubusercontent.com/airalab/learning-center/master/img/714.png)
+![Урок 7 шаг 15](https://raw.githubusercontent.com/airalab/learning-center/master/img/715.png)
+
+### Запускаем выполнение урока передав адрес Market
+
+```
+var seventhLesson_addr = '0x2c7b5fb3066bbbdd22f6c55bc29a735c90f9c6ab';
+var SeventhLesson = [{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"accountOf","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"ownerAir","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_market","type":"address"},{"name":"_regulator","type":"address"}],"name":"execute","outputs":[],"type":"function"},{"inputs":[{"name":"_ownerAir","type":"address"}],"type":"constructor"}];
+var seventhLesson = web3.eth.contract(SeventhLesson).at(seventhLesson_addr);
+seventhLesson.execute(market_addr, DAOMarketRegulator_addr, {from:web3.eth.accounts[0], gas:900000})
+```
+
+![Урок 7 шаг 716](https://raw.githubusercontent.com/airalab/learning-center/master/img/716.png)
+
+Проверяем баланс air
+
+![Урок 7 шаг 717](https://raw.githubusercontent.com/airalab/learning-center/master/img/717.png)
