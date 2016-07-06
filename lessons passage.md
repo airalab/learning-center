@@ -354,7 +354,7 @@ market.size()
 ```
 var DAOMarketRegulator = [{"constant":true,"inputs":[],"name":"shares","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_lot","type":"address"}],"name":"dealDone","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"credits","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[],"name":"sign","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[],"name":"kill","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_owner","type":"address"}],"name":"delegate","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"market","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[{"name":"_asset","type":"address"}],"name":"currentRuleOf","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_seller","type":"address"},{"name":"_sale","type":"address"},{"name":"_value","type":"uint256"},{"name":"_price","type":"uint256"}],"name":"append","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_asset","type":"address"},{"name":"_rule","type":"address"},{"name":"_count","type":"uint256"}],"name":"pollUp","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"core","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_asset","type":"address"},{"name":"_count","type":"uint256"}],"name":"pollDown","outputs":[],"type":"function"},{"inputs":[{"name":"_shares","type":"address"},{"name":"_core","type":"address"},{"name":"_market","type":"address"},{"name":"_dao_credits","type":"address"}],"type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"name":"sender","type":"address"},{"indexed":true,"name":"lot","type":"address"}],"name":"LotPlaced","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"_value","type":"uint256"}],"name":"DealDoneEmission","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_client","type":"address"},{"indexed":true,"name":"_agent","type":"address"}],"name":"MarketAgentSign","type":"event"}];
 var marketRegulator = web3.eth.contract(DAOMarketRegulator).at(DAOMarketRegulator_addr);
-marketRegulator.append(eth.accounts[0], coaching_addr, credits_addr, 1000, 5, {from:web3.eth.accounts[0], gas:900000})
+marketRegulator.append(eth.accounts[0], coaching_addr, 1000, 5, {from:web3.eth.accounts[0], gas:900000})
 market.size()
 ```
 
@@ -495,3 +495,94 @@ ninthLesson.execute(DAOMarketRegulator_addr, credits_addr, marketRuleConstant_ad
 Проверяем баланс air
 
 ![Урок 9 шаг 97](https://raw.githubusercontent.com/airalab/learning-center/master/img/97.png)
+
+## Урок 10
+
+### Создаем 4 новых токена
+
+```
+var BuilderTokenEmission = [{"constant":false,"inputs":[{"name":"_buildingCost","type":"uint256"}],"name":"setCost","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_owner","type":"address"}],"name":"delegate","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_proposal","type":"address"}],"name":"setProposal","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"string"},{"name":"_symbol","type":"string"},{"name":"_decimals","type":"uint8"},{"name":"_start_count","type":"uint256"}],"name":"create","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_cashflow","type":"address"}],"name":"setCashflow","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"buildingCost","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[],"name":"getLastContract","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"},{"name":"","type":"uint256"}],"name":"getContractsOf","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[{"name":"_buildingCost","type":"uint256"},{"name":"_cashflow","type":"address"},{"name":"_proposal","type":"address"}],"type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"name":"sender","type":"address"},{"indexed":true,"name":"instance","type":"address"}],"name":"Builded","type":"event"}];
+var builder = web3.eth.contract(BuilderTokenEmission).at(factory.getModule("Aira BuilderTokenEmission"));
+
+builder.create('Assset 1', 'A1', 0, 100, {from: eth.accounts[0], gas: 1000000, value: builder.buildingCost()})
+var assset1_addr = builder.getLastContract()
+
+builder.create('Assset 2', 'A2', 0, 100, {from: eth.accounts[0], gas: 1000000, value: builder.buildingCost()})
+var assset2_addr = builder.getLastContract()
+
+builder.create('Service 1', 'S1', 0, 100, {from: eth.accounts[0], gas: 1000000, value: builder.buildingCost()})
+var service1_addr = builder.getLastContract()
+
+builder.create('Service 2', 'S2', 0, 100, {from: eth.accounts[0], gas: 1000000, value: builder.buildingCost()})
+var service2_addr = builder.getLastContract()
+service2_addr
+```
+
+![Урок 10 шаг 101](https://raw.githubusercontent.com/airalab/learning-center/master/img/101.png)
+![Урок 10 шаг 102](https://raw.githubusercontent.com/airalab/learning-center/master/img/102.png)
+![Урок 10 шаг 103](https://raw.githubusercontent.com/airalab/learning-center/master/img/103.png)
+![Урок 10 шаг 104](https://raw.githubusercontent.com/airalab/learning-center/master/img/104.png)
+![Урок 10 шаг 105](https://raw.githubusercontent.com/airalab/learning-center/master/img/105.png)
+![Урок 10 шаг 106](https://raw.githubusercontent.com/airalab/learning-center/master/img/106.png)
+![Урок 10 шаг 107](https://raw.githubusercontent.com/airalab/learning-center/master/img/107.png)
+![Урок 10 шаг 108](https://raw.githubusercontent.com/airalab/learning-center/master/img/108.png)
+
+### Добавляем новые лоты в реестр DAO, чтоб можно было ими торговать на рынке
+
+```
+var Core = [{"constant":true,"inputs":[],"name":"name","outputs":[{"name":"","type":"string"}],"type":"function"},{"constant":true,"inputs":[{"name":"_name","type":"string"}],"name":"getModule","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[{"name":"_module","type":"address"}],"name":"getModuleName","outputs":[{"name":"","type":"string"}],"type":"function"},{"constant":false,"inputs":[],"name":"kill","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"interfaceOf","outputs":[{"name":"","type":"string"}],"type":"function"},{"constant":true,"inputs":[],"name":"founder","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"string"}],"name":"removeModule","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_owner","type":"address"}],"name":"delegate","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"_module","type":"address"}],"name":"contains","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"firstModule","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[],"name":"description","outputs":[{"name":"","type":"string"}],"type":"function"},{"constant":true,"inputs":[{"name":"_name","type":"string"}],"name":"isConstant","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"string"},{"name":"_module","type":"address"},{"name":"_interface","type":"string"},{"name":"_constant","type":"bool"}],"name":"setModule","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"_current","type":"address"}],"name":"nextModule","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[{"name":"_name","type":"string"},{"name":"_description","type":"string"}],"type":"constructor"}];
+var core = eth.contract(Core).at(dao_addr)
+
+core.setModule('Assset 1 token', assset1_addr, "github://airalab/core/token/TokenEmission.sol", true, {from:web3.eth.accounts[0], gas:300000})
+core.contains(assset1_addr)
+
+core.setModule('Assset 2 token', assset2_addr, "github://airalab/core/token/TokenEmission.sol", true, {from:web3.eth.accounts[0], gas:300000})
+core.contains(assset2_addr)
+
+core.setModule('Service 1 token', service1_addr, "github://airalab/core/token/TokenEmission.sol", true, {from:web3.eth.accounts[0], gas:300000})
+core.contains(service1_addr)
+
+core.setModule('Service 2 token', service2_addr, "github://airalab/core/token/TokenEmission.sol", true, {from:web3.eth.accounts[0], gas:300000})
+core.contains(service2_addr)
+```
+
+![Урок 10 шаг 109](https://raw.githubusercontent.com/airalab/learning-center/master/img/109.png)
+![Урок 10 шаг 1010](https://raw.githubusercontent.com/airalab/learning-center/master/img/1010.png)
+![Урок 10 шаг 1011](https://raw.githubusercontent.com/airalab/learning-center/master/img/1011.png)
+![Урок 10 шаг 1012](https://raw.githubusercontent.com/airalab/learning-center/master/img/1012.png)
+![Урок 10 шаг 1013](https://raw.githubusercontent.com/airalab/learning-center/master/img/1013.png)
+![Урок 10 шаг 1014](https://raw.githubusercontent.com/airalab/learning-center/master/img/1014.png)
+![Урок 10 шаг 1015](https://raw.githubusercontent.com/airalab/learning-center/master/img/1015.png)
+![Урок 10 шаг 1016](https://raw.githubusercontent.com/airalab/learning-center/master/img/1016.png)
+
+### Добавляем на рынок по лоту каждого токена
+
+```
+var DAOMarketRegulator = [{"constant":true,"inputs":[],"name":"shares","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_lot","type":"address"}],"name":"dealDone","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"credits","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[],"name":"sign","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[],"name":"kill","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_owner","type":"address"}],"name":"delegate","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"market","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[{"name":"_asset","type":"address"}],"name":"currentRuleOf","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_seller","type":"address"},{"name":"_sale","type":"address"},{"name":"_value","type":"uint256"},{"name":"_price","type":"uint256"}],"name":"append","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_asset","type":"address"},{"name":"_rule","type":"address"},{"name":"_count","type":"uint256"}],"name":"pollUp","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"core","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_asset","type":"address"},{"name":"_count","type":"uint256"}],"name":"pollDown","outputs":[],"type":"function"},{"inputs":[{"name":"_shares","type":"address"},{"name":"_core","type":"address"},{"name":"_market","type":"address"},{"name":"_dao_credits","type":"address"}],"type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"name":"sender","type":"address"},{"indexed":true,"name":"lot","type":"address"}],"name":"LotPlaced","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"_value","type":"uint256"}],"name":"DealDoneEmission","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_client","type":"address"},{"indexed":true,"name":"_agent","type":"address"}],"name":"MarketAgentSign","type":"event"}];
+var marketRegulator = web3.eth.contract(DAOMarketRegulator).at(DAOMarketRegulator_addr);
+marketRegulator.append(eth.accounts[0], assset1_addr, 1, 2, {from:web3.eth.accounts[0], gas:900000})
+marketRegulator.append(eth.accounts[0], assset2_addr, 2, 1, {from:web3.eth.accounts[0], gas:900000})
+marketRegulator.append(eth.accounts[0], service1_addr, 1, 5, {from:web3.eth.accounts[0], gas:900000})
+marketRegulator.append(eth.accounts[0], service2_addr, 4, 2, {from:web3.eth.accounts[0], gas:900000})
+```
+
+![Урок 10 шаг 1017](https://raw.githubusercontent.com/airalab/learning-center/master/img/1017.png)
+
+### Запускаем выполнение урока передав адрес контракта Market
+
+```
+var tenthLesson_addr = '0x7005135930b3e3767ad1a6b4ac250f7cad5b8623';
+var TenthLesson = [{"constant":false,"inputs":[{"name":"_market","type":"address"}],"name":"execute","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"accountOf","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"ownerAir","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[{"name":"_ownerAir","type":"address"}],"type":"constructor"}];
+var tenthLesson = web3.eth.contract(TenthLesson).at(tenthLesson_addr);
+tenthLesson.execute(market_addr, {from:web3.eth.accounts[0], gas:900000})
+```
+
+![Урок 10 шаг 1018](https://raw.githubusercontent.com/airalab/learning-center/master/img/1018.png)
+
+Проверяем баланс air
+
+![Урок 10 шаг 1019](https://raw.githubusercontent.com/airalab/learning-center/master/img/1019.png)
+
+
+
+
