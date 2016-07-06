@@ -264,7 +264,7 @@ TO DO: Eugene примеры запросов на добавление лото
 
 #### Пример выполнения
 - TO DO: Eugene пример с Ethereum wallet
-- TO DO: vol4tim пример с geth
+- [Пример выполнения урока с geth](https://github.com/airalab/learning-center/blob/master/lessons%20passage.md#Урок-9)
 
 ## Урок 10: Увеличивайте ликвидность ваших внутренних токенов ДАО (кредитов)
 > Уровень сложности урока:  средний.
