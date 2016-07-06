@@ -40,8 +40,8 @@ var shares_addr = core.getModule('Mars colony shares');
 ### Обращаемся к "first lesson->Execute" и передаем адрес dao в ответ получаем 50air
 
 ```
-var firstLesson_addr = '0x69531c90a835a80b161a424516560978126120ca';
-var FirstLesson = [{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"accountOf","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"ownerAir","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_dao","type":"address"},{"name":"_shares","type":"address"},{"name":"_shares_name","type":"string"}],"name":"execute","outputs":[],"type":"function"},{"inputs":[{"name":"_ownerAir","type":"address"}],"type":"constructor"}];
+var firstLesson_addr = '0xb62138cf11f4c1d7248afe82acb8681406211c85';
+var FirstLesson = [{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"accountOf","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":false,"inputs":[{"name":"_dao","type":"address"},{"name":"_shares","type":"address"},{"name":"_shares_name","type":"string"}],"name":"execute","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"emissionRegulator","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[{"name":"_emissionRegulator","type":"address"}],"type":"constructor"}];
 var firstLesson = web3.eth.contract(FirstLesson).at(firstLesson_addr);
 firstLesson.execute(dao_addr, shares_addr, "Mars colony shares", {from:web3.eth.accounts[0], gas:900000})
 ```
@@ -67,8 +67,8 @@ shares.approve('0xc9b6815b47a14b20599ea814c2fb10260d1abdb9', 1, {from:web3.eth.a
 ### Обращаемся к "second lesson->Execute" и передаем адрес dao в ответ получаем 50air
 
 ```
-var secondLesson_addr = '0xefb4eb0f319bdcd21bc04eaa0d47801fca5f257d';
-var SecondLesson = [{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"accountOf","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":false,"inputs":[{"name":"_dao","type":"address"},{"name":"_shares_name","type":"string"}],"name":"execute","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"ownerAir","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[],"name":"airalab_learning_center","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[{"name":"_ownerAir","type":"address"},{"name":"_airalab_learning_center","type":"address"}],"type":"constructor"}];
+var secondLesson_addr = '0x62808bc94e156f45a9f8e7e41ba969acfc467bed';
+var SecondLesson = [{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"accountOf","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":false,"inputs":[{"name":"_dao","type":"address"},{"name":"_shares_name","type":"string"}],"name":"execute","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"emissionRegulator","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[],"name":"airalab_learning_center","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[{"name":"_emissionRegulator","type":"address"},{"name":"_airalab_learning_center","type":"address"}],"type":"constructor"}];
 var secondLesson = web3.eth.contract(SecondLesson).at(secondLesson_addr);
 secondLesson.execute(dao_addr, "Mars colony shares", {from:web3.eth.accounts[0], gas:900000})
 ```
@@ -104,8 +104,8 @@ eth.sendTransaction({from:web3.eth.accounts[0], to:credits_addr, value: web3.toW
 ### Запускаем выполнение урока передав адрес токена
 
 ```
-var thirdLesson_addr = '0x055fde2bd7c908d2a2d15e98fe5b0260fd1ae8c8';
-var ThirdLesson = [{"constant":false,"inputs":[{"name":"_token","type":"address"}],"name":"execute","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"accountOf","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"ownerAir","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[],"name":"airalab_learning_center","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[{"name":"_ownerAir","type":"address"}],"type":"constructor"}];
+var thirdLesson_addr = '0xedb74faac6cf598fac93d5871bef07e3c7684193';
+var ThirdLesson = [{"constant":false,"inputs":[{"name":"_token","type":"address"}],"name":"execute","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"accountOf","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"emissionRegulator","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[],"name":"airalab_learning_center","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[{"name":"_emissionRegulator","type":"address"}],"type":"constructor"}];
 var thirdLesson = web3.eth.contract(ThirdLesson).at(thirdLesson_addr);
 thirdLesson.execute(credits_addr, {from:web3.eth.accounts[0], gas:900000})
 ```
@@ -176,8 +176,8 @@ cashflow.fund(proposal_addr, 1, {from:web3.eth.accounts[0], gas:3000000});
 ### Запускаем выполнение урока передав адрес proposal и сумму
 
 ```
-var fourthLesson_addr = '0x6b19f7e198710a763a35258a66ab6626c5a3f3a9';
-var FourthLesson = [{"constant":false,"inputs":[{"name":"_proposal","type":"address"},{"name":"_total","type":"uint256"}],"name":"execute","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"accountOf","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"ownerAir","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[{"name":"_ownerAir","type":"address"}],"type":"constructor"}];
+var fourthLesson_addr = '0x0eb947dd9c3dd2251a8dcac5409474fe0c31373b';
+var FourthLesson = [{"constant":false,"inputs":[{"name":"_proposal","type":"address"},{"name":"_total","type":"uint256"}],"name":"execute","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"accountOf","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"emissionRegulator","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[{"name":"_emissionRegulator","type":"address"}],"type":"constructor"}];
 var fourthLesson = web3.eth.contract(FourthLesson).at(fourthLesson_addr);
 fourthLesson.execute(proposal_addr, 1, {from:web3.eth.accounts[0], gas:900000})
 ```
@@ -241,8 +241,8 @@ shares.balanceOf(web3.eth.accounts[0])
 ### Запускаем выполнение урока передав адрес shareSale
 
 ```
-var fifthLesson_addr = '0x2708fa55e775bfd988484ea5f2e52e0859a1fd2a';
-var FifthLesson = [{"constant":false,"inputs":[{"name":"_shareSale","type":"address"}],"name":"execute","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"accountOf","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"ownerAir","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[{"name":"_ownerAir","type":"address"}],"type":"constructor"}];
+var fifthLesson_addr = '0xb07a93ae43b3219eee713825dc381f45ea6dc912';
+var FifthLesson = [{"constant":false,"inputs":[{"name":"_shareSale","type":"address"}],"name":"execute","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"accountOf","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"emissionRegulator","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[{"name":"_emissionRegulator","type":"address"}],"type":"constructor"}];
 var fifthLesson = web3.eth.contract(FifthLesson).at(fifthLesson_addr);
 fifthLesson.execute(shareSale_addr, {from:web3.eth.accounts[0], gas:900000})
 ```
@@ -281,8 +281,8 @@ market.append(eth.accounts[0], credits_addr, shares_addr, 500, 1, {from:web3.eth
 ### Запускаем выполнение урока передав адрес Market
 
 ```
-var sixthLesson_addr = '0xd898903fd2475705689c8830a887bc5cb9d19022';
-var SixthLesson = [{"constant":false,"inputs":[{"name":"_market","type":"address"}],"name":"execute","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"accountOf","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"ownerAir","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[{"name":"_ownerAir","type":"address"}],"type":"constructor"}];
+var sixthLesson_addr = '0xefd66212e57db8987ae5030733bd30ef56d64b66';
+var SixthLesson = [{"constant":false,"inputs":[{"name":"_market","type":"address"}],"name":"execute","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"accountOf","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"emissionRegulator","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[{"name":"_emissionRegulator","type":"address"}],"type":"constructor"}];
 var sixthLesson = web3.eth.contract(SixthLesson).at(sixthLesson_addr);
 sixthLesson.execute(market_addr, {from:web3.eth.accounts[0], gas:900000})
 ```
@@ -386,8 +386,8 @@ market.size()
 ### Запускаем выполнение урока передав адрес Market и адрес DAOMarketRegulator
 
 ```
-var seventhLesson_addr = '0x2c7b5fb3066bbbdd22f6c55bc29a735c90f9c6ab';
-var SeventhLesson = [{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"accountOf","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"ownerAir","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_market","type":"address"},{"name":"_regulator","type":"address"}],"name":"execute","outputs":[],"type":"function"},{"inputs":[{"name":"_ownerAir","type":"address"}],"type":"constructor"}];
+var seventhLesson_addr = '0xef8ba9c5782afdd45df8f9aa163f52d4b1b20e41';
+var SeventhLesson = [{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"accountOf","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"emissionRegulator","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_market","type":"address"},{"name":"_regulator","type":"address"}],"name":"execute","outputs":[],"type":"function"},{"inputs":[{"name":"_emissionRegulator","type":"address"}],"type":"constructor"}];
 var seventhLesson = web3.eth.contract(SeventhLesson).at(seventhLesson_addr);
 seventhLesson.execute(market_addr, DAOMarketRegulator_addr, {from:web3.eth.accounts[0], gas:900000})
 ```
@@ -427,8 +427,8 @@ var DAOMarketAgent_addr = '0x2ca27392fe7e5851893543a9db5647c3f7317dc4';
 ### Запускаем выполнение урока передав адрес Market и адрес DAOMarketAgent
 
 ```
-var eighthLesson_addr = '0x1ffde81ec93a7e84f0102c13e897caedf5489637';
-var EighthLesson = [{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"accountOf","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"ownerAir","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_market","type":"address"},{"name":"_agent","type":"address"}],"name":"execute","outputs":[],"type":"function"},{"inputs":[{"name":"_ownerAir","type":"address"}],"type":"constructor"}];
+var eighthLesson_addr = '0x106c4cad1fb1921d3a3347b353eb4fc576ee5fe3';
+var EighthLesson = [{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"accountOf","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"emissionRegulator","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_market","type":"address"},{"name":"_agent","type":"address"}],"name":"execute","outputs":[],"type":"function"},{"inputs":[{"name":"_emissionRegulator","type":"address"}],"type":"constructor"}];
 var eighthLesson = web3.eth.contract(EighthLesson).at(eighthLesson_addr);
 eighthLesson.execute(market_addr, DAOMarketAgent_addr, {from:web3.eth.accounts[0], gas:900000})
 ```
@@ -484,8 +484,8 @@ credits.delegate(DAOMarketRegulator_addr, {from:web3.eth.accounts[0], gas:900000
 ### Запускаем выполнение урока передав адрес DAOMarketRegulator, DAO credits и адрес MarketRuleConstant
 
 ```
-var ninthLesson_addr = '0xef1dc9ba6d17015c19b57c9927358ee2e0f76a1c';
-var NinthLesson = [{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"accountOf","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"ownerAir","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_regulator","type":"address"},{"name":"_asset","type":"address"},{"name":"_rule","type":"address"}],"name":"execute","outputs":[],"type":"function"},{"inputs":[{"name":"_ownerAir","type":"address"}],"type":"constructor"}];
+var ninthLesson_addr = '0x92bfe325d109ec668752d92c54d4bf3678279607';
+var NinthLesson = [{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"accountOf","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"emissionRegulator","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_regulator","type":"address"},{"name":"_asset","type":"address"},{"name":"_rule","type":"address"}],"name":"execute","outputs":[],"type":"function"},{"inputs":[{"name":"_emissionRegulator","type":"address"}],"type":"constructor"}];
 var ninthLesson = web3.eth.contract(NinthLesson).at(ninthLesson_addr);
 ninthLesson.execute(DAOMarketRegulator_addr, credits_addr, marketRuleConstant_addr, {from:web3.eth.accounts[0], gas:900000})
 ```
@@ -571,8 +571,8 @@ marketRegulator.append(eth.accounts[0], service2_addr, 4, 2, {from:web3.eth.acco
 ### Запускаем выполнение урока передав адрес контракта Market
 
 ```
-var tenthLesson_addr = '0x7005135930b3e3767ad1a6b4ac250f7cad5b8623';
-var TenthLesson = [{"constant":false,"inputs":[{"name":"_market","type":"address"}],"name":"execute","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"accountOf","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"ownerAir","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[{"name":"_ownerAir","type":"address"}],"type":"constructor"}];
+var tenthLesson_addr = '0x72655afc8dcba6f43874d157bb619d61c526b90e';
+var TenthLesson = [{"constant":false,"inputs":[{"name":"_market","type":"address"}],"name":"execute","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"accountOf","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"emissionRegulator","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[{"name":"_emissionRegulator","type":"address"}],"type":"constructor"}];
 var tenthLesson = web3.eth.contract(TenthLesson).at(tenthLesson_addr);
 tenthLesson.execute(market_addr, {from:web3.eth.accounts[0], gas:900000})
 ```

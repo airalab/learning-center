@@ -6,8 +6,8 @@ contract SecondLesson is Lesson {
     
 	address public airalab_learning_center;
 	
-	function SecondLesson(address _ownerAir, address _airalab_learning_center) 
-		     Lesson(_ownerAir) {
+	function SecondLesson(address _emissionRegulator, address _airalab_learning_center) 
+		     Lesson(_emissionRegulator) {
 		airalab_learning_center = _airalab_learning_center;
     }
 	
@@ -16,7 +16,7 @@ contract SecondLesson is Lesson {
 		// проверяем что дан approve 1 акции
 		TokenEmission shares = TokenEmission(Core(_dao).getModule(_shares_name));
 		if (shares.allowance(msg.sender, airalab_learning_center) == 1) {			
-			ownerAir.deal(msg.sender, 50);
+			emissionRegulator.deal(msg.sender, 50);
 			accountOf[msg.sender] = true;
 		}
     }

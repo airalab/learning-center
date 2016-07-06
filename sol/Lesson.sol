@@ -1,11 +1,11 @@
-import './OwnerAir.sol';
+import './EmissionRegulator.sol';
 
 contract Lesson {
     
-    OwnerAir public ownerAir;
+    EmissionRegulator public emissionRegulator;
     mapping(address => bool) public accountOf;
     
-    function Lesson(address _ownerAir) {
-        ownerAir = OwnerAir(_ownerAir);
+    function Lesson(address _emissionRegulator) {
+        emissionRegulator = EmissionRegulator(_emissionRegulator);
     }
 }

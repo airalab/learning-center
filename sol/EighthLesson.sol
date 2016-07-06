@@ -3,8 +3,8 @@ import '../market/Market.sol';
 import '../market/DAOMarketAgent.sol';
 
 contract EighthLesson is Lesson {
-    function EighthLesson(address _ownerAir)
-             Lesson(_ownerAir)
+    function EighthLesson(address _emissionRegulator)
+             Lesson(_emissionRegulator)
     {}
 	
     function execute(address _market, address _agent) {
@@ -12,7 +12,7 @@ contract EighthLesson is Lesson {
 		Market market = Market(_market);
 		DAOMarketAgent agent = DAOMarketAgent(_agent);
 		if (agent.regulator().market() == market) {
-			ownerAir.deal(msg.sender, 100);
+			emissionRegulator.deal(msg.sender, 100);
 			accountOf[msg.sender] = true;
 		}
     }

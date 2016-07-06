@@ -3,8 +3,8 @@ import '../market/Market.sol';
 import '../market/Lot.sol';
 
 contract TenthLesson is Lesson {
-    function TenthLesson(address _ownerAir)
-             Lesson(_ownerAir)
+    function TenthLesson(address _emissionRegulator)
+             Lesson(_emissionRegulator)
     {}
 	
 	address[] lots;
@@ -29,7 +29,7 @@ contract TenthLesson is Lesson {
 			}
 		}
 		if (lots.length >= 5) {
-			ownerAir.deal(msg.sender, 100);
+			emissionRegulator.deal(msg.sender, 100);
 			accountOf[msg.sender] = true;
 		}
 		delete lots;
