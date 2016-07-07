@@ -1,16 +1,17 @@
 import './Lesson.sol';
-import '../cashflow/ShareSale.sol';
+import '../dao/Core.sol';
 
 contract FifthLesson is Lesson {	
 	function FifthLesson(address _emissionRegulator) 
 		     Lesson(_emissionRegulator)
 	{}
 	
-    function execute(address _shareSale) {
+    function execute(string _token_name, address _dao) {
 		if (accountOf[msg.sender]) throw;
-		ShareSale shareSale = ShareSale(_shareSale);
-		if (shareSale.closed() > 0) {			
-			emissionRegulator.deal(msg.sender, 100);
+		Core core = Core(_dao);
+		var token = core.getModule(_token_name);
+		if (token > 0) {			
+			emissionRegulator.deal(msg.sender, 50);
 			accountOf[msg.sender] = true;
 		}
     }

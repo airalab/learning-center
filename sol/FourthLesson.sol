@@ -1,16 +1,15 @@
 import './Lesson.sol';
-import '../cashflow/Proposal.sol';
+import '../cashflow/ShareSale.sol';
 
 contract FourthLesson is Lesson {	
 	function FourthLesson(address _emissionRegulator) 
 		     Lesson(_emissionRegulator)
 	{}
 	
-    function execute(address _proposal, uint _total) {
+    function execute(address _shareSale) {
 		if (accountOf[msg.sender]) throw;
-		// проверяем что баланс 5Ether
-		Proposal proposal = Proposal(_proposal);
-		if (proposal.targetValue() == _total && proposal.closed() > 0) {			
+		ShareSale shareSale = ShareSale(_shareSale);
+		if (shareSale.closed() > 0) {			
 			emissionRegulator.deal(msg.sender, 100);
 			accountOf[msg.sender] = true;
 		}
