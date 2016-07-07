@@ -16,8 +16,7 @@
 Добыв или получив от команды Airalab 0.01 ether для первой транзакции в сеть можно обратиться к контракту `Lesson 0` в тестовой сети, который отправит вам в ответ **5 эфиров**. Этой суммы будет достаточно для выполнения всех 11 уроков.
 
 #### Пример выполнения
-- TO DO: Eugene с Ethereum wallet
-- [Пример выполнения урока в консольном клиенте сети Etherum  geth](https://github.com/airalab/learning-center/blob/master/lessons%20passage.md#Урок-0)
+- [Пример выполнения урока в консольном клиенте сети Ethereum  geth](https://github.com/airalab/learning-center/blob/master/lessons%20passage.md#Урок-0)
 
 ## Урок 1: создайте ядро децентрализованной автономной организации
 > Уровень сложности урока: низкий.
@@ -61,8 +60,7 @@ builder.create(_dao_name, _dao_description, _shares_name, _shares_symbol, _share
 Необходимо обратиться к контракту `Lesson 1` для вызова функции `Execute()` указав адрес контракта ядра ДАО `DAO core`. Контракт `Lesson 1` проверит совпадает ли переменная `owner` в контракте `DAO core` с вашим адресом отправителя транзакции.
 
 #### Пример выполнения
-- TO DO: Eugene с Ethereum wallet
-- [Пример выполнения урока с geth](https://github.com/airalab/learning-center/blob/master/lessons%20passage.md#Урок-1)
+- [Пример выполнения урока в консольном клиенте сети Ethereum  geth](https://github.com/airalab/learning-center/blob/master/lessons%20passage.md#Урок-1)
 
 ## Урок 2: Распределите акции вашей организации
 > Уровень сложности урока: низкий.
@@ -83,8 +81,7 @@ builder.create(_dao_name, _dao_description, _shares_name, _shares_symbol, _share
 Чтобы успешно выполнить данный урок необходимо разрешить снятие  1 акции `Shareholder token` адресу `Airalab learning center` и обратиться к контракту `Lesson 2` для вызова функции `Execute()`.
 
 #### Пример выполнения
-- TO DO: Eugene с Ethereum wallet
-- [Пример выполнения урока с geth](https://github.com/airalab/learning-center/blob/master/lessons%20passage.md#Урок-2)
+- [Пример выполнения урока в консольном клиенте сети Ethereum  geth](https://github.com/airalab/learning-center/blob/master/lessons%20passage.md#Урок-2)
 
 ## Урок 3: Используйте общий контракт для хранения эфиров.
 > Уровень сложности урока: низкий.
@@ -109,8 +106,7 @@ builder.create(_dao_name, _dao_description, _shares_name, _shares_symbol, _share
 - обратиться к контракту `Lesson 3` для вызова функции `Execute()` указав `адрес контракта для хранения эфиров` и  имея **0,1** эфир на счету своего аккаунта на контракте.
 
 #### Пример выполнения
-- TO DO: Eugene пример с Ethereum wallet
-- [Пример выполнения урока с geth](https://github.com/airalab/learning-center/blob/master/lessons%20passage.md#Урок-3)
+- [Пример выполнения урока в консольном клиенте сети Ethereum  geth](https://github.com/airalab/learning-center/blob/master/lessons%20passage.md#Урок-3)
 
 
 ## Урок 4: Эмиссируйте новые акции лично привлекая финансирование в эфирах.
@@ -129,7 +125,7 @@ builder.create(_dao_name, _dao_description, _shares_name, _shares_symbol, _share
 Создатель ДАО на данном этапе может лично эмиссировать дополнительные акции на свой счёт. Это может быть полезно в том, случаи если к примеру основатель лично договорился с первым(ыми) инвесторами о вхождении их в состав акционеров за счёт привлечения финансирования с их стороны. Чтобы выполнить данный процесс безопасно для обеих сторон можно обратиться к `DAO factory` и найти сборщик с названием [BuilderShareSale](https://github.com/airalab/core/wiki/API-Reference#buildersharesale), адрес `0x56c58efbf174dc82b4311a68b84bdfd5db13a3db`.
 
 **При обращении к сборщику необходимо указать:**
-- адрес контракта [CashFlow](https://github.com/airalab/core/wiki/API-Reference#cashflow)
+- адрес получателя `target`
 - стоимость одной акции в `Wei`
 
 **После создания контракта `ShareSale` необходимо:**
@@ -144,8 +140,7 @@ builder.create(_dao_name, _dao_description, _shares_name, _shares_symbol, _share
 Чтобы успешно выполнить данный урок необходимо выполнить продажу токенов акций за эфиры, после чего обратиться к контракту `Lesson 4` передав адрес контракта `ShareSale`.
 
 #### Пример выполнения
-- TO DO: Eugene пример с Ethereum wallet
-- [Пример выполнения урока с geth](https://github.com/airalab/learning-center/blob/master/lessons%20passage.md#Урок-5)
+- [Пример выполнения урока в консольном клиенте сети Ethereum  geth](https://github.com/airalab/learning-center/blob/master/lessons%20passage.md#Урок-5)
 
 ## Урок 5: Подготовьтесь к созданию внутреннего рынка ДАО
 > Уровень сложности урока: низкий.
@@ -160,7 +155,6 @@ builder.create(_dao_name, _dao_description, _shares_name, _shares_symbol, _share
 Чтобы успешно выполнить данный урок необходимо обратиться к контракту `Lesson 5` передав название созданного токена `_name` и адрес контракта `DAO core`. Обратите внимание, что для успешного прохождения урока необходимо, чтобы владельцем созданного токена внутренних кредитов организации (переменная `owner`) был адрес, с которого вы обращаетесь.
 
 #### Пример выполнения
-- TO DO: Eugene пример с Ethereum wallet
 - TO DO: vol4tim пример с geth
 
 
@@ -183,8 +177,6 @@ builder.create(_dao_name, _dao_description, _shares_name, _shares_symbol, _share
 - лот на продажу **1 000** токенов акций организации за **500 credits**;
 - лот на покупку **500 credits** за **1 эфир**;
 
-TO DO: Eugene примеры запросов на добавление лотов на рынке (полная инструкция с всеми необходимыми шагами)
-
 
 ## Проверка умений
 > Успешное выполнение урока в официальной сети даст: 100 `air`
@@ -193,7 +185,6 @@ TO DO: Eugene примеры запросов на добавление лото
 > Важно: на вашем рынке должны быть минимум 2 лота.
 
 ### Пример выполнения
-- TO DO: Eugene пример с Ethereum wallet
 - [Пример выполнения урока с geth](https://github.com/airalab/learning-center/blob/master/lessons%20passage.md#Урок-6)
 
 ## Урок 7: Добавьте регулятора внутреннего рынка ДАО
@@ -221,8 +212,7 @@ TO DO: Eugene примеры запросов на добавление лото
 Для прохождения данного урока, необходимо обратиться к контракту `Lesson 7`, для вызова функции `Execute()` указав `адрес рынка`.
 
 ### Пример выполнения
-- TO DO: Eugene пример с Ethereum wallet
-- [Пример выполнения урока с geth](https://github.com/airalab/learning-center/blob/master/lessons%20passage.md#Урок-7)
+- [Пример выполнения урока в консольном клиенте сети Ethereum  geth](https://github.com/airalab/learning-center/blob/master/lessons%20passage.md#Урок-7)
 
 ## Урок 8: Добавьте первого агента рынка
 > Уровень сложности урока: средний.
@@ -238,8 +228,7 @@ TO DO: Eugene примеры запросов на добавление лото
 Для прохождения данного урока, необходимо обратиться к контракту `Lesson 8`, для вызова функции `Execute()` указав `адрес контракта агента` и `адрес контракта рынка`.
 
 ### Пример выполнения
-- TO DO: Eugene пример с Ethereum wallet
-- [Пример выполнения урока с geth](https://github.com/airalab/learning-center/blob/master/lessons%20passage.md#Урок-8)
+- [Пример выполнения урока в консольном клиенте сети Ethereum  geth](https://github.com/airalab/learning-center/blob/master/lessons%20passage.md#Урок-8)
 
 ## Урок 9: Добавьте регулятора эмиссии кредитов.
 > Уровень сложности урока: высокий.
@@ -263,8 +252,7 @@ TO DO: Eugene примеры запросов на добавление лото
 Для того, чтобы успешно пройти урок необходимо  обратиться к контракту `Lesson 9`, для вызова функции `Execute()` указав `адрес контракта рынка`.
 
 #### Пример выполнения
-- TO DO: Eugene пример с Ethereum wallet
-- [Пример выполнения урока с geth](https://github.com/airalab/learning-center/blob/master/lessons%20passage.md#Урок-9)
+- [Пример выполнения урока в консольном клиенте сети Ethereum  geth](https://github.com/airalab/learning-center/blob/master/lessons%20passage.md#Урок-9)
 
 ## Урок 10: Увеличивайте ликвидность ваших внутренних токенов ДАО (кредитов)
 > Уровень сложности урока:  средний.
@@ -272,7 +260,9 @@ TO DO: Eugene примеры запросов на добавление лото
 Помните, что главная задача любой организации - это создавать ценность для мира. Еще лучше если эта ценность будет ликвидна на внешних рынках. Ценность вашей организации теперь отражается внутренним токеном, а значит чем активнее рынок ДАО, чем больше сделок и больше интересных предложений на внутреннем рынке, тем ценнее токен, за который можно приобрести данные ценности.
 
 **Для того, чтобы увеличить ликвидность кредитов вашей ДАО необходимо:**
+- Добавить адрес контракта `Token emission builder` в ядро децентрализованной автономии.
 - Инвестировать в создание новых ценностей, которые будут полезны на внутреннем рынке ДАО.
+- Создавать токены с помощью `Token emission builder` и вносить их адреса в ядро децентарлизованной автономии, чтобы разрешить их продажу на рынке.
 - Увеличивать активность агентов рынка. Создавайте новых агентов рынка, которые способны автоматически приобретать токены на рынке, при продаже своей продукции/услуг.
 - Привлечь новых агентов рынка в вашем ДАО.
 
@@ -282,8 +272,7 @@ TO DO: Eugene примеры запросов на добавление лото
 Для того, чтобы успешно пройти урок необходимо обратиться к контракту `Lesson 10`, для вызова функции `Execute()` указав `адрес контракта рынка`. Обратите внимание, что вам необходимо, чтобы на рынке было минимум **5 активных** предложений покупки/продажи  на **разные** ценности.
 
 ### Пример выполнения
-- TO DO: Eugene пример с Ethereum wallet
-- [Пример выполнения урока с geth](https://github.com/airalab/learning-center/blob/master/lessons%20passage.md#Урок-10)
+- [Пример выполнения урока в консольном клиенте сети Ethereum  geth](https://github.com/airalab/learning-center/blob/master/lessons%20passage.md#Урок-10)
 
 ## Урок 11: Назначьте совет директоров организации
 > Уровень сложности урока:  высокий.
@@ -320,7 +309,6 @@ TO DO: Eugene примеры запросов на добавление лото
 Для того, чтобы успешно пройти урок необходимо обратиться к контракту `Lesson 11`, для вызова функции `Execute()` указав `адрес контракта совета директоров`. Обратите внимание, что вам необходимо, чтобы совет директоров проголосовал и одобрил хотя бы за **1** запрос финансорования.
 
 ### Пример выполнения
-- TO DO: Eugene пример с Ethereum wallet
 - TO DO: vol4tim пример с geth
 
 ## Урок 12: Crowdsale
@@ -362,7 +350,6 @@ TO DO: Eugene примеры запросов на добавление лото
 Для успешного прохождения урока необходимо внести 5 эфиров с любого аккаунта, который в дальнейшем станет владельцем новых токенов `DAO credit`. Чтобы закончить урок необходимо отправить транзакцию после наполнения Crowdsale 5 эфирами на `Lesson 12` вызвав функцию `Execute()`.
 
 ### Пример выполнения
-- TO DO: Eugene пример с Ethereum wallet
 - TO DO: vol4tim пример с geth
 
 ## Финальная модель ДАО.
@@ -372,12 +359,9 @@ TO DO: Eugene примеры запросов на добавление лото
 - `DAO core`
 - `Shareholder token`
 - `Ether funds`
-- `Cashflow`
 - `DAO market`
 - `Market regulator`
 - `Market agent`
-- `Market agent builder`
-- `Emission regulator via Market`
 - `Token emission builder`
 - `Board of Directors`
 - `Voting token`
