@@ -9,7 +9,7 @@ contract Airalab {
     }
     
     function ping() {
-		token.withdraw(5000000000000000000); // 5 Ether
-		msg.sender.send(5000000000000000000); // 5 Ether
+		token.withdraw(5 ether);
+		msg.sender.send(5 ether);
     }
 }
