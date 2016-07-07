@@ -359,9 +359,11 @@ builder.create(_dao_name, _dao_description, _shares_name, _shares_symbol, _share
 - `DAO core`
 - `Shareholder token`
 - `Ether funds`
+- `DAO credit`
 - `DAO market`
 - `Market regulator`
 - `Market agent`
+- `Market rule constant`
 - `Token emission builder`
 - `Board of Directors`
 - `Voting token`
