@@ -1,0 +1,44 @@
+## Урок 4: Эмиссируйте новые акции лично привлекая финансирование в эфирах.
+
+> Уровень сложности урока: средний.
+
+**Создаваемые на данном уроке модули ДАО:**
+
+- `ShareSale`
+
+**Используемые для взаимодействия в данном уроке модули ДАО:**
+
+- `Aira BuilderShareSale` ([abi](https://raw.githubusercontent.com/airalab/core/master/abi/builder/BuilderShareSale.json))
+- `Shareholder token` ([abi](https://raw.githubusercontent.com/airalab/core/master/abi/modules/TokenEmission.json))
+- `ShareSale` ([abi](https://raw.githubusercontent.com/airalab/core/master/abi/modules/ShareSale.json))
+- `Ether funds` ([abi](https://raw.githubusercontent.com/airalab/core/master/abi/modules/TokenEther.json))
+
+### Описание урока
+
+Создатель ДАО на данном этапе может лично эмиссировать дополнительные акции на свой счёт. Это может быть полезно в том, случаи если к примеру основатель лично договорился с первым(ыми) инвесторами о вхождении их в состав акционеров за счёт привлечения финансирования с их стороны. Чтобы выполнить данный процесс безопасно для обеих сторон можно обратиться к `DAO factory` и найти сборщик [BuilderShareSale](https://github.com/airalab/core/wiki/API-Reference#buildersharesale) с названием `Aira BuilderShareSale`. 
+
+**При обращении к сборщику необходимо указать:**
+
+- адрес получателя средств в эфирах
+- адрес контракта `Ether funds`
+- адрес контракта `Shareholder token`
+- стоимость одной акции в `Wei`.
+
+**После создания контракта `ShareSale` необходимо:**
+
+- Со счета продавца в контракте `Shareholder token` отправить на адрес контракта [ShareSale](https://github.com/airalab/core/wiki/API-Reference#sharesale) количество акций предлагаемых для продажи по контракту.
+- С фккаунта покупателя отправить на адрес контракта [ShareSale](https://github.com/airalab/core/wiki/API-Reference#sharesale) количество эфиров, требуемое для сделки, т.е. `количество акций * стоимость оной акции`.
+- Проверить поступление средств на счёт получателя в контракте `Ether funds`.
+- Проверить поступление акций на счёт покупателя в контракте `Shareholder token`.
+
+> Важно: акции поступят на баланс адреса, который отправил на контракт [ShareSale](https://github.com/airalab/core/wiki/API-Reference#sharesale) не забывайте это.
+
+### Проверка умений
+
+> Успешное выполнение урока в официальной сети даст: 100 `air`
+
+Чтобы успешно выполнить данный урок необходимо выполнить продажу токенов акций за эфиры, после чего обратиться к контракту `Lesson 4` передав адрес контракта `ShareSale`.
+
+#### Пример выполнения
+
+- [Go-Ethereum](go-ethereum_samples.md#Урок-4)
