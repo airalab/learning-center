@@ -25,7 +25,3 @@
 - обратиться к контракту [Aira BuilderTokenEther](https://github.com/airalab/core/wiki/API-Reference#buildertokenether) в DAO factory с названием `Aira BuilderTokenEther` для создания контракта, который будет хранить эфиры.
 - перевести **0,1** эфир на свой счет в контракте [TokenEther](https://github.com/airalab/core/wiki/API-Reference#tokenether), созданном вами ранее.
 - обратиться к контракту `Lesson 3` для вызова функции `Execute()` указав `адрес контракта для хранения эфиров` и имея **0,1** эфир на счету своего аккаунта на контракте.
-
-#### Пример выполнения
-
-- [Go-Ethereum](go-ethereum_samples.md#Урок-3)

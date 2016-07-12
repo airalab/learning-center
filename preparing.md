@@ -2,7 +2,7 @@
 
 > Данный урок существует только в тестовой сети.
 
-## Описание урока
+### Описание урока
 
 В данном уроке необходим клиент сети Ethereum, поддерживающий работу в консольном режиме. Рекомендуется использовать клиент сети [geth](https://github.com/ethereum/go-ethereum#automated-development-builds) или [parity](https://ethcore.io/parity.html).
 
@@ -14,8 +14,13 @@
 
 ### Проверка умений
 
-Добыв или получив от команды Airalab 0.01 ether для первой транзакции в сеть можно обратиться к контракту `Lesson 0` в тестовой сети, который отправит вам в ответ **5 эфиров**. Этой суммы будет достаточно для выполнения всех 12 уроков.
+Добыв или получив от команды Airalab 0.01 `ether` для первой транзакции в сеть можно обратиться к контракту `Lesson 0` в тестовой сети, который отправит вам в ответ **5 эфиров**. Этой суммы будет достаточно для выполнения всех 12 уроков.
 
 #### Пример выполнения
 
-- [Пример выполнения урока в консольном клиенте сети Ethereum  geth](https://github.com/airalab/learning-center/blob/master/lessons%20passage.md#Урок-0)
+```js
+var airalab_addr = "0xf89ed9fee40ac4030b48294e689391cccb89d139";
+var airalab_abi = [{"constant":false,"inputs":[],"name":"ping","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"token","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[{"name":"_token","type":"address"}],"type":"constructor"}];
+var airalab = web3.eth.contract(airalab_abi).at(airalab_addr);
+airalab.ping({from:web3.eth.accounts[0], gas:200000});
+```

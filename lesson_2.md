@@ -5,9 +5,9 @@
 **Используемые для взаимодействия в данном уроке модули ДАО:**
 
 - `Shareholder token` ([abi](https://raw.githubusercontent.com/airalab/core/master/abi/modules/TokenEmission.json))
-- `Aira BuilderShareholder` ([abi](https://github.com/airalab/core/blob/master/abi/builder/BuilderShareholder.json)
+- `Aira BuilderShareholder` ([abi](https://github.com/airalab/core/blob/master/abi/builder/BuilderShareholder.json))
 
-## Описание урока
+### Описание урока
 
 При создании ДАО на баланс адреса создателя `founder` было эмисировано заданное количество токенов акций `Shareholder token`. Теперь время их распределить среди команды.
 
@@ -25,7 +25,3 @@
 > Успешное выполнение урока в официальной сети даст: 50 `air`
 
 Чтобы успешно выполнить данный урок необходимо разрешить снятие  1 акции `Shareholder token` адресу `Airalab learning center` и обратиться к контракту `Lesson 2` для вызова функции `Execute()`.
-
-#### Пример выполнения
-
-- [Go-Ethereum](go-ethereum_samples.md#Урок-2)
