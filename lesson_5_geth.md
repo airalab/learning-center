@@ -1,6 +1,6 @@
 ## Практика: geth
 
-> Создаем токен для внутреннего рынка
+Создаем токен для внутреннего рынка
 
 ```js
 var BuilderTokenEmission = [{"constant":false,"inputs":[{"name":"_buildingCost","type":"uint256"}],"name":"setCost","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_owner","type":"address"}],"name":"delegate","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_proposal","type":"address"}],"name":"setProposal","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"string"},{"name":"_symbol","type":"string"},{"name":"_decimals","type":"uint8"},{"name":"_start_count","type":"uint256"}],"name":"create","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_cashflow","type":"address"}],"name":"setCashflow","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"buildingCost","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[],"name":"getLastContract","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"},{"name":"","type":"uint256"}],"name":"getContractsOf","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[{"name":"_buildingCost","type":"uint256"},{"name":"_cashflow","type":"address"},{"name":"_proposal","type":"address"}],"type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"name":"sender","type":"address"},{"indexed":true,"name":"instance","type":"address"}],"name":"Builded","type":"event"}];
@@ -9,14 +9,14 @@ builder.create('DAO credit', 'DCT', 0, 100, {from: eth.accounts[0], gas: 1000000
 builder.getLastContract()
 ```
 
-> Добавляем в реестр контрактов организации новый токен
+Добавляем в реестр контрактов организации новый токен
 
 ```js
 core.setModule("DAO credit", builder.getLastContract(), "github://airalab/core/token/TokenEmission.sol", true, {from:web3.eth.accounts[0], gas:300000})
 core.getModule("DAO credit")
 ```
 
-> Запускаем выполнение урока передав адрес нового токена и адрес DAO
+Запускаем выполнение урока передав адрес нового токена и адрес DAO
 
 ```js
 var fifthLesson_addr = '0x9ec00d5b0fe4f9497596c67d96f0c57115dce787';
@@ -25,7 +25,7 @@ var fifthLesson = web3.eth.contract(FifthLesson).at(fifthLesson_addr);
 fifthLesson.execute('DAO credit', dao_addr, {from:web3.eth.accounts[0], gas:900000})
 ```
 
-> Проверяем баланс air
+Проверяем баланс air
 
 ```js
 var tokenair_addr = '0x000755654006c311edc395f331b61dfe8e8d4dc1';

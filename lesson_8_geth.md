@@ -1,6 +1,6 @@
 ## Практика: geth
 
-> Ловим события для новых контрактов DAOMarketAgent
+Ловим события для новых контрактов DAOMarketAgent
 
 ```js
 var e = marketRegulator.MarketAgentSign({}, '', function(error,result){
@@ -8,20 +8,20 @@ var e = marketRegulator.MarketAgentSign({}, '', function(error,result){
 })
 ```
 
-> Создаем контракт агента рынка DAOMarketAgent с помощью регулятора рынка
+Создаем контракт агента рынка DAOMarketAgent с помощью регулятора рынка
 
 ```js
 marketRegulator.sign({from:web3.eth.accounts[0], gas:900000});
 ```
 
-> Добавляем в реестр контрактов организации адрес нового контракта из пойманого события
+Добавляем в реестр контрактов организации адрес нового контракта из пойманого события
 
 ```js
 core.setModule("Market agent", '0x2ca27392fe7e5851893543a9db5647c3f7317dc4', "github://airalab/core/market/DAOMarketAgent.sol", true, {from:web3.eth.accounts[0], gas:300000})
 core.getModule("Market agent")
 ```
 
-> Запускаем выполнение урока передав адрес Market и адрес DAOMarketAgent
+Запускаем выполнение урока передав адрес Market и адрес DAOMarketAgent
 
 ```js
 var eighthLesson_addr = '0x106c4cad1fb1921d3a3347b353eb4fc576ee5fe3';
@@ -30,7 +30,7 @@ var eighthLesson = web3.eth.contract(EighthLesson).at(eighthLesson_addr);
 eighthLesson.execute(core.getModule('Market'), core.getModule('Market agent'), {from:web3.eth.accounts[0], gas:900000})
 ```
 
-> Проверяем баланс air
+Проверяем баланс air
 
 ```js
 var tokenair_addr = '0x000755654006c311edc395f331b61dfe8e8d4dc1';

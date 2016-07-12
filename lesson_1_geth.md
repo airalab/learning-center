@@ -1,6 +1,6 @@
 ## Практика: geth
 
-> Обращаемся к BuilderDAO для создания dao
+Обращаемся к BuilderDAO для создания dao
 
 ```js
 var BuilderDAO = [{"constant":false,"inputs":[{"name":"_dao_name","type":"string"},{"name":"_dao_description","type":"string"},{"name":"_shares_name","type":"string"},{"name":"_shares_symbol","type":"string"},{"name":"_shares_count","type":"uint256"}],"name":"create","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_buildingCost","type":"uint256"}],"name":"setCost","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_owner","type":"address"}],"name":"delegate","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_proposal","type":"address"}],"name":"setProposal","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_cashflow","type":"address"}],"name":"setCashflow","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"buildingCost","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[],"name":"getLastContract","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"},{"name":"","type":"uint256"}],"name":"getContractsOf","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[{"name":"_price","type":"uint256"},{"name":"_cashflow","type":"address"},{"name":"_proposal","type":"address"}],"type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"name":"sender","type":"address"},{"indexed":true,"name":"instance","type":"address"}],"name":"Builded","type":"event"}];
@@ -14,7 +14,7 @@ var core = web3.eth.contract(Core).at(dao_addr);
 core.getModule('Mars colony shares');
 ```
 
-> Обращаемся к "first lesson->Execute" и передаем адрес dao в ответ получаем 50air
+Обращаемся к "first lesson->Execute" и передаем адрес dao в ответ получаем 50air
 
 ```js
 var firstLesson_addr = '0xb62138cf11f4c1d7248afe82acb8681406211c85';
@@ -23,7 +23,7 @@ var firstLesson = web3.eth.contract(FirstLesson).at(firstLesson_addr);
 firstLesson.execute(dao_addr, core.getModule('Mars colony shares'), "Mars colony shares", {from:web3.eth.accounts[0], gas:900000})
 ```
 
-> Проверяем баланс air
+Проверяем баланс air
 
 ```js
 var tokenair_addr = '0x000755654006c311edc395f331b61dfe8e8d4dc1';

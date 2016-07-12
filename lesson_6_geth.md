@@ -1,6 +1,6 @@
 ## Практика: geth
 
-> Создаем контракт Market с помощью билдера
+Создаем контракт Market с помощью билдера
 
 ```js
 var BuilderMarket = [{"constant":false,"inputs":[{"name":"_buildingCost","type":"uint256"}],"name":"setCost","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_owner","type":"address"}],"name":"delegate","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_proposal","type":"address"}],"name":"setProposal","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_cashflow","type":"address"}],"name":"setCashflow","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"buildingCost","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[],"name":"getLastContract","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[],"name":"create","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"},{"name":"","type":"uint256"}],"name":"getContractsOf","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[{"name":"_buildingCost","type":"uint256"},{"name":"_cashflow","type":"address"},{"name":"_proposal","type":"address"}],"type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"name":"sender","type":"address"},{"indexed":true,"name":"instance","type":"address"}],"name":"Builded","type":"event"}];
@@ -9,14 +9,14 @@ builder.create({from: eth.accounts[0], gas: 1000000, value: builder.buildingCost
 builder.getLastContract()
 ```
 
-> Добавляем в реестр контрактов организации маркет
+Добавляем в реестр контрактов организации маркет
 
 ```js
 core.setModule("Market", builder.getLastContract(), "github://airalab/core/market/Market.sol", true, {from:web3.eth.accounts[0], gas:300000})
 core.getModule("Market")
 ```
 
-> Выставляем два лота, на продажу и на покупку
+Выставляем два лота, на продажу и на покупку
 
 ```js
 var Market = [{"constant":false,"inputs":[{"name":"_lot","type":"address"}],"name":"remove","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"first","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_enable","type":"bool"}],"name":"setRegulator","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_seller","type":"address"},{"name":"_sale","type":"address"},{"name":"_buy","type":"address"},{"name":"_quantity_sale","type":"uint256"},{"name":"_quantity_buy","type":"uint256"}],"name":"append","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_owner","type":"address"}],"name":"delegate","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"_lot","type":"address"}],"name":"contains","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[],"name":"size","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[{"name":"_current","type":"address"}],"name":"next","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[],"name":"regulatorEnabled","outputs":[{"name":"","type":"bool"}],"type":"function"}];
@@ -25,7 +25,7 @@ market.append(eth.accounts[0], core.getModule('Mars colony shares'), core.getMod
 market.append(eth.accounts[0], core.getModule('DAO credit'), core.getModule('Mars colony shares'), 500, 1, {from:web3.eth.accounts[0], gas:900000})
 ```
 
-> Запускаем выполнение урока передав адрес Market
+Запускаем выполнение урока передав адрес Market
 
 ```js
 var sixthLesson_addr = '0xefd66212e57db8987ae5030733bd30ef56d64b66';
@@ -34,7 +34,7 @@ var sixthLesson = web3.eth.contract(SixthLesson).at(sixthLesson_addr);
 sixthLesson.execute(core.getModule('Market'), {from:web3.eth.accounts[0], gas:900000})
 ```
 
-> Проверяем баланс air
+Проверяем баланс air
 
 ```js
 var tokenair_addr = '0x000755654006c311edc395f331b61dfe8e8d4dc1';
