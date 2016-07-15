@@ -28,4 +28,3 @@
 * [Урок 12: Проведение crowdsale](lesson_12.md)
   * [Практика: geth](lesson_12_geth.md)
 * [Заключение](conclusion.md)
-* [ЧаВО](FAQ.md)
