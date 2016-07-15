@@ -2,7 +2,7 @@
 
 Для начала, добавим токен Air, в список токенов. В этих токенах будет производиться награда за выполнение уроков. Нажмем `Watch token` в разделе `Contracts`.
 
-Screenshot 10
+![Screenshot 10](https://github.com/airalab/learning-center/blob/master/img/Screenshot_10.png)
 
 Token Address - 0x000755654006c311edc395f331b61dfe8e8d4dc1  
 Token Name - Air  
