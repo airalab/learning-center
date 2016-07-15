@@ -10,19 +10,19 @@ core.getModule("Token emission builder")
 Создаем 4 новых токена
 
 ```js
-var BuilderTokenEmission = [{"constant":false,"inputs":[{"name":"_buildingCost","type":"uint256"}],"name":"setCost","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_owner","type":"address"}],"name":"delegate","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_proposal","type":"address"}],"name":"setProposal","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"string"},{"name":"_symbol","type":"string"},{"name":"_decimals","type":"uint8"},{"name":"_start_count","type":"uint256"}],"name":"create","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_cashflow","type":"address"}],"name":"setCashflow","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"buildingCost","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[],"name":"getLastContract","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"},{"name":"","type":"uint256"}],"name":"getContractsOf","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[{"name":"_buildingCost","type":"uint256"},{"name":"_cashflow","type":"address"},{"name":"_proposal","type":"address"}],"type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"name":"sender","type":"address"},{"indexed":true,"name":"instance","type":"address"}],"name":"Builded","type":"event"}];
+var BuilderTokenEmission = [{"constant":false,"inputs":[{"name":"_buildingCostWei","type":"uint256"}],"name":"setCost","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_owner","type":"address"}],"name":"delegate","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"buildingCostWei","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":false,"inputs":[{"name":"_proposal","type":"address"}],"name":"setProposal","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"string"},{"name":"_symbol","type":"string"},{"name":"_decimals","type":"uint8"},{"name":"_start_count","type":"uint256"}],"name":"create","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_cashflow","type":"address"}],"name":"setCashflow","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"getLastContract","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"},{"name":"","type":"uint256"}],"name":"getContractsOf","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[{"name":"_buildingCost","type":"uint256"},{"name":"_cashflow","type":"address"},{"name":"_proposal","type":"address"}],"type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"name":"sender","type":"address"},{"indexed":true,"name":"instance","type":"address"}],"name":"Builded","type":"event"}];
 var builder = web3.eth.contract(BuilderTokenEmission).at(core.getModule("Token emission builder"));
 
-builder.create('Assset 1', 'A1', 0, 100, {from: eth.accounts[0], gas: 1000000, value: builder.buildingCost()})
+builder.create('Assset 1', 'A1', 0, 100, {from: eth.accounts[0], gas: 1000000, value: builder.buildingCostWei()})
 var assset1_addr = builder.getLastContract()
 
-builder.create('Assset 2', 'A2', 0, 100, {from: eth.accounts[0], gas: 1000000, value: builder.buildingCost()})
+builder.create('Assset 2', 'A2', 0, 100, {from: eth.accounts[0], gas: 1000000, value: builder.buildingCostWei()})
 var assset2_addr = builder.getLastContract()
 
-builder.create('Service 1', 'S1', 0, 100, {from: eth.accounts[0], gas: 1000000, value: builder.buildingCost()})
+builder.create('Service 1', 'S1', 0, 100, {from: eth.accounts[0], gas: 1000000, value: builder.buildingCostWei()})
 var service1_addr = builder.getLastContract()
 
-builder.create('Service 2', 'S2', 0, 100, {from: eth.accounts[0], gas: 1000000, value: builder.buildingCost()})
+builder.create('Service 2', 'S2', 0, 100, {from: eth.accounts[0], gas: 1000000, value: builder.buildingCostWei()})
 var service2_addr = builder.getLastContract()
 service2_addr
 ```
