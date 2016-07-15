@@ -4,6 +4,7 @@
 * [Подготовка к работе](preparing.md)
 * [Урок 1: Создание организации](lesson_1.md)
   * [Практика: geth](lesson_1_geth.md)
+  * [Практика: Ethereum Wallet](lesson_1_wallet.md)
 * [Урок 2: Распределение акций](lesson_2.md)
   * [Практика: geth](lesson_2_geth.md)
 * [Урок 3: Контракт для хранения эфиров](lesson_3.md)
