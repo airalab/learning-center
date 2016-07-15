@@ -2,7 +2,7 @@
 
 Для начала, добавим токен Air, в список токенов. В этих токенах будет производиться награда за выполнение уроков. Нажмем `Watch token` в разделе `Contracts`.
 
-![Screenshot 10](https://raw.githubusercontent.com/airalab/learning-center/master/img/Screenshot_10.png)
+![Screenshot 10](/img/Screenshot_10.png)
 
 Token Address - `0x000755654006c311edc395f331b61dfe8e8d4dc1`  
 Token Name - Air  
@@ -10,7 +10,7 @@ Token Symbol - Air
 
 Для того, чтобы создать `DAO core` и `Shareholder token` необходимо обратиться к фабрике DAO отправив транзакцию со своего аккаунта к сборщику `Aira BuilderDAO` из реестра `DAO factory`. Чтобы это сделать, сначала нужно добавить контракт `Factory Core` в список ваших контрактов в разделе `Contracts`.
 
-![Screenshot 4](https://github.com/airalab/learning-center/blob/master/img/Screenshot_4.png)
+![Screenshot 4](/img/Screenshot_4.png)
 
 Contract Name - Factory Core  
 Address - `0xa76422591378d14fb6d94c9da48a42498d8b51da`
@@ -22,11 +22,11 @@ Abi:
 
 Далее, нужно найти в реестре `Factory Core`, адрес сборщика `Aira BuilderDAO`:
 
-![Screenshot 5](https://github.com/airalab/learning-center/blob/master/img/Screenshot_5.png)
+![Screenshot 5](/img/Screenshot_5.png)
 
 И добавить его в список ваших контрактов:
 
-![Screenshot 6](https://github.com/airalab/learning-center/blob/master/img/Screenshot_6.png)
+![Screenshot 6](/img/Screenshot_6.png)
 
 Contract Name: `Aira BuilderDAO`  
 Address: `0xb814efd3B486927FA2bA2ca9Ea6a699bC8a09A0a`  
