@@ -57,3 +57,7 @@ Abi - [{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"accountO
 Теперь вызовем в нем, функцию `Execute`, указав адрес `DAO core`, адрес `Shareholder token` и его название.
 
 ![Screenshot 11](https://github.com/airalab/learning-center/blob/master/img/Screenshot_11.png)
+
+Если вы всё сделали правильно, на вашем аккаунте появятся 50 AIR.
+
+![Screenshot 12](https://github.com/airalab/learning-center/blob/master/img/Screenshot_12.png)
