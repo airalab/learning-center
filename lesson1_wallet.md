@@ -10,7 +10,7 @@ Token Symbol - Air
 
 Для того, чтобы создать `DAO core` и `Shareholder token` необходимо обратиться к фабрике DAO отправив транзакцию со своего аккаунта к сборщику `Aira BuilderDAO` из реестра `DAO factory`. Чтобы это сделать, сначала нужно добавить контракт `Factory Core` в список ваших контрактов в разделе `Contracts`.
 
-Screenshot 4
+![Screenshot 4](https://github.com/airalab/learning-center/blob/master/img/Screenshot_4.png)
 
 Contract Name - Factory Core  
 Address - 0xa76422591378d14fb6d94c9da48a42498d8b51da  
@@ -18,11 +18,11 @@ Abi - [{"constant":true,"inputs":[],"name":"name","outputs":[{"name":"","type":"
 
 Далее, нужно найти в реестре `Factory Core`, адрес сборщика `Aira BuilderDAO`:
 
-Screenshot 5
+![Screenshot 5](https://github.com/airalab/learning-center/blob/master/img/Screenshot_5.png)
 
 И добавить его в список ваших контрактов:
 
-Screenshot 6
+![Screenshot 6](https://github.com/airalab/learning-center/blob/master/img/Screenshot_6.png)
 
 Contract Name - Aira BuilderDAO  
 Address - тот, который вы найдете  
@@ -30,17 +30,17 @@ Abi - [{"constant":false,"inputs":[{"name":"_dao_name","type":"string"},{"name":
 
 Теперь у нас есть контракт сборщика DAO - `Aira BuilderDAO`. Мы готовы к созданию DAO. Чтобы это сделать, необходимо вызвать функцию `create` в сборщике `Aira BuilderDAO`:
 
-Screenshot 7
+![Screenshot 7](https://github.com/airalab/learning-center/blob/master/img/Screenshot_7.png)
 
 Заполняем dao_name, dao_desc и т.д. Не забудьте указать правильный аккаунт, этот аккаунт будет владельцем DAO. Также, необходимо отправить некоторое кол-во эфиров с этой транзакцией, но не менее 0.01 Eth. Сборщики берут комиссию за свои услуги и умеют сдавать сдачу, поэтому можно отправлять любую сумму больше 0.01 Eth. Нажимаем кнопку `Execute`.
 
 После того, как транзакция будет подтверждена сетью, в контракте `BuilderDAO`, в разделе `Latest Events` можно будет увидеть информацию созданном для вас `DAO Core`.
 
-Screenshot 8
+![Screenshot 8](https://github.com/airalab/learning-center/blob/master/img/Screenshot_8.png)
 
 Instanse - это адрес созданного для вас `DAO Core`. Чтобы начать работу с ним, нужно добавить его в список ваших контрактов.
 
-Screenshot 9
+![Screenshot 9](https://github.com/airalab/learning-center/blob/master/img/Screenshot_9.png)
 
 Contract Name - My Test DAO  
 Address - адрес из instance
@@ -56,4 +56,4 @@ Abi - [{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"accountO
 
 Теперь вызовем в нем, функцию `Execute`, указав адрес `DAO core`, адрес `Shareholder token` и его название.
 
-Screenshot 11
+![Screenshot 11](https://github.com/airalab/learning-center/blob/master/img/Screenshot_11.png)
