@@ -74,11 +74,11 @@ Abi:
 
 Для того, чтобы завершить урок и получить AIR, необходимо   
 сделать `Approve` 1 акции на адрес `Airalab learning center`.  
-Address `Airalab learning center` -  ё
+Address `Airalab learning center` -  
 `0xd5ec7544753fcf759b4dd37210dab113fce76814`
 
 Далее нужно обратиться к функции `Execute` второго урока.    
-Address 2-го урока - `0x62808bc94e156f45a9f8e7e41ba969acfc467bed`
+Address 2-го урока - `0x62808bc94e156f45a9f8e7e41ba969acfc467bed`  
 Abi:
 ```js
 [{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"accountOf","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":false,"inputs":[{"name":"_dao","type":"address"},{"name":"_shares_name","type":"string"}],"name":"execute","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"emissionRegulator","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[],"name":"airalab_learning_center","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[{"name":"_emissionRegulator","type":"address"},{"name":"_airalab_learning_center","type":"address"}],"type":"constructor"}]
