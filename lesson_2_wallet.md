@@ -77,7 +77,7 @@ Abi:
 Address `Airalab learning center` -  ё
 `0xd5ec7544753fcf759b4dd37210dab113fce76814`
 
-Далее нужно обратиться к функции `Execute` второго урока.  
+Далее нужно обратиться к функции `Execute` второго урока.    
 Address 2-го урока - `0x62808bc94e156f45a9f8e7e41ba969acfc467bed`
 Abi:
 ```js
