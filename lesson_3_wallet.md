@@ -1,6 +1,6 @@
 # Урок 3 в Ethereum Wallet
 
-В этом уроке мы создадим модуль DAO для хранения эфиров. Фактически это токен Eth. Такой подход для хранения Eth используется для универсализации при работе модулей DAO с ценностями. Т.е. модули DAO всегда работают с токенами, поэтому и эфиры храняться на специализированном токене `TokenEther`.
+В этом уроке мы создадим модуль DAO для хранения эфиров. Фактически это токен Eth. Такой подход для хранения Eth используется для универсализации при работе модулей DAO с ценностями. Т.е. модули DAO всегда работают с токенами, поэтому и эфиры хранятся на специализированном токене `TokenEther`.
 
 Сначала найдем сборщик `Aira BuilderTokenEther` в контракте `Factory Core`. Как это сделать было рассмотрено в предыдущих уроках.
 
@@ -28,7 +28,7 @@ Abi:
 ![Screenshot 23](/img/Screenshot_23.png)
 
 Чтобы завершить урок, необходимо обратиться к контракту `Lesson 3` для вызова функции `Execute`, указав адрес контракта для хранения эфиров и имея 0,1 эфир на счету своего аккаунта на контракте.  
-Address Lesson 3 - `0xedb74faac6cf598fac93d5871bef07e3c7684193`  
+Address Lesson 3 − `0xedb74faac6cf598fac93d5871bef07e3c7684193`  
 Abi:
 ```js
 [{"constant":false,"inputs":[{"name":"_token","type":"address"}],"name":"execute","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"accountOf","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"emissionRegulator","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[],"name":"airalab_learning_center","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[{"name":"_emissionRegulator","type":"address"}],"type":"constructor"}]
