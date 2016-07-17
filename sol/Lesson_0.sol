@@ -1,4 +1,3 @@
-import '../token/TokenEther.sol';
 import './Lesson.sol';
 
 contract Lesson_0 {
