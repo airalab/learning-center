@@ -5,9 +5,9 @@ contract Lesson_1 is Lesson {
     function Lesson_1(address _air, uint _reward)
              Lesson(_air, _reward) {}
 
-    function execute(Core _dao, address _shares, string _shares_name) {
+    function execute(Core _dao) {
         // Check when DAO is created
-        if (_dao.getModule(_shares_name) == _shares && _shares != 0)
+        if (_dao.owner() == msg.sender)
             passed(msg.sender);
     }
 }
