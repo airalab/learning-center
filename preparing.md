@@ -19,8 +19,8 @@
 #### Пример выполнения
 
 ```js
-var airalab_addr = "0xf89ed9fee40ac4030b48294e689391cccb89d139";
-var airalab_abi = [{"constant":false,"inputs":[],"name":"ping","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"token","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[{"name":"_token","type":"address"}],"type":"constructor"}];
-var airalab = web3.eth.contract(airalab_abi).at(airalab_addr);
-airalab.ping({from:web3.eth.accounts[0], gas:200000});
+var learning_center = eth.contract(Core).at("0x73c5f07b929867951aa2b61f30773dba627d4779");
+var Lesson_0 = [{"constant":false,"inputs":[],"name":"ping","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"isSended","outputs":[{"name":"","type":"bool"}],"type":"function"}];
+var lesson = web3.eth.contract(Lesson_0).at(learning_center.getModule("Lesson_0");
+lesson.ping({from:web3.eth.accounts[0], gas:200000});
 ```
