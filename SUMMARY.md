@@ -13,6 +13,7 @@
   * [Практика: Ethereum Wallet](lesson_3_wallet.md)
 * [Урок 4: Привлечение финансирования](lesson_4.md)
   * [Практика: geth](lesson_4_geth.md)
+  * [Практика: Ethereum Wallet](lesson_4_wallet.md)
 * [Урок 5: Создание внутренней валюты](lesson_5.md)
   * [Практика: geth](lesson_5_geth.md)
 * [Урок 6: Создание внутреннего рынка](lesson_6.md)
