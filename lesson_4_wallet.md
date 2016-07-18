@@ -50,10 +50,10 @@ Abi:
 
 ![Screenshot 28](/img/Screenshot_28.png)
 
-## Завершение урока (пока не работает)
+## Завершение урока
 
 Чтобы завершить урок, необходимо обратиться к контракту `Lesson 4` для вызова функции `Execute`, указав адрес контракта `ShareSale`.
-Address Lesson 4 - `0x8db39604c8a544165b16d1b6ac2bfd0f9cfac9f2`  
+Address Lesson 4 - `0x892bec692f4c7121b396f70f7a3b1b88e6dc3000`  
 Abi:
 ```js
 [{"constant":false,"inputs":[{"name":"_shareSale","type":"address"}],"name":"execute","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"accountOf","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"emissionRegulator","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[{"name":"_emissionRegulator","type":"address"}],"type":"constructor"}]

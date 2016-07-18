@@ -28,7 +28,7 @@ Abi:
 ![Screenshot 23](/img/Screenshot_23.png)
 
 Чтобы завершить урок, необходимо обратиться к контракту `Lesson 3` для вызова функции `Execute`, указав адрес контракта для хранения эфиров и имея 0,1 эфир на счету своего аккаунта на контракте.  
-Address Lesson 3 − `0xedb74faac6cf598fac93d5871bef07e3c7684193`  
+Address Lesson 3 − `0xdc6471214d3d28fb5cbd95f39414a59e7eeda423`  
 Abi:
 ```js
 [{"constant":false,"inputs":[{"name":"_token","type":"address"}],"name":"execute","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"accountOf","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"emissionRegulator","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[],"name":"airalab_learning_center","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[{"name":"_emissionRegulator","type":"address"}],"type":"constructor"}]
