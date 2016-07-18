@@ -4,9 +4,7 @@
 
 ![Screenshot 10](/img/Screenshot_10.png)
 
-Token Address - `0x000755654006c311edc395f331b61dfe8e8d4dc1`  
-Token Name - Air  
-Token Symbol - Air
+Token Address - `0xf307308cf0da2297e03401f65891b7e3052d234b`  
 
 Для того, чтобы создать `DAO core` и `Shareholder token` необходимо обратиться к фабрике DAO отправив транзакцию со своего аккаунта к сборщику `Aira BuilderDAO` из реестра `DAO factory`. Чтобы это сделать, сначала нужно добавить контракт `Factory Core` в список ваших контрактов в разделе `Contracts`.
 
@@ -64,7 +62,7 @@ Abi:
 `DAO Core` создано, осталось завершить урок, для этого нужно добавить контракт урока `Lesson 1` в список ваших контрактов.
 
 Contract Name - Lesson 1  
-Address - `0xb62138cf11f4c1d7248afe82acb8681406211c85`
+Address - `0xab6585e43262de17f0e2b4f3674c98899569d3c3`
 
 Abi:
 ```js
