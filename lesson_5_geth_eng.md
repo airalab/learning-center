@@ -1,4 +1,4 @@
-## Практика: geth
+## Practice: geth
 
 Create internal market token
 
@@ -16,7 +16,7 @@ core.setModule("DAO credit", builder.getLastContract(), "github://airalab/core/t
 core.getModule("DAO credit")
 ```
 
-Execute lesson. Don't forget to pass new token address and DAO address.
+Execute lesson. Don't forget to pass new token address and DAO address
 
 ```js
 var learning_center = eth.contract(Core).at("0x73c5f07b929867951aa2b61f30773dba627d4779");
