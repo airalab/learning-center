@@ -2,7 +2,7 @@
 
 Если вы не знакомы с консолью и вам хотелось бы работать через GUI, для прохождения наших уроков, вы можете использовать официальный клиент для сети Ethereum - Ethereum Wallet.
 
-[Wallet latest release](https://github.com/ethereum/mist/releases)
+Ссылка для скачивания - [Wallet latest release](https://github.com/ethereum/mist/releases)
 
 Вам нужен раздел Download
 
