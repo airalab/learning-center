@@ -2,6 +2,7 @@
 
 * [Введение](README.md)
 * [Подготовка к работе](preparing.md)
+  * [Практика: Ethereum Wallet](preparing_wallet.md) 
 * [Урок 1: Создание организации](lesson_1.md)
   * [Практика: geth](lesson_1_geth.md)
   * [Практика: Ethereum Wallet](lesson_1_wallet.md)
