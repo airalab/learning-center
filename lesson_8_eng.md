@@ -12,7 +12,7 @@
 
 ### Lesson Description 
 
-Regulator that was added in a previous lesson also helps market agents to do their job. `MarketAgent` contract is used as an impersonation of an end-user on a specific market. Agent can close deals on behalf of their client. 
+Regulator that was added in a previous lesson also helps market agents to do their job. `MarketAgent` contract is used as an impersonation of an end-user on a specific market. Agent can close deals on behalf of his client. 
 
 **To add market agent to a DAO:**
 

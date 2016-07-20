@@ -4,7 +4,7 @@
 
 ### Lesson Description 
 
-Primary goal of any organization - to create new value. This value must be liquid on a external markets. Valuation of your token rises if internal market is active (more deals your DAO makes).
+Primary goal of any organization - to create new value. This value must be liquid on a external markets. The more deals your DAO makes (i.e. internal market is active) - the more the valuation of your token. 
 
 **To increase your token liquidity:**
 
@@ -18,5 +18,5 @@ Primary goal of any organization - to create new value. This value must be liqui
 
 > Complete this lesson and get 100 `air` tokens! 
 
-To complete this lesson you need to call `Execute()` function of `Lesson 10` contract. Please specify market contract address. Your market needs at least 5 active lots (different tokent).
+To complete this lesson you need to call `Execute()` function of `Lesson 10` contract. Please specify market contract address. Your market needs at least 5 active lots (different token).
 

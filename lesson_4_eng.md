@@ -38,5 +38,5 @@ In order to do that in a safe for all parties way, you need to use [Aira Builder
 
 > Complete this lesson and get 100 `air` tokens! 
 
-To complete this lesson you need to sell shares and receive ETH. Then call `Execute()` function of `Lesson 4` contract. Please specify `ShareSale` contract address.
+To complete this lesson you need to sell your shares and receive ETH. Then call `Execute()` function of `Lesson 4` contract. Please specify `ShareSale` contract address.
 

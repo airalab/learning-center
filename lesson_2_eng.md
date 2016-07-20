@@ -9,7 +9,7 @@
 
 ### Lesson Description 
 
-Some `shareholder tokens` were emmited when DAO was created. Now you need to send them to your team members.
+Some `shareholder tokens` were emmited when DAO was created. Now you need to distribute them to your team members.
 
 You can do that in 2 different ways:
 

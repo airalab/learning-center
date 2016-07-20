@@ -16,9 +16,9 @@
 
 ### Lesson description 
 
-Currently your DAO has no elected board of directors. Each shareholder can decide how to invest his `Ether funds` money and DAO Core is controlled only by the owner. If your organization will grow - it will be convinient to add Board of directors that will then control flow of investments and the core. 
+Currently your DAO has no elected board of directors. Each shareholder can decide how to invest his `Ether funds` money and DAO Core is controlled only by the owner. If your organization will grow - it will be convinient to add Board of directors that will then control flow of investments and the DAO core. 
 
-**Instructions:**
+**To add Board of directors:**
 
 - Call `DAO factory` to get `Board of Directors builder`. Please specify `Shareholder token` registry address and `Ether funds` address.
 - Create `Board of directors` contract and distribute `Directors voting tokens` to add members to the board.
@@ -27,7 +27,7 @@ Currently your DAO has no elected board of directors. Each shareholder can decid
 
 > `Board of Directors` contract has `pollUp` method that can be used to start elections in order to change board of directors. Control is passed to new members if 51% votes reached. Shareholders can not vote for multiple variants of board at once. Voting freezes shareholders shares, but he can always take his vote back using `pollDown` method. 
 
-**Instructions:**
+**To try Board of directors in action:**
 
 - Create new `proposal` request from any member of Board of Directors.
 - Collect 51% of directors votes.

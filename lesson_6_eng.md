@@ -13,8 +13,8 @@
 
 ### Lesson Description 
 
-We will create internal DAO market and populate it with deals. We need to call `DAO factory` builder 
-[BuilderMarket](https://github.com/airalab/core/wiki/API-Reference#buildermarket) that named `Aira BuilderMarket`.
+We will create internal DAO market and populate it with deals. We need to call `DAO factory` 
+[BuilderMarket](https://github.com/airalab/core/wiki/API-Reference#buildermarket) builder that named `Aira BuilderMarket`.
 
 `Aira BuilderMarket` will create [Market](https://github.com/airalab/core/wiki/API-Reference#market), where tokens could be traded.
 

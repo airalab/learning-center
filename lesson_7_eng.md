@@ -28,7 +28,7 @@ If you add `MarketRegulator` contract - adding lot to market will be possible on
 - add token to registry;
 - try to add new lot with that token again. It should succeed.
 
-> Совет: например в DAO Aira на внутреннем рынке есть предложение токенов кураторства команды Aira для вашей DAO. 1 токен = 1 месяцу поддержки. Придумайте такой токен, который был бы полезен в дальнейшем в работе.
+> Advice: For example, Aira DAO has an Aira team curation proposal on internal market. 1 token = 1 month of curating. Create token that will be useful and valuable.
 
 ### Skill test 
 

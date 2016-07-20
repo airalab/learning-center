@@ -13,7 +13,7 @@
 
 ### Lesson Description  
 
-Primary goal of any DAO - increase liquidity of it's internal currency by adding new proposals. To stimulate market you need to invest in `value providers`. You'll need a lot of money for that. We can emit and sale (with a fixed price) internal currency. That is called `crowdsale`.
+Primary goal of any DAO is to increase liquidity of it's internal currency by adding new proposals. To stimulate market you need to invest in `value providers`. You'll need a lot of money for that. We can emit and sale (with a fixed price) internal currency. That is called `crowdsale`.
 
 **Instructions:**
 - Call `DAO factory` for `Crowdsale builder` contract. Pass address of registry that holds `DAO credit` tokens and address of registry that holds `Ether funds`.

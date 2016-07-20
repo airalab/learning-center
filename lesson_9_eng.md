@@ -13,7 +13,7 @@
 
 ### Lesson Description 
 
-Currently `owner` that created `DAO credit` initially can emit new tokens freely. This can decrease your market and currency values. In order to deal with that we are going to create `DAO credit` emission regulatorand add it to market. Shareholders must vote on that.
+Currently `owner` that created `DAO credit` initially can emit new tokens freely. This can decrease your market and currency values. In order to deal with that we are going to create `DAO credit` emission regulator and add it to the market. Shareholders must vote on that.
 
 Market regulator that we created earlier can filter deals according to rules that are set by shareholders. 
 `DAO credit` is an example of such rule. Shareholders vote to set these rules.
