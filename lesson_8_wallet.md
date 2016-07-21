@@ -16,7 +16,7 @@
 
     Название модуля - MarketAgent1
     Адрес модуля - из `Latest Events`
-    Interface - `github://airalab/core/market/DAOMarketAgent.sol`
+    Interface - github://airalab/core/market/DAOMarketAgent.sol
 
 ![Screenshot 55](/img/Screenshot_55.png)
 
