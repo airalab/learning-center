@@ -1,6 +1,6 @@
 ## Practice: geth
 
-Create MarketRegulator contract using builder
+Create the MarketRegulator contract using builder
 
 ```js
 var BuilderDAOMarketRegulator = [{"constant":false,"inputs":[{"name":"_buildingCostWei","type":"uint256"}],"name":"setCost","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_owner","type":"address"}],"name":"delegate","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"buildingCostWei","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":false,"inputs":[{"name":"_proposal","type":"address"}],"name":"setProposal","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_shares","type":"address"},{"name":"_core","type":"address"},{"name":"_market","type":"address"},{"name":"_dao_credits","type":"address"}],"name":"create","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_cashflow","type":"address"}],"name":"setCashflow","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"getLastContract","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"},{"name":"","type":"uint256"}],"name":"getContractsOf","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[{"name":"_buildingCost","type":"uint256"},{"name":"_cashflow","type":"address"},{"name":"_proposal","type":"address"}],"type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"name":"sender","type":"address"},{"indexed":true,"name":"instance","type":"address"}],"name":"Builded","type":"event"}];
@@ -9,7 +9,7 @@ builder.create(core.getModule('Mars colony shares'), dao_addr, core.getModule('M
 builder.getLastContract()
 ```
 
-Add regulator to organization contracts registry
+Add regulator to the organization contracts registry
 
 ```js
 core.setModule("Market regulator", builder.getLastContract(), "github://airalab/core/market/DAOMarketRegulator.sol", true, {from:web3.eth.accounts[0], gas:300000})
@@ -25,7 +25,7 @@ market.setRegulator(true, {from: eth.accounts[0], gas: 100000});
 market.regulatorEnabled();
 ```
 
-Delegate market to regulator
+Delegate the market to the regulator
 
 ```js
 market.delegate(core.getModule('Market regulator'), {from: eth.accounts[0], gas: 100000});
@@ -41,7 +41,7 @@ builder.create('Сoaching', 'C', 0, 100, {from: eth.accounts[0], gas: 1000000, v
 var coaching_addr = builder.getLastContract()
 ```
 
-Check market lot count
+Check the market lot count
 
 ```js
 market.size()
@@ -56,7 +56,7 @@ marketRegulator.sale(coaching_addr, 1000, 5, {from:web3.eth.accounts[0], gas:900
 market.size()
 ```
 
-Add lot to DAO registry
+Add lot to the DAO registry
 
 ```js
 var Core = [{"constant":true,"inputs":[],"name":"name","outputs":[{"name":"","type":"string"}],"type":"function"},{"constant":true,"inputs":[{"name":"_name","type":"string"}],"name":"getModule","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[{"name":"_module","type":"address"}],"name":"getModuleName","outputs":[{"name":"","type":"string"}],"type":"function"},{"constant":false,"inputs":[],"name":"kill","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"interfaceOf","outputs":[{"name":"","type":"string"}],"type":"function"},{"constant":true,"inputs":[],"name":"founder","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"string"}],"name":"removeModule","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_owner","type":"address"}],"name":"delegate","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"_module","type":"address"}],"name":"contains","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"firstModule","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[],"name":"description","outputs":[{"name":"","type":"string"}],"type":"function"},{"constant":true,"inputs":[{"name":"_name","type":"string"}],"name":"isConstant","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"string"},{"name":"_module","type":"address"},{"name":"_interface","type":"string"},{"name":"_constant","type":"bool"}],"name":"setModule","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"_current","type":"address"}],"name":"nextModule","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[{"name":"_name","type":"string"},{"name":"_description","type":"string"}],"type":"constructor"}];
@@ -65,14 +65,14 @@ core.setModule('Сoaching token', coaching_addr, "github://airalab/core/token/To
 core.contains(coaching_addr)
 ```
 
-Add lot once again
+Add the lot once again
 
 ```js
 marketRegulator.sale(coaching_addr, 1000, 5, {from:web3.eth.accounts[0], gas:900000})
 market.size()
 ```
 
-Execute lesson. Don't forget to pass market address and address of regulator
+Execute the lesson. Don't forget to pass the market address and the address of regulator
 
 ```js
 var learning_center = eth.contract(Core).at("0x73c5f07b929867951aa2b61f30773dba627d4779");

@@ -9,14 +9,14 @@ builder.create('DAO credit', 'DCT', 0, 100, {from: eth.accounts[0], gas: 1000000
 builder.getLastContract()
 ```
 
-Add new token to registry
+Add new token to the registry
 
 ```js
 core.setModule("DAO credit", builder.getLastContract(), "github://airalab/core/token/TokenEmission.sol", true, {from:web3.eth.accounts[0], gas:300000})
 core.getModule("DAO credit")
 ```
 
-Execute lesson. Don't forget to pass new token address and DAO address
+Execute the lesson. Don't forget to pass new token address and the DAO address
 
 ```js
 var learning_center = eth.contract(Core).at("0x73c5f07b929867951aa2b61f30773dba627d4779");

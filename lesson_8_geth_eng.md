@@ -1,6 +1,6 @@
 ## Practice: geth
 
-Add DAOMarketAgent creation event handler
+Add the DAOMarketAgent creation event handler
 
 ```js
 var e = marketRegulator.MarketAgentSign({}, '', function(error,result){
@@ -8,20 +8,20 @@ var e = marketRegulator.MarketAgentSign({}, '', function(error,result){
 })
 ```
 
-Create new market agent contract with a help of market regulator
+Create new market agent contract with a help of the market regulator
 
 ```js
 marketRegulator.sign({from:web3.eth.accounts[0], gas:900000});
 ```
 
-Add market agent contract address to registry (in event handler).
+Add the market agent contract address to the registry (in event handler).
 
 ```js
 core.setModule("Market agent", '0x2ca27392fe7e5851893543a9db5647c3f7317dc4', "github://airalab/core/market/DAOMarketAgent.sol", true, {from:web3.eth.accounts[0], gas:300000})
 core.getModule("Market agent")
 ```
 
-Execute lesson. Don't forget to pass market address and address of DAOMarketAgent 
+Execute the lesson. Don't forget to pass the market address and the address of DAOMarketAgent 
 
 ```js
 var learning_center = eth.contract(Core).at("0x73c5f07b929867951aa2b61f30773dba627d4779");
