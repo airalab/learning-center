@@ -49,8 +49,8 @@ Instanse - это адрес созданного для вас `DAO Core`. Чт
 ![Screenshot 9](/img/Screenshot_9.png)
 
 Contract Name: My Test DAO  
-Address: `0x1Ec65e5BDe44281BF78d03863472629A5385cb87`
-> Обратите внимание, что у вас будет свой адрес ядра ДАО.
+Address: тот, который в instance
+
 
 Abi:
 ```js
