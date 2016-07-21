@@ -13,24 +13,24 @@
 
 ### Lesson Description 
 
-Currently `owner` that created `DAO credit` initially can emit new tokens freely. This can decrease your market and currency values. In order to deal with that we are going to create `DAO credit` emission regulator and add it to the market. Shareholders must vote on that.
+Currently the `owner` that created the `DAO credit` can initially emit new tokens freely. This can decrease your market value. In order to deal with that, we are going to create a `DAO credit` emission regulator and add it to the market. The shareholders must vote on that.
 
-Market regulator that we created earlier can filter deals according to rules that are set by shareholders. 
-`DAO credit` is an example of such rule. Shareholders vote to set these rules.
+The market regulator that we created earlier can filter deals according to rules that are set by the shareholders. 
+`DAO credit` is an example of such a rule. The shareholders vote to set these rules.
 
 **Instructions:**
 
-- Call `Aira BuilderMarketRuleConstant` builder. Specify amount of emitted tokens.  
-- Vote for this rule by calling `pollUp()` with these arguments: token, your shares count; **Notice: call regulator's `approve` for your shares before**
-- Call `Credit ledger` contract (by `owner`) in order to change owner address to market regulator contract address.
+- Call the `Aira BuilderMarketRuleConstant` builder. Specify the amount of emitted tokens.  
+- Vote for this rule by calling `pollUp()` with these arguments: token, your shares count; **Notice: call regulator's `approve` for your shares beforehand**
+- Call the `Credit ledger` contract (by `owner`) in order to change owner address to market regulator contract address.
 
-**How to check that emission regulator works:**
+**How to check that the emission regulator works:**
 
-- Close any deal with token that must be filtered by a rule;
-- Call `Credit ledger` contract and check that correct amount of tokens were emitted to DAO owner.
+- Close any deal with a token that must be filtered by a rule;
+- Call the `Credit ledger` contract and check that the correct amount of tokens were emitted to the DAO owner.
 
 ### Skill test 
 
 > Complete this lesson and get 200 `air` tokens! 
 
-To complete this lesson you need to call `Execute()` function of `Lesson 9` contract. Please specify market contract address.
+To complete this lesson you need to call the `Execute()` function of the `Lesson 9` contract. Please specify market contract address.
