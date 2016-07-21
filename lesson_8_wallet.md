@@ -6,7 +6,7 @@
 
 ![Screenshot 53](/img/Screenshot_53.png)
 
-После того, как транзакция будет подтверждена сеть, найдем адрес созданного контракта в `Latest Events` в модуле `DAO MarketRegulator`.
+После того, как транзакция будет подтверждена сетью, найдем адрес созданного контракта в `Latest Events` в модуле `DAO MarketRegulator`.
 
 ![Screenshot 54](/img/Screenshot_54.png)
 
