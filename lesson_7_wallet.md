@@ -38,7 +38,7 @@ Abi:
     адрес модуля
     Abi - github.com/airalab/core/blob/master/abi/modules/DAOMarketRegulator.json  
 
-Транзакция должна быть отправлена с аккаунта, который указан как `Owner` в вашем DAO. Проверьте наличие модуля в вашем DAO, указав название модуля `Credits` в функции `Get Module`, в контракте `DAO Core` и получив его адрес.
+Транзакция должна быть отправлена с аккаунта, который указан как `Owner` в вашем DAO. Проверьте наличие модуля в вашем DAO, указав название модуля `MarketRegulator` в функции `Get Module`, в контракте `DAO Core` и получив его адрес.
 
 ![Screenshot 44](/img/Screenshot_44.png)
 
