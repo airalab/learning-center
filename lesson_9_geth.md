@@ -43,7 +43,7 @@ credits.delegate(core.getModule('Market regulator'), {from:web3.eth.accounts[0],
 ```js
 var learning_center = eth.contract(Core).at("0x73c5f07b929867951aa2b61f30773dba627d4779");
 var Lesson_9 = [{"constant":false,"inputs":[{"name":"_air","type":"address"}],"name":"setToken","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"reward","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[],"name":"air","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_reward","type":"uint256"}],"name":"setReward","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_owner","type":"address"}],"name":"delegate","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"isPassed","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":false,"inputs":[{"name":"_regulator","type":"address"},{"name":"_asset","type":"address"},{"name":"_rule","type":"address"}],"name":"execute","outputs":[],"type":"function"},{"inputs":[{"name":"_air","type":"address"},{"name":"_reward","type":"uint256"}],"type":"constructor"}];
-var lesson = web3.eth.contract(Lesson_9).at(learning_center.getModule("Lesson_9");
+var lesson = web3.eth.contract(Lesson_9).at(learning_center.getModule("Lesson_9"));
 lesson.execute(core.getModule('Market regulator'), core.getModule('DAO credit'), core.getModule('Market rule constant'), {from:web3.eth.accounts[0], gas:900000})
 ```
 
