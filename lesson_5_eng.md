@@ -1,4 +1,4 @@
-## Lesson 5: Create internal currency
+## Lesson 5: Create internal token 
 
 > Difficulty: low.
 
