@@ -9,17 +9,19 @@ contract Lesson_10 is Lesson {
     mapping(address => bool) isProceed;
     
     function execute(Market _market) {
-        if (_market.size() != 5) throw;
+        var differentLots = 0;
 
         var lot = _market.first();
         while (address(lot) != 0) {
-            if (!isProceed[lot.sale()])
+            if (!isProceed[lot.sale()]) {
                 isProceed[lot.sale()] = true;
-            else
-                throw;
+                ++differentLots;
+            }
 
             lot = _market.next(lot);
         }
+
+        if (differentLots < 5) throw;
 
         passed(msg.sender);
     }
