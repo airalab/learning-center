@@ -1,4 +1,4 @@
-## Lesson 5: Create internal token 
+## Lesson 5: Create internal DAO token 
 
 > Difficulty: low.
 
