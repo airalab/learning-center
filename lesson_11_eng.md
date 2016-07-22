@@ -1,4 +1,4 @@
-## Lesson 11: Board of directors 
+## Lesson 11: Create Board of Directors 
 
 > Difficulty: high.
 

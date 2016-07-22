@@ -1,4 +1,4 @@
-## Lesson 6: create internal market
+## Lesson 6: Create DAO market
 
 > Difficulty: medium.
 
