@@ -1,5 +1,5 @@
 # Оглавление
-* [Airalab learning center on English](README_eng.md)
+* [Airalab learning center in English](README_eng.md)
   * [Preparing to work](preparing_eng.md)
   * [Lesson 1: Create organization on Blockchain](lesson_1_eng.md)
     * [Practice: geth](lesson_1_geth_eng.md)
