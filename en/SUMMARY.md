@@ -6,7 +6,7 @@
   * [Lesson 2: Distribute shares](lesson_2_eng.md)
     * [Practice: geth](lesson_2_geth_eng.md)
   * [Lesson 3: Collect ETH](lesson_3_eng.md)
-    * [Практика: geth](lesson_3_geth_eng.md)
+    * [Practice: geth](lesson_3_geth_eng.md)
   * [Lesson 4: Fund raising](lesson_4_eng.md)
     * [Practice: geth](lesson_4_geth_eng.md)
   * [Lesson 5: Create internal DAO token](lesson_5_eng.md)
