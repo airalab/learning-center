@@ -1,6 +1,7 @@
 # Оглавление
 * [Airalab learning center in English](README_eng.md)
   * [Preparing to work](preparing_eng.md)
+    * [Practice: Youtube](preparing_youtube.md)
   * [Lesson 1: Create organization on Blockchain](lesson_1_eng.md)
     * [Practice: geth](lesson_1_geth_eng.md)
   * [Lesson 2: Allotment of shares](lesson_2_eng.md)
