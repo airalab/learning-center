@@ -1,4 +1,4 @@
-## Lesson 4: Investment 
+## Lesson 4: Fund raising 
 
 > Difficulty: medium.
 

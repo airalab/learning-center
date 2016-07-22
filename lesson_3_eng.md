@@ -1,4 +1,4 @@
-## Lesson 3: ETH collector contract
+## Lesson 3: Collect ETH 
 
 > Difficulty: low.
 
