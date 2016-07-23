@@ -6,7 +6,7 @@
 
 This document will help you to create your own DAO on top of the [Aira Core](https://github.com/airalab/core) smart-contracts.
 
-Please use GitBook - [AiraLab Learning-center](https://www.gitbook.com/book/ensrationis/learning-center-airalab/en/)
+Please use GitBook - [AiraLab Learning-center](https://ensrationis.gitbooks.io/learning-center-airalab/content/en/)
 
 ## [RUS] Учебный центр Airalab
 
@@ -14,4 +14,4 @@ Please use GitBook - [AiraLab Learning-center](https://www.gitbook.com/book/ensr
 
 В данном документе содержаться основные учебные уроки по созданию собственной децентрализованной автономной организации (далее сокр. ДАО) с использованием автономных контрактов из репозитория [Aira Core](https://github.com/airalab/core).
 
-Просим использовать GitBook - [Учебный центр Airalab](https://www.gitbook.com/book/ensrationis/learning-center-airalab/ru/)
+Просим использовать GitBook - [Учебный центр Airalab](https://ensrationis.gitbooks.io/learning-center-airalab/content/ru/)
