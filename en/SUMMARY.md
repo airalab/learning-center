@@ -1,6 +1,6 @@
 # Оглавление
 * [Airalab learning center in English](README_eng.md)
-  * [Preparing to work](preparing_eng.md)
+  * [Preparing for work](preparing_eng.md)
   * [Lesson 1: Create your own DAO](lesson_1_eng.md)
     * [Practice: geth](lesson_1_geth_eng.md)
   * [Lesson 2: Distribute shares](lesson_2_eng.md)
