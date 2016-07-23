@@ -34,7 +34,7 @@ Abi:
  [{"constant":false,"inputs":[{"name":"_dao_name","type":"string"},{"name":"_dao_description","type":"string"},{"name":"_shares_name","type":"string"},{"name":"_shares_symbol","type":"string"},{"name":"_shares_count","type":"uint256"}],"name":"create","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_buildingCost","type":"uint256"}],"name":"setCost","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_owner","type":"address"}],"name":"delegate","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_proposal","type":"address"}],"name":"setProposal","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_cashflow","type":"address"}],"name":"setCashflow","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"buildingCost","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[],"name":"getLastContract","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"},{"name":"","type":"uint256"}],"name":"getContractsOf","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[{"name":"_price","type":"uint256"},{"name":"_cashflow","type":"address"},{"name":"_proposal","type":"address"}],"type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"name":"sender","type":"address"},{"indexed":true,"name":"instance","type":"address"}],"name":"Builded","type":"event"}]
  ```
 
-Now we are ready to create new DAO. Call `Aira BuilderDAO` -> `Create()` function:
+Now we are ready to create new DAO. Call `Aira BuilderDAO` -> `Create` function:
 
 ![Screenshot 7](/img/Screenshot_7.png)
 
@@ -59,7 +59,8 @@ Abi:
 
 Let's add `Shareholder token` to the token list. Go to the `DAO Core` contract -> `First Module`. First module address is the address of the `Shareholder token`.
 
-We have created `DAO Core`! Now let's finish our lesson. In order to do that add `Lesson 1` contract to your contract list.
+We have created `DAO Core`! Now let's finish our lesson. 
+In order to do that add `Lesson 1` contract to your contract list.
 
 Contract Name - Lesson 1  
 Address - `0xab6585e43262de17f0e2b4f3674c98899569d3c3`
@@ -69,7 +70,7 @@ Abi:
  [{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"accountOf","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":false,"inputs":[{"name":"_dao","type":"address"},{"name":"_shares","type":"address"},{"name":"_shares_name","type":"string"}],"name":"execute","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"emissionRegulator","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[{"name":"_emissionRegulator","type":"address"}],"type":"constructor"}]
  ```
 
-Then call `Execute()` function specifying `DAO core` address, `Shareholder token` address, token name.
+Then call `Execute` function specifying `DAO core` address, `Shareholder token` address, token name.
 
 ![Screenshot 11](/img/Screenshot_11.png)
 
