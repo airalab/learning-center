@@ -1,13 +1,17 @@
-# Ethereum-based Decentralized Autonomous Organizations (DAO) framework tutorial
+# Introducing
 
-This document will help you to create your own DAO on top of the [Aira Core](https://github.com/airalab/core) smart-contracts.
+## [ENG] AiraLab learning center
 
 > As of July 2016 learning center is for testnet usage only.
 
----
+This document will help you to create your own DAO on top of the [Aira Core](https://github.com/airalab/core) smart-contracts.
 
-# Учебный центр по созданию децентрализованных автономных организаций на платформе Ethereum
+Please use GitBook - [AiraLab Learning-center](https://www.gitbook.com/book/ensrationis/learning-center-airalab/en/)
+
+## [RUS] Учебный центр Airalab
+
+> В июле 2016 года учебный центр будет работать только в тестовой сети.
 
 В данном документе содержаться основные учебные уроки по созданию собственной децентрализованной автономной организации (далее сокр. ДАО) с использованием автономных контрактов из репозитория [Aira Core](https://github.com/airalab/core).
 
-> В июле 2016 года учебный центр будет работать только в тестовой сети.
+Просим использовать GitBook - [Учебный центр Airalab](https://www.gitbook.com/book/ensrationis/learning-center-airalab/ru/)
