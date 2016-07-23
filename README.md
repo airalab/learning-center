@@ -1,6 +1,6 @@
 # Introducing 1
 
-## [ENG] AiraLab learning center
+## [ENG] AiraLab learning center 1
 
 > As of July 2016 learning center is for testnet usage only.
 
@@ -8,7 +8,7 @@ This document will help you to create your own DAO on top of the [Aira Core](htt
 
 Please use GitBook - [AiraLab Learning-center](https://www.gitbook.com/book/ensrationis/learning-center-airalab/en/)
 
-## [RUS] Учебный центр Airalab
+## [RUS] Учебный центр Airalab 1
 
 > В июле 2016 года учебный центр будет работать только в тестовой сети.
 
