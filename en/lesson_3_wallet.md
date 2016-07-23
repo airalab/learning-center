@@ -28,9 +28,7 @@ Send 0.1 ETH to `Ether Funds` contract:
 
 ![Screenshot 23](/img/Screenshot_23.png)
 
-Чтобы завершить урок, необходимо обратиться к контракту `Lesson 3` для вызова функции `Execute`, указав адрес контракта для хранения эфиров и имея 0,1 эфир на счету своего аккаунта на контракте.  
-
-Then call `Execute` function of the third lesson contract specifying `Ether Funds` contract address. You are required to have 0.1 ETH on your balance.
+Call the `Execute` function of the third lesson contract specifying `Ether Funds` contract address. You are required to have 0.1 ETH on your balance.
 Lesson contract address is `0xdc6471214d3d28fb5cbd95f39414a59e7eeda423`  
 
 Abi:
