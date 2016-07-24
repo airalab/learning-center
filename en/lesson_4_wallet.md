@@ -1,6 +1,6 @@
 # Ethereum Wallet - Lesson 4
 
-In this lesson we are going to create `SharesSale` contract to sell some DAO shares (in exchange for ETH).
+We are going to create `SharesSale` contract to sell some DAO shares (in exchange for ETH) in this lesson.
 
 Find the `Factory Core` -> `Aira BuilderShareSale` builder address. Please check previous lessons if you don't know how to do that. 
 
@@ -11,13 +11,13 @@ Abi:
 [{"constant":false,"inputs":[{"name":"_buildingCostWei","type":"uint256"}],"name":"setCost","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_owner","type":"address"}],"name":"delegate","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_target","type":"address"},{"name":"_etherFund","type":"address"},{"name":"_shares","type":"address"},{"name":"_price_wei","type":"uint256"}],"name":"create","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[],"name":"buildingCostWei","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":false,"inputs":[{"name":"_proposal","type":"address"}],"name":"setProposal","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_cashflow","type":"address"}],"name":"setCashflow","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"getLastContract","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"},{"name":"","type":"uint256"}],"name":"getContractsOf","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[{"name":"_buildingCost","type":"uint256"},{"name":"_cashflow","type":"address"},{"name":"_proposal","type":"address"}],"type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"name":"sender","type":"address"},{"indexed":true,"name":"instance","type":"address"}],"name":"Builded","type":"event"}]
 
 ```  
-Let's create `ShareSale` contract with the help of the `Aira BuilderShareSale` -> `Create` function.
+Let's create the `ShareSale` contract with the help of the `Aira BuilderShareSale` -> `Create` function.
 
 **Please specify these arguments:**
 
-- ETH Receiver address
-- `Ether funds` contract address
-- `Shareholder token` contract address
+- Address of the ETH Receiver
+- Address of the `Ether funds` contract 
+- Address of the `Shareholder token` contract
 - Price of a single share (in `Wei`).
 
 > It is convenient to use [http://ether.fund/tool/converter](http://ether.fund/tool/converter) to convert Wei <-> Eth.
@@ -35,7 +35,7 @@ Abi:
 
 ```  
 
-Transfer some `Shares` to `ShareSales` contract.
+Transfer some `Shares` to the `ShareSales` contract.
 
 ![Screenshot 25](/img/Screenshot_25.png)
 
@@ -53,7 +53,7 @@ If you did everything right - shares and ETH must be transferred.
 
 ## Complete the lesson
 
-In order to complete the lesson and get a reward, you must call `Lesson 4` -> `Execute` function specifying `ShareSale` contract address.
+In order to complete the lesson and get a reward, you must call the `Lesson 4` -> `Execute` function specifying the address of `ShareSale` contract.
 
 Address of the `Lesson 4` contract is `0x892bec692f4c7121b396f70f7a3b1b88e6dc3000`  
 Abi:

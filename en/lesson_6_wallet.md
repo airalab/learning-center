@@ -1,6 +1,6 @@
 # Ethereum Wallet - Lesson 6
 
-In previous lessons we have created `Shares`, `Credits`, `EthToken`. This is our basic assets. Now we will create `Market` to support the asset exchange. 
+We created `Shares`, `Credits`, `EthToken` in the previous lessons. This is our basic assets. Now we will create `Market` to support the asset exchange. 
 
 Find the `Aira BuilderMarket` builder in the `Factory Core` contract. Please check previous lessons if you don't know how to do that.
 
@@ -55,7 +55,7 @@ Send the transaction from the seller account
 
 ![Screenshot 35](/img/Screenshot_35.png)
 
-The `Market` is not capable of closing the deals itself. It is just a registry of buy/sell contracts. It creates new deal contract and tracks it's address. 
+The `Market` is not capable of closing the deals itself. It is just a registry of buy/sell contracts. It can create new deal and tracks it's address. 
 
 Let's make sure that you have created the lot. Click on the `Market` contract in `Read from Contract`. The select `First`.
 
@@ -67,7 +67,7 @@ Now add one more lot to buy 500 `DAO credit` tokens for 1 ETH.
 
 > Please take into account the `Number of decimal places` while specifying quantities. If you set the `Number of decimal places` to 8 and want to get 500 Cr tokens, set quantity_buy parameter to 500 00000000.
 
-Let's make sure that you have created the lot. Get the `First` address and then set it into `Next` field. You should now see address there.
+Let's make sure that you have created the lot. Get the `First` address and then set it into the `Next` field. You should now see address there.
 
 ![Screenshot 42](/img/Screenshot_42.png)
 
