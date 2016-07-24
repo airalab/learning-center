@@ -2,9 +2,9 @@
 
 In this lesson we are going to create the DAO module that will accumulate all ETH. You can treat ETH as a single Eth token. Aira has a special `TokenEther` token for that. 
 
-First, let's find `Aira BuilderTokenEther` contract in `Factory Core`. Please check previous lessons if you don't know how to do that.
+First, let's find the `Aira BuilderTokenEther` contract in `Factory Core`. Please check previous lessons if you don't know how to do that.
 
-Then add `Aira BuilderTokenEhter` to the contract list.
+Then add the `Aira BuilderTokenEhter` to the contract list.
 
 Abi:
 ```js
@@ -12,10 +12,10 @@ Abi:
 
 ```  
 
-Create `TokenEther` module using `Aira BuilderTokenEther` -> `Create` function. We have discussed that in a previous lessons. Don't forget to include small amount of ETH for the builder fee (0.01 ETH).
+Create `TokenEther` module using the `Aira BuilderTokenEther` -> `Create` function. We have discussed that in a previous lessons. Don't forget to include small amount of ETH for the builder fee (0.01 ETH).
 
 Add `TokenEther` module to the watched contracts list. Let's call it `Ether Funds`. 
-You can find `TokenEhter` address in `Aira BuilderTokenEther` -> `Latest Events`.
+You can find `TokenEhter` address in the `Aira BuilderTokenEther` -> `Latest Events`.
 
 Abi:
 ```js

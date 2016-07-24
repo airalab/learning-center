@@ -28,7 +28,7 @@ Create `TestCredits` module with the help of `Aira BuilderTokenEmission` -> `Cre
 
 Send 0.01 ETH to builder. 
 
-Get the created `Credits` contract address in `Aira BuilderTokenEmission` -> `Latest Events` list.
+Get the created `Credits` contract address in the `Aira BuilderTokenEmission` -> `Latest Events` list.
 
 Add `Credits` to the contracts list.
 
