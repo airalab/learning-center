@@ -4,7 +4,7 @@ In this lesson we are going to create `SharesSale` contract to sell some DAO sha
 
 Find the `Factory Core` -> `Aira BuilderShareSale` builder address. Please check previous lessons if you don't know how to do that. 
 
-Add `Aira BuilderShareSale` contract to your contracts list.
+Add the `Aira BuilderShareSale` contract to your contracts list.
 
 Abi:
 ```js
@@ -26,7 +26,7 @@ Let's create `ShareSale` contract with the help of the `Aira BuilderShareSale` -
 
 Don't forget to send some ETH to the builder (0.01 ETH).
 
-Add `ShareSale` to the contracts list.
+Add the `ShareSale` to the contracts list.
 Get the created `ShareSale` contract address in the `Aira BuilderShareSale` -> `Latest Events` list.
 
 Abi:
@@ -55,7 +55,7 @@ If you did everything right - shares and ETH must be transferred.
 
 In order to complete the lesson and get a reward, you must call `Lesson 4` -> `Execute` function specifying `ShareSale` contract address.
 
-Address of `Lesson 4` contract is `0x892bec692f4c7121b396f70f7a3b1b88e6dc3000`  
+Address of the `Lesson 4` contract is `0x892bec692f4c7121b396f70f7a3b1b88e6dc3000`  
 Abi:
 ```js
 [{"constant":false,"inputs":[{"name":"_shareSale","type":"address"}],"name":"execute","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"accountOf","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"emissionRegulator","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[{"name":"_emissionRegulator","type":"address"}],"type":"constructor"}]

@@ -14,7 +14,7 @@ Abi:
 
 Create `TokenEther` module using the `Aira BuilderTokenEther` -> `Create` function. We have discussed that in a previous lessons. Don't forget to include small amount of ETH for the builder fee (0.01 ETH).
 
-Add `TokenEther` module to the watched contracts list. Let's call it `Ether Funds`. 
+Add the `TokenEther` module to the watched contracts list. Let's call it `Ether Funds`. 
 You can find `TokenEhter` address in the `Aira BuilderTokenEther` -> `Latest Events`.
 
 Abi:
