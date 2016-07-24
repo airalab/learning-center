@@ -1,3 +1,3 @@
 ## Прохождение урока #1 видео на youtube
 
-{% youtube %}https://youtu.be/r6gYLwh09Zk{% endyoutube %}
+{% youtube %}https://www.youtube.com/watch?v=8GKY656nGrU{% endyoutube %}
