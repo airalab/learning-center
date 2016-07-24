@@ -1,25 +1,22 @@
-# Урок 8 в Ethereum Wallet
+# Ethereum Wallet - Lesson 8
 
-Иногда возникают ситуации, когда создатель ценности не желает сам заниматься работой на рынке, он хочет доверить эту часть работы другой сущности. Для таких случаев существует контракт агента рынка `MarketAgent`. Используя такой контракт, держатель ценности(токена) может доверить их агенту рынка, который будет совершать сделки от лица держателя. Создадим такой контракт.
+The creator of an asset can delegate his duties to the `MarketAgent`. The `MarketAgent` contract is used to represent an end-user on a specific market. An agent can close deals on behalf of his client.
 
-Чтобы создать такой контракт, вызовем функцию `Sign` в модуле `DAO MarketRegulator`.
+Let's create that contract.
+
+In order to do that, call `DAO MarketRegulator` -> `Sign` function.
 
 ![Screenshot 53](/img/Screenshot_53.png)
 
-После того, как транзакция будет подтверждена сетью, найдем адрес созданного контракта в `Latest Events` в модуле `DAO MarketRegulator`.
+Wait for the transaction to complete and then get the created `DAO MarketAgent` contract address in the `DAO MarketRegulator` -> `Latest Events` list.
 
 ![Screenshot 54](/img/Screenshot_54.png)
 
-Теперь внесем его в список модулей `DAO Core`, используя функцию `Set module` и адрес из события.
+Now we are ready to add this module to DAO registry. Open the `DAO Core` account (`My Test DAO` that was created in the first lesson). Select the `Set Module` function. Pass these parameters:
 
-Укажем:  
-
-    Название модуля - MarketAgent1
-    Адрес модуля - из `Latest Events`
-    Interface - github://airalab/core/market/DAOMarketAgent.sol
+- Name - MarketAgent1
+- Address of the module (see above)
+- Interface - [github://airalab/core/market/DAOMarketAgent.sol](github://airalab/core/market/DAOMarketAgent.sol)
 
 ![Screenshot 55](/img/Screenshot_55.png)
 
-
-
-## Завершение урока (TO DO)
