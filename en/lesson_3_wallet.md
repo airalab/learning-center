@@ -4,7 +4,7 @@ In this lesson we are going to create the DAO module that will accumulate all ET
 
 First, let's find the `Aira BuilderTokenEther` contract in `Factory Core`. Please check previous lessons if you don't know how to do that.
 
-Then add the `Aira BuilderTokenEhter` to the contract list.
+Then add the `Aira BuilderTokenEther` to the contract list.
 
 Abi:
 ```js
@@ -12,7 +12,7 @@ Abi:
 
 ```  
 
-Create the `TokenEther` module using the `Aira BuilderTokenEther` -> `Create` function. We have discussed that in a previous lessons. Don't forget to include small amount of ETH for the builder fee (0.01 ETH).
+Create the `TokenEther` module using the `Aira BuilderTokenEther` -> `Create` function. We have discussed that in a previous lesson. Don't forget to include a small amount of ETH for the builder fee (0.01 ETH).
 
 Add the `TokenEther` module to the watched contracts list. Let's call it `Ether Funds`. 
 You can find the `TokenEhter` address in the `Aira BuilderTokenEther` -> `Latest Events`.
@@ -28,7 +28,7 @@ Send 0.1 ETH to `Ether Funds` contract:
 
 ![Screenshot 23](/img/Screenshot_23.png)
 
-Call the `Execute` function of the third lesson contract specifying `Ether Funds` contract address. You are required to have 0.1 ETH on your balance.
+Call the `Execute` function of the third lesson contract specifying the `Ether Funds` contract address. You are required to have 0.1 ETH on your balance.
 Lesson contract address is `0xdc6471214d3d28fb5cbd95f39414a59e7eeda423`  
 
 Abi:

@@ -1,6 +1,6 @@
 # Ethereum Wallet - Lesson 7
 
-In this lesson we will create the regulator for the `DAO market`. Regulator is used to check that clients are adding lots that met some special conditions. It will only allow lots that sell tokens that are in the `DAO core` registry. 
+In this lesson we will create the regulator for the `DAO market`. The regulator is used to check that clients are adding lots that meet some special conditions. It will only allow lots that sell tokens that are in the `DAO core` registry. 
 In addition, `DAO MarketRegulator` creates new lots through `DAO Credits` only.
 
 Find the `Aira BuilderDAOMarketRegulator` builder in the `Factory Core` contract. Please check previous lessons if you don't know how to do that.
@@ -36,13 +36,13 @@ Abi:
 
 ```
 
-Now we are ready to add this module to DAO registry. Open the `DAO Core` account (`My Test DAO` that was created in the first lesson). Select the `Set Module` function. Pass these parameters:
+Now we are ready to add this module to the DAO registry. Open the `DAO Core` account (`My Test DAO` that was created in the first lesson). Select the `Set Module` function. Pass these parameters:
 
 - Name - MarketRegulator
 - Address of the module 
 - Abi - [github.com/airalab/core/blob/master/abi/modules/DAOMarketRegulator.json](github.com/airalab/core/blob/master/abi/modules/DAOMarketRegulator.json)
 
-Send that transaction from the `Owner` account. Check that everyting is OK by getting the address of the `MarketRegulator` module from the `DAO Core`.
+Send that transaction from the `Owner` account. Check that everything is OK by getting the address of the `MarketRegulator` module from the `DAO Core`.
 
 ![Screenshot 44](/img/Screenshot_44.png)
 
@@ -57,7 +57,7 @@ Check that `Market` mode is switched.
 
 ![Screenshot 47](/img/Screenshot_47.png)
 
-Now let's pass market contol to the regulator. Use the `Market` -> `Delegate` function. Specify address of the regulator. Send that transaction from the `Market`'s `Owner` account.
+Now let's pass market control to the regulator. Use the `Market` -> `Delegate` function. Specify the address of the regulator. Send that transaction from the `Market`'s `Owner` account.
 
 ![Screenshot 48](/img/Screenshot_48.png)
 
@@ -65,9 +65,9 @@ Make sure that `Market` is now under the regulator control.
 
 ![Screenshot 49](/img/Screenshot_49.png)
 
-> Warning: after control is passed to regulator, lots can be created only through `DAO MarketRegulator`.
+> Warning: after control is passed to the regulator, lots can be created only through `DAO MarketRegulator`.
 
-Try to sell some `EthToken`s. We haven't added `EthToken` to `DAO Core` before, so this lot will be blocked by regulator. As an alternative to `EthToken`, you can create any other token just for test. 
+Try to sell some `EthToken`s. We haven't added `EthToken` to `DAO Core` before, so this lot will be blocked by the regulator. As an alternative to `EthToken`, you can create any other token just for a test. 
 
 ![Screenshot 50](/img/Screenshot_50.png)
 

@@ -1,6 +1,6 @@
 # Ethereum Wallet - Lesson 6
 
-We created `Shares`, `Credits`, `EthToken` in the previous lessons. This is our basic assets. Now we will create `Market` to support the asset exchange. 
+We created `Shares`, `Credits`, `EthToken` in the previous lessons. These are our basic assets. Now we will create the `Market` to support the asset exchange. 
 
 Find the `Aira BuilderMarket` builder in the `Factory Core` contract. Please check previous lessons if you don't know how to do that.
 
@@ -27,13 +27,13 @@ Abi:
 ```
 ![Screenshot 32](/img/Screenshot_32.png)
 
-Now we are ready to add this module to the DAO registry. Open the `DAO Core` account (`My Test DAO` that was created in the first lesson). Select `Set Module` function. Pass these parameters:
+Now we are ready to add this module to the DAO registry. Open the `DAO Core` account (`My Test DAO` that was created in the first lesson). Select the `Set Module` function. Pass these parameters:
 
 - Name - Market 
 - Module address 
 - ABI - github.com/airalab/core/blob/master/abi/modules/Market.json  
 
-Send that transaction from the `Owner` account. Check that everyting is OK by getting the address of the `Market` by calling the `Get Module` function from the `DAO Core`.
+Send that transaction from the `Owner` account. Check that everything is OK by getting the address of the `Market` by calling the `Get Module` function from the `DAO Core`.
 
 ![Screenshot 33](/img/Screenshot_33.png)
 
@@ -47,17 +47,17 @@ Now let's create some lots. Call the `Market` -> `Append` function. Pass these p
     quantity_buy - Quantity to buy 
     quantity_sale - Quantity to sell
 
-Create lot to sell 1000 `Shareholder token`s in exchange for 500 `DAO credit` tokens.
+Create a lot to sell 1000 `Shareholder token`s in exchange for 500 `DAO credit` tokens.
 
-> Please take into account `Number of decimal places` while specifying quantities. If you set the `Number of decimal places` to 8 and want to get 500 Cr tokens, set quantity_buy parameter to 500 00000000.
+> Please take into account the `Number of decimal places` while specifying quantities. If you set the `Number of decimal places` to 8 and want to get 500 Cr tokens, set the quantity_buy parameter to 500 00000000.
 
 Send the transaction from the seller account
 
 ![Screenshot 35](/img/Screenshot_35.png)
 
-The `Market` is not capable of closing the deals itself. It is just a registry of buy/sell contracts. It can create new deal and tracks it's address. 
+The `Market` is not capable of closing the deals itself. It is just a registry of bought/sold contracts. It can create a new deal and tracks its address. 
 
-Let's make sure that you have created the lot. Click on the `Market` contract in `Read from Contract`. The select `First`.
+Let's make sure that you have created the lot. Click on the `Market` contract in `Read from Contract`. Then select `First`.
 
 ![Screenshot 40](/img/Screenshot_40.png)
 
@@ -65,9 +65,9 @@ Now add one more lot to buy 500 `DAO credit` tokens for 1 ETH.
 
 ![Screenshot 41](/img/Screenshot_41.png)
 
-> Please take into account the `Number of decimal places` while specifying quantities. If you set the `Number of decimal places` to 8 and want to get 500 Cr tokens, set quantity_buy parameter to 500 00000000.
+> Please take into account the `Number of decimal places` while specifying quantities. If you set the `Number of decimal places` to 8 and want to get 500 Cr tokens, set the quantity_buy parameter to 500 00000000.
 
-Let's make sure that you have created the lot. Get the `First` address and then set it into the `Next` field. You should now see address there.
+Let's make sure that you have created the lot. Get the `First` address and then set it into the `Next` field. You should now see the address there.
 
 ![Screenshot 42](/img/Screenshot_42.png)
 

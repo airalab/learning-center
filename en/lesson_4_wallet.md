@@ -1,6 +1,6 @@
 # Ethereum Wallet - Lesson 4
 
-We are going to create `SharesSale` contract to sell some DAO shares (in exchange for ETH) in this lesson.
+We are going to create a `SharesSale` contract to sell some DAO shares (in exchange for ETH) in this lesson.
 
 Find the `Factory Core` -> `Aira BuilderShareSale` builder address. Please check previous lessons if you don't know how to do that. 
 
@@ -26,7 +26,7 @@ Let's create the `ShareSale` contract with the help of the `Aira BuilderShareSal
 
 Don't forget to send some ETH to the builder (0.01 ETH).
 
-Add the `ShareSale` to the contracts list.
+Add `ShareSale` to the contracts list.
 Get the created `ShareSale` contract address in the `Aira BuilderShareSale` -> `Latest Events` list.
 
 Abi:
@@ -39,15 +39,15 @@ Transfer some `Shares` to the `ShareSales` contract.
 
 ![Screenshot 25](/img/Screenshot_25.png)
 
-Shares are ready for the sale!
+The shares are ready for the sale!
 
 ![Screenshot 26](/img/Screenshot_26.png)
 
-To buy some shares, let's send ETH to `ShareSale` contract from another account. Exchange rate is **100 shares * 0.01 = 1 ETH**.
+To buy some shares, let's send some ETH to the `ShareSale` contract from another account. The exchange rate is **100 shares * 0.01 = 1 ETH**.
 
 ![Screenshot 27](/img/Screenshot_27.png)
 
-If you did everything right - shares and ETH must be transferred.
+If you did everything right - the shares and ETH will have been transferred.
 
 ![Screenshot 28](/img/Screenshot_28.png)
 

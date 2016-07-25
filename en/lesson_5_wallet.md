@@ -1,8 +1,8 @@
 # Ethereum Wallet - Lesson 5
 
-DAO's internal market needs a special internal token. This will protect organization from ETH exchange rate volatility.
+DAO's internal market needs a special internal token. This will protect the organization from ETH exchange rate volatility.
 
-We are going to create the `Credit` module in order to issue internal DAO token in this lesson.
+We are going to create the `Credit` module in order to issue internal DAO tokens in this lesson.
 
 Find the `Aira BuilderTokenEmission` builder in the `Factory Core` contract. Please check previous lessons if you don't know how to do that.
 
@@ -34,13 +34,13 @@ Add the `Credits` contract to the contracts list.
 
 ![Screenshot 30](/img/Screenshot_30.png)
 
-Now we are ready to add this module to DAO registry. Open the `DAO Core` account (`My Test DAO` that was created in the first lesson). Select the `Set Module` function. Pass these parameters:
+Now we are ready to add this module to the DAO registry. Open the `DAO Core` account (`My Test DAO` that was created in the first lesson). Select the `Set Module` function. Pass these parameters:
 
 - Name - TestCredits
 - Address of the module
 - ABI - [github.com/airalab/core/blob/master/abi/modules/TokenEmission.json](github.com/airalab/core/blob/master/abi/modules/TokenEmission.json)
 
-Send that transaction from the `Owner` account. Check that everyting is OK by getting the address of the `Credits` module from the `DAO Core`.
+Send that transaction from the `Owner` account. Check that everything is OK by getting the address of the `Credits` module from the `DAO Core`.
 
 ![Screenshot 31](/img/Screenshot_31.png)
 

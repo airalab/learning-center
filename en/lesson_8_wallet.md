@@ -4,7 +4,7 @@ The creator of an asset can delegate his duties to the `MarketAgent`. The `Marke
 
 Let's create that contract.
 
-In order to do that, call `DAO MarketRegulator` -> `Sign` function.
+In order to do that, call the `DAO MarketRegulator` -> `Sign` function.
 
 ![Screenshot 53](/img/Screenshot_53.png)
 
@@ -12,7 +12,7 @@ Wait for the transaction to complete and then get the created `DAO MarketAgent` 
 
 ![Screenshot 54](/img/Screenshot_54.png)
 
-Now we are ready to add this module to DAO registry. Open the `DAO Core` account (`My Test DAO` that was created in the first lesson). Select the `Set Module` function. Pass these parameters:
+Now we are ready to add this module to the DAO registry. Open the `DAO Core` account (`My Test DAO` that was created in the first lesson). Select the `Set Module` function. Pass these parameters:
 
 - Name - MarketAgent1
 - Address of the module (see above)
