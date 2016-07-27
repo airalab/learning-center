@@ -41,6 +41,7 @@
     * [Практика: Youtube](lesson_9_youtube.md)
   * [Урок 10: Увеличение ликвидности токенов ДАО](lesson_10.md)
     * [Практика: geth](lesson_10_geth.md)
+    * [Практика: Ethereum Wallet](lesson_10_wallet.md)
     * [Практика: Youtube](lesson_10_youtube.md)
   * [Урок 11: Совет директоров организации](lesson_11.md)
     * [Практика: geth](lesson_11_geth.md)
