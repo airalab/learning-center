@@ -14,7 +14,7 @@
 
 ### Lesson Description 
 
-We can accumulate all invested (by shareholders) ETH in a single contract. All ETH that is sent to contract can be withdrawn or used **only** by the account that sent it. 
+We can accumulate all invested ETH (by shareholders) in a single contract. All ETH that is sent to a contract can be withdrawn or used **only** by the account that sent it. 
 
 ### Skill test 
 
@@ -23,6 +23,6 @@ We can accumulate all invested (by shareholders) ETH in a single contract. All E
 **Instructions:**
 
 - Create a contract that will accumulate all ETH by calling [Aira BuilderTokenEther](https://github.com/airalab/core/wiki/API-Reference#buildertokenether).
-- Send **0.1** ETH to your account in [TokenEther](https://github.com/airalab/core/wiki/API-Reference#tokenether) contract that you created before.
+- Send **0.1** ETH to your account in the [TokenEther](https://github.com/airalab/core/wiki/API-Reference#tokenether) contract that you created before.
 - Call the `Execute()` function from `Lesson 3` contract. Please specify your address.
 

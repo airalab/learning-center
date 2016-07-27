@@ -1,6 +1,6 @@
 ## Final DAO model.
 
-If you have completed all steps correctly, the final DAO model will include these contracts:
+If you have completed all the steps correctly, the final DAO model will include these contracts:
 
 - `DAO core`
 - `Shareholder token`
@@ -10,5 +10,5 @@ If you have completed all steps correctly, the final DAO model will include thes
 - `Market regulator`
 - `Board of Directors`
 
-**not including the `Crowdsale` and the `ShareSale` contracts, because they were used occasionally only**
+**This does not include the `Crowdsale` and the `ShareSale` contracts because they were used onlye occasionally**
 

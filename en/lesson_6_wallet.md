@@ -1,6 +1,6 @@
 # Ethereum Wallet - Lesson 6
 
-We created `Shares`, `Credits`, `EthToken` in the previous lessons. These are our basic assets. Now we will create the `Market` to support the asset exchange. 
+We created `Shares`, `Credits`, and `EthToken` in the previous lessons. These are our basic assets. Now we will create the `Market` to support the asset exchange. 
 
 Find the `Aira BuilderMarket` builder in the `Factory Core` contract. Please check previous lessons if you don't know how to do that.
 

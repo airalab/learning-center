@@ -9,7 +9,7 @@ builder.create('Mars colony credits', 'MRC', {from: eth.accounts[0], gas: 100000
 builder.getLastContract()
 ```
 
-Add new token to the DAO registry
+Add a new token to the DAO registry
 
 ```js
 core.setModule("Ether funds", builder.getLastContract(), "github://airalab/core/token/TokenEther.sol", true, {from:web3.eth.accounts[0], gas:300000})
@@ -22,7 +22,7 @@ Send 0.1 ETH to the contract
 eth.sendTransaction({from:web3.eth.accounts[0], to:core.getModule('Ether funds'), value: web3.toWei('0.1', 'ether')})
 ```
 
-Call "third lesson->Execute". Must receive 50 air
+Call "third lesson->Execute". You will receive 50 air
 
 ```js
 var learning_center = eth.contract(Core).at("0x73c5f07b929867951aa2b61f30773dba627d4779");

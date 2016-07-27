@@ -8,7 +8,7 @@ var shares = web3.eth.contract(TokenEmission).at(core.getModule('Mars colony sha
 shares.approve('0xd5ec7544753fcf759b4dd37210dab113fce76814', 1, {from:web3.eth.accounts[0], gas:900000})
 ```
 
-Call "second lesson->Execute" with the dao address as an argument. Must receive 50 air
+Call "second lesson->Execute" with the dao address as an argument. You will receive 50 air
 
 ```js
 var learning_center = eth.contract(Core).at("0x73c5f07b929867951aa2b61f30773dba627d4779");

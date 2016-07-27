@@ -15,7 +15,7 @@
 
 ### Lesson Description 
 
-First, we create the `DAO core`. It will provide us with a registry that stores all autonomous contracts that are used by DAO. A `Shareholder token` contract is used to control that registry (to append/modify/remove items). In order to create these contracts, you need to send a transaction from your address to `Aira BuilderDAO` (found in `DAO factory` registry).
+First, we create the `DAO core`. It will provide us with a registry that stores all autonomous contracts that are used by the DAO. A `Shareholder token` contract is used to control that registry (to append/modify/remove items). In order to create these contracts, you need to send a transaction from your address to `Aira BuilderDAO` (found in the `DAO factory` registry).
 
 #### Input arguments 
 
@@ -33,4 +33,4 @@ Argument| Description | Sample
 
 **Instructions:**
 
-- Call the `Execute()` function (see the `Lesson 1` contract) specifying the `DAO core` address. The `Lesson 1` contract will check whethere the `owner` variable in the `DAO core` equals to your address.
+- Call the `Execute()` function (see the `Lesson 1` contract) specifying the `DAO core` address. The `Lesson 1` contract will check whether the `owner` variable in the `DAO core` is equal to your address.

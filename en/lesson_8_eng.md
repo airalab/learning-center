@@ -12,11 +12,11 @@
 
 ### Lesson Description 
 
-The regulator that was added in the previous lesson also helps market agents to do their job. The `MarketAgent` contract is used to represent an end-user on a specific market. An agent can close deals on behalf of his client. 
+The regulator that was added in the previous lesson also helps market agents to do their job. The `MarketAgent` contract is used to represent an end-user in a specific market. An agent can close deals on behalf of his client. 
 
-**To add market agent to a DAO:**
+**To add a market agent to a DAO:**
 
-- Call regulator's `sign()` method. The regulator will create market agent contract and will call the `MarketAgentSign(sender, agent)` event.
+- Call the regulator's `sign()` method. The regulator will create a market agent contract and will call the `MarketAgentSign(sender, agent)` event.
 
 ### Skill test 
 

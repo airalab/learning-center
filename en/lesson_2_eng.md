@@ -14,9 +14,9 @@ Some `shareholder tokens` were emitted when DAO was created. Now you need to dis
 You can do that in 2 different ways:
 
 1. Send the tokens directly;
-2. Call an `Aira BuilderShareholder` builder to create a `Shareholder` contract. When the `Sign` function is called, it will automatically withdraw a specified number of tokens from the `founder` to `recipient` (specified during contract creation). 
+2. Call an `Aira BuilderShareholder` builder to create a `Shareholder` contract. When the `Sign` function is called, it will automatically withdraw a specified number of tokens from the `founder` to the `recipient` (specified during contract creation). 
 
-The main difference is that in the first case the `recipient` becomes a shareholder automatically, without any approval. The second option requires explicit approval. The function `sign` is used for that.
+The main difference is that, in the first case, the `recipient` becomes a shareholder automatically, without any approval. The second option requires explicit approval. The function `sign` is used for that.
 
 > Notice: do not forget to call the `approve` function (see `Shareholder token` contract) to enable token withdrawal by `Shareholder` contract.
 
@@ -26,6 +26,6 @@ The main difference is that in the first case the `recipient` becomes a sharehol
 
 **Instructions:**
 
-- Allow `Airalab learning center` address to withdraw 1 share of the `Shareholder token`. 
-- Call `Execute()` function from the `Lesson 2` contract.
+- Allow the `Airalab learning center` address to withdraw 1 share of the `Shareholder token`. 
+- Call the `Execute()` function from the `Lesson 2` contract.
 

@@ -48,12 +48,12 @@ Send that transaction from the `Owner` account. Check that everything is OK by g
 
 ![Screenshot 45](/img/Screenshot_45.png)
 
-Now switch market into `regulated` mode. Call the `Market` -> `Set regulator` function. 
+Now switch the market into `regulated` mode. Call the `Market` -> `Set regulator` function. 
 Send that transaction from the `Market`'s `Owner` account. 
 
 ![Screenshot 46](/img/Screenshot_46.png)
 
-Check that `Market` mode is switched.
+Check that `Market` mode is selected.
 
 ![Screenshot 47](/img/Screenshot_47.png)
 
