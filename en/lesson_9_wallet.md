@@ -4,7 +4,6 @@ In this lesson we will create `MarketRuleConstant` module. It will allow us to s
 
 Find the `Aira BuilderMarketRuleConstant` builder in the `Factory Core` contract. Please check previous lessons if you don't know how to do that.
 
-
 Add the `Aira BuilderMarketRuleConstant` contract to your contracts list.
 
 Abi:
