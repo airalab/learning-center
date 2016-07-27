@@ -38,7 +38,7 @@ Now we are ready to create a new DAO. Call the `Aira BuilderDAO` -> `Create` fun
 
 ![Screenshot 7](/img/Screenshot_7.png)
 
-Fill in dao_name, dao_desc, etc. Please double check the correctness of the address. This account will be the owner of the DAO. You need to include a small ETH amount with that transaction. The builder will send you back the change, so any >0.01 ETH amount may suffice. Click the `Execute` button.
+Fill in dao_name, dao_desc, etc. Please double check the correctness of the address. This account will be the owner of the DAO. You need to include a small amount of ETH with that transaction. The builder will send you back the change, so any >0.01 ETH amount will suffice. Click the `Execute` button.
 
 Please wait a little bit in order for the transaction to be confirmed by the Ethereum network. Now you should go to the `BuilderDAO` -> `Latest Events` list. 
 
@@ -60,7 +60,7 @@ Abi:
 Let's add the `Shareholder token` to the token list. Go to the `DAO Core` contract -> `First Module`. The first module address is the address of the `Shareholder token`.
 
 We have created the `DAO Core`! Now let's finish our lesson. 
-In order to do that, add `Lesson 1` contract to your contract list.
+In order to do that, add the `Lesson 1` contract to your contract list.
 
 Contract Name - Lesson 1  
 Address - `0xab6585e43262de17f0e2b4f3674c98899569d3c3`

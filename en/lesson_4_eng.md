@@ -1,4 +1,4 @@
-## Lesson 4: Fund raising 
+## Lesson 4: Fundraising 
 
 > Difficulty: medium.
 

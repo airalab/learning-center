@@ -23,7 +23,7 @@ The shares are transferred!
 
 ## The second way 
 
-In this case the other side must approve the transfer first. Create the `Shareholder` contract. Do that by going to the `Factory Core` contract -> `Get module`. Find the `Aira BuilderShareholder` address.
+In this case, the other side must approve the transfer first. Create the `Shareholder` contract. Do that by going to the `Factory Core` contract -> `Get module`. Find the `Aira BuilderShareholder` address.
 
 ![Screenshot 15](/img/Screenshot_15.png)
 
@@ -68,7 +68,7 @@ We are ready to sign the shareholder contract. Let's call the `Sign` function by
 
 ![Screenshot 20](/img/Screenshot_20.png)
 
-Shares must be transferred to another account.
+Shares will be transferred to another account.
 
 ![Screenshot 21](/img/Screenshot_21.png)
 

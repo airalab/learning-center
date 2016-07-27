@@ -18,5 +18,5 @@ The primary goal of any organization is to create new value. This value must be 
 
 > Complete this lesson and get 100 `air` tokens! 
 
-To complete this lesson you need to call the `Execute()` function of the `Lesson 10` contract. Please specify market contract address. Your market needs at least 5 active lots (different token).
+To complete this lesson you need to call the `Execute()` function of the `Lesson 10` contract. Please specify market contract address. Your market needs at least 5 active lots (different tokens).
 

@@ -13,7 +13,7 @@
 
 ### Lesson Description 
 
-Currently the `owner` that created the `DAO credit` can initially emit new tokens freely. This can decrease your market value. In order to deal with that, we are going to create a `DAO credit` emission regulator and add it to the market. The shareholders must vote on that.
+Currently, the `owner` that created the `DAO credit` can initially emit new tokens freely. This can decrease your market value. In order to deal with that, we are going to create a `DAO credit` emission regulator and add it to the market. The shareholders must vote on that.
 
 The market regulator that we created earlier can filter deals according to rules that are set by the shareholders. 
 `DAO credit` is an example of such a rule. The shareholders vote to set these rules.
@@ -21,8 +21,8 @@ The market regulator that we created earlier can filter deals according to rules
 **Instructions:**
 
 - Call the `Aira BuilderMarketRuleConstant` builder. Specify the amount of emitted tokens.  
-- Vote for this rule by calling `pollUp()` with these arguments: token, your shares count; **Notice: call regulator's `approve` for your shares beforehand**
-- Call the `Credit ledger` contract (by `owner`) in order to change owner address to market regulator contract address.
+- Vote for this rule by calling `pollUp()` with these arguments: token, your shares count; **Notice: call the regulator's `approve` for your shares beforehand**
+- Call the `Credit ledger` contract (by `owner`) in order to change the owner address to the market regulator contract address.
 
 **How to check that the emission regulator works:**
 
@@ -33,4 +33,4 @@ The market regulator that we created earlier can filter deals according to rules
 
 > Complete this lesson and get 200 `air` tokens! 
 
-To complete this lesson you need to call the `Execute()` function of the `Lesson 9` contract. Please specify market contract address.
+To complete this lesson you need to call the `Execute()` function of the `Lesson 9` contract. Please specify the market contract address.
