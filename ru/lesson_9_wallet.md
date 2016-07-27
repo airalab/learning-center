@@ -1,77 +1,64 @@
 # Урок 9 в Ethereum Wallet
 
-В этом уроке мы создадим модуль `DAO MarketRegulator`. Когда он начнет работать, добавление на рынок лота становится возможно только при выполнении условий, установленных регулятором. На данный момент, регулятор, при включении позволяет добавлять на рынок лоты, только с теми токенами, запись о которых есть в `DAO core`. Также, `DAO MarketRegulator` создает лоты только через `DAO Credits`, т.е все ценности(токены) можно будет покупать\продавать только за `DAO Credits`.
+В этом уроке мы создадим модуль `MarketRuleConstant`. Этот модуль даст возможность задать правило эмисии для `DAO Credits`.
 
-Сначала найдем сборщик `Aira BuilderDAOMarketRegulator` в контракте `Factory Core`. Как это сделать было рассмотрено в предыдущих уроках.
+Сначала найдем сборщик `Aira BuilderMarketRuleConstant` в контракте `Factory Core`. Как это сделать было рассмотрено в предыдущих уроках.
 
-Далее, добавим сборщик `Aira BuilderDAOMarketRegulator` в список ваших контрактов.
+Далее, добавим сборщик `Aira BuilderMarketRuleConstant` в список ваших контрактов.
 Abi:
 ```js
-[{"constant":false,"inputs":[{"name":"_buildingCostWei","type":"uint256"}],"name":"setCost","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_owner","type":"address"}],"name":"delegate","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"buildingCostWei","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":false,"inputs":[{"name":"_proposal","type":"address"}],"name":"setProposal","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_shares","type":"address"},{"name":"_core","type":"address"},{"name":"_market","type":"address"},{"name":"_dao_credits","type":"address"}],"name":"create","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_cashflow","type":"address"}],"name":"setCashflow","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"getLastContract","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"},{"name":"","type":"uint256"}],"name":"getContractsOf","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[{"name":"_buildingCost","type":"uint256"},{"name":"_cashflow","type":"address"},{"name":"_proposal","type":"address"}],"type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"name":"sender","type":"address"},{"indexed":true,"name":"instance","type":"address"}],"name":"Builded","type":"event"}]
+[{"constant":false,"inputs":[{"name":"_buildingCostWei","type":"uint256"}],"name":"setCost","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_owner","type":"address"}],"name":"delegate","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"buildingCostWei","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":false,"inputs":[{"name":"_proposal","type":"address"}],"name":"setProposal","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_emission","type":"uint256"}],"name":"create","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_cashflow","type":"address"}],"name":"setCashflow","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"getLastContract","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"},{"name":"","type":"uint256"}],"name":"getContractsOf","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[{"name":"_buildingCost","type":"uint256"},{"name":"_cashflow","type":"address"},{"name":"_proposal","type":"address"}],"type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"name":"sender","type":"address"},{"indexed":true,"name":"instance","type":"address"}],"name":"Builded","type":"event"}]
 
-```  
-Создадим модуль `DAO MarketRegulator`, используя функцию `Create` в контракте `Aira BuilderDAOMarketRegulator`.
+```
+Создадим модуль `MarketRuleConstant`, используя функцию `Create` в контракте `Aira BuilderMarketRuleConstant`.
 
 При обращении к сборщику необходимо указать:
 
-    адрес модуля `Shares`
-    адрес `DAO Core`
-    адрес модуля `Market`
-    адрес модуля `Credits`
+    Emission - кол-во эмиссируемых токенов при каждой сделке.
 
 Не забудьте указать правильный аккаунт и отправить немного Eth сборщику, его работа стоит 0.01 Eth.
 
-![Screenshot 43](/img/Screenshot_43.png)
+![Screenshot 56](/img/Screenshot_56.png)
 
-Адрес созданного `DAO MarketRegulator` вы найдете в `Latest Events` сборщика `Aira BuilderDAOMarketRegulator`.
-
-Добавьте этот модуль в список наблюдаемых. Адрес у вас есть.  
-Abi:  
-```js
-[{"constant":true,"inputs":[],"name":"shares","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_sale","type":"address"},{"name":"_quantity","type":"uint256"},{"name":"_price","type":"uint256"}],"name":"sale","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[],"name":"credits","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_lot","type":"address"}],"name":"notifyDeal","outputs":[],"type":"function"},{"constant":false,"inputs":[],"name":"sign","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_owner","type":"address"}],"name":"delegate","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"market","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[{"name":"_asset","type":"address"}],"name":"currentRuleOf","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_buy","type":"address"},{"name":"_quantity","type":"uint256"},{"name":"_price","type":"uint256"}],"name":"buy","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_asset","type":"address"},{"name":"_rule","type":"address"},{"name":"_count","type":"uint256"}],"name":"pollUp","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_asset","type":"address"},{"name":"_count","type":"uint256"}],"name":"pollDown","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"dao_core","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[{"name":"_shares","type":"address"},{"name":"_core","type":"address"},{"name":"_market","type":"address"},{"name":"_dao_credits","type":"address"}],"type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"name":"sender","type":"address"},{"indexed":true,"name":"lot","type":"address"}],"name":"NewLot","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"_value","type":"uint256"}],"name":"Emission","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"sender","type":"address"},{"indexed":true,"name":"agent","type":"address"}],"name":"MarketAgentSign","type":"event"}]
-
-```
+Адрес созданного `MarketRuleConstant` вы найдете в `Latest Events` сборщика `Aira BuilderMarketRuleConstant`.
 
 Мы готовы добавить этот модуль в реестр модулей вашего DAO. Для этого откроем контракт `DAO Core` (в уроке 1 мы его создали как `My Test DAO`). Выберем функцию `Set Module`. Указываем:
 
-    наименование - MarketRegulator
+    наименование - MarketRuleConstant
     адрес модуля
-    Abi - github.com/airalab/core/blob/master/abi/modules/DAOMarketRegulator.json  
+    Abi - github://airalab/core/market/MarketRuleConstant.sol
 
-Транзакция должна быть отправлена с аккаунта, который указан как `Owner` в вашем DAO. Проверьте наличие модуля в вашем DAO, указав название модуля `MarketRegulator` в функции `Get Module`, в контракте `DAO Core` и получив его адрес.
+Транзакция должна быть отправлена с аккаунта, который указан как `Owner` в вашем DAO. Проверьте наличие модуля в вашем DAO, указав название модуля `MarketRuleConstant` в функции `Get Module`, в контракте `DAO Core` и получив его адрес.
 
-![Screenshot 44](/img/Screenshot_44.png)
+![Screenshot 57](/img/Screenshot_57.png)
 
-![Screenshot 45](/img/Screenshot_45.png)
+![Screenshot 58](/img/Screenshot_58.png)
 
-Теперь переведем модуль `Market` в режим функционирования с регулятором. Для этого используем функцию `Set regulator` в модуле `Market`. Транзакция должна быть отправлена с аккаунта, который является `Owner` для `Market`.
+Для того, чтобы правило заработало, нужно за него проголосовать. Для этого, сначала сделаем `Approve` акций `Shares` для `Market regulator`. Найдем адрес `Market regulator` в `DAO Core` либо просто возьмем адрес из наблюдаемого контракта `Market regulator`.
 
-![Screenshot 46](/img/Screenshot_46.png)
+![Screenshot 59](/img/Screenshot_59.png)
 
-Проверим, переключился ли `Market` в режим с регулятором.
+Кликнем на модуль `Shares` и выберем функцию `Approve`.
+Указываем:
 
-![Screenshot 47](/img/Screenshot_47.png)
+    адрес Market regulator
+    кол-во акций - 1
 
-Далле, нам нужно передать управление рынком регулятору, используем функцию `Delegate` в модуле `Market`. Указываем адрес регулятора. Транзакция должна быть отправлена с аккаунта, который является `Owner` для `Market`.
+![Screenshot 60](/img/Screenshot_60.png)
 
-![Screenshot 48](/img/Screenshot_48.png)
+Транзакция должна быть отправлена с аккаунта у которого есть `Shares`.  
+Далее, проголосуем за правило в модуле `Market regulator`. Используем функцию `Poll Up`
 
-Убедимся, что `Market` перешел под управление регулятора.
+Указываем:
 
-![Screenshot 49](/img/Screenshot_49.png)
+    адрес ценности которая будет эмиссироваться - `Credits`
+    адрес правила
+    кол-во акций для голосования - 1
 
->Обращаю внимание на то, что после передачи `Market` регулятору, лоты будут выставляться только через `DAO MarketRegulator`.
+![Screenshot 61](/img/Screenshot_61.png)
 
-Попробуем добавить лот на рынок, в котором будут участвовать токены не добавленные в `DAO Core`. `EthToken` такой токен, мы его еще не добавляли в `DAO Core` или можете создать свой с помощью `Aira BuilderTokenEmission`.
+Последнее, что нам нужно сделать, передать `Credits` под управление `Market regulator`. Для этого вызовем функцию `Delegate` в модуле `Credits`, указав адрес `Market Regulator`. Транзакция должна быть отправлена с аккаунта, который указан как `Owner` в модуле `Credits`.
 
-![Screenshot 50](/img/Screenshot_50.png)
-
-![Screenshot 51](/img/Screenshot_51.png)
-
-Как видим, контракт не может исполнится.
-
-Если мы попробуем продать, например `Shares`, которые есть в реестре `DAO Core`, то лот выставится.
-
-![Screenshot 52](/img/Screenshot_52.png)
+![Screenshot 62](/img/Screenshot_62.png)
 
 ## Завершение урока (TO DO)
