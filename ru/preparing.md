@@ -6,7 +6,7 @@
 
 В данном уроке необходим клиент сети Ethereum, поддерживающий работу в консольном режиме. Рекомендуется использовать клиент сети [geth](https://github.com/ethereum/go-ethereum#automated-development-builds) или [parity](https://ethcore.io/parity.html).
 
-Если вы не знакомы с консолью, мы предлагаем вам воспользоваться официальным GUI клиентом сети Ethereum - Ethereum Wallet. Инструкция по его подготовке - [Ethereum Wallet](https://github.com/airalab/learning-center/blob/master/preparing_wallet.md)
+Если вы не знакомы с консолью, мы предлагаем вам воспользоваться официальным GUI клиентом сети Ethereum - Ethereum Wallet. Инструкция по его подготовке - [Ethereum Wallet](https://ensrationis.gitbooks.io/learning-center-airalab/content/ru/preparing_wallet.html)
 
 После установки клиента сети необходимо выполнить синхронизацию с **тестовой сетью** и добыть крайне небольшую сумму токенов **ether** для отправки транзакции, требуемой для выполнения данного урока. Сделать это можно одним из следующих способов:
 
