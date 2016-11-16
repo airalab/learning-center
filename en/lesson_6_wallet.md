@@ -1,6 +1,6 @@
 # Ethereum Wallet - Lesson 6
 
-We created `Shares`, `Credits`, and `EthToken` in the previous lessons. These are our basic assets. Now we will create the `Market` to support the asset exchange. 
+We created `Shares`, `Credits`, and `EthToken` in the previous lessons. These are our basic assets. Now we will create the `Market` to support the asset exchange.
 
 Find the `Aira BuilderMarket` builder in the `Factory Core` contract. Please check previous lessons if you don't know how to do that.
 
@@ -14,7 +14,7 @@ Abi:
 
 Call the `Market` -> `Create` function in the `Aira BuilderMarket` contract.
 
-Send 0.01 ETH to builder. 
+Send 0.01 ETH to builder.
 
 Get the created `Market` contract address in the `Aira BuilderMarket` -> `Latest Events` list.
 
@@ -29,9 +29,9 @@ Abi:
 
 Now we are ready to add this module to the DAO registry. Open the `DAO Core` account (`My Test DAO` that was created in the first lesson). Select the `Set Module` function. Pass these parameters:
 
-- Name - Market 
-- Module address 
-- ABI - github.com/airalab/core/blob/master/abi/modules/Market.json  
+- Name - Market
+- module - Module address
+- interface - Link github.com/airalab/core/blob/master/abi/modules/Market.json  
 
 Send that transaction from the `Owner` account. Check that everything is OK by getting the address of the `Market` by calling the `Get Module` function from the `DAO Core`.
 
@@ -41,10 +41,10 @@ Send that transaction from the `Owner` account. Check that everything is OK by g
 
 Now let's create some lots. Call the `Market` -> `Append` function. Pass these parameters:
 
-    seller address - The address of the seller 
-    sale address - The address of an asset. 
-    buy address - The address of the asset that we want to get in exchange 
-    quantity_buy - Quantity to buy 
+    seller address - The address of the seller
+    sale address - The address of an asset.
+    buy address - The address of the asset that we want to get in exchange
+    quantity_buy - Quantity to buy
     quantity_sale - Quantity to sell
 
 Create a lot to sell 1000 `Shareholder token`s in exchange for 500 `DAO credit` tokens.
@@ -55,7 +55,7 @@ Send the transaction from the seller account
 
 ![Screenshot 35](/img/Screenshot_35.png)
 
-The `Market` is not capable of closing the deals itself. It is just a registry of bought/sold contracts. It can create a new deal and tracks its address. 
+The `Market` is not capable of closing the deals itself. It is just a registry of bought/sold contracts. It can create a new deal and tracks its address.
 
 Let's make sure that you have created the lot. Click on the `Market` contract in `Read from Contract`. Then select `First`.
 
@@ -71,3 +71,13 @@ Let's make sure that you have created the lot. Get the `First` address and then 
 
 ![Screenshot 42](/img/Screenshot_42.png)
 
+## Complete the lesson
+
+Чтобы завершить урок, необходимо обратиться к контракту `Lesson 6` для вызова функции `Execute`, передав адрес созданного контракта `Market`.
+Address Lesson 6 - `0xd7A0D1391C504C5E9649bc7482B1917eC9E6eD37`  
+Abi:
+```js
+[{"constant":false,"inputs":[{"name":"_air","type":"address"}],"name":"setToken","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"reward","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[],"name":"air","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_reward","type":"uint256"}],"name":"setReward","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_market","type":"address"}],"name":"execute","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_owner","type":"address"}],"name":"delegate","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"isPassed","outputs":[{"name":"","type":"bool"}],"type":"function"},{"inputs":[{"name":"_air","type":"address"},{"name":"_reward","type":"uint256"}],"type":"constructor"}]
+
+```  
+Выполните самостоятельно. Если всё сделано правильно, вы получите 100 Air.

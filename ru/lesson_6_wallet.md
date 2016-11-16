@@ -27,8 +27,8 @@ Abi:
 Мы готовы добавить этот модуль в реестр модулей вашего DAO. Для этого откроем контракт `DAO Core` (в уроке 1 мы его создали как `My Test DAO`). Выберем функцию `Set Module`. Указываем:
 
     наименование - Market
-    адрес модуля
-    Abi - github.com/airalab/core/blob/master/abi/modules/Market.json  
+    module - адрес модуля
+    interface - ссылку github.com/airalab/core/blob/master/abi/modules/Market.json  
 
 Транзакция должна быть отправлена с аккаунта, который указан как `Owner` в вашем DAO. Проверьте наличие модуля в вашем DAO, указав название модуля `Market` в функции `Get Module`, в контракте `DAO Core` и получив его адрес.
 
@@ -67,4 +67,13 @@ Abi:
 
 ![Screenshot 42](/img/Screenshot_42.png)
 
-## Завершение урока (TO DO)
+## Завершение урока
+
+Чтобы завершить урок, необходимо обратиться к контракту `Lesson 6` для вызова функции `Execute`, передав адрес созданного контракта `Market`.
+Address Lesson 6 - `0xd7A0D1391C504C5E9649bc7482B1917eC9E6eD37`  
+Abi:
+```js
+[{"constant":false,"inputs":[{"name":"_air","type":"address"}],"name":"setToken","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"reward","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[],"name":"air","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_reward","type":"uint256"}],"name":"setReward","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_market","type":"address"}],"name":"execute","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_owner","type":"address"}],"name":"delegate","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"isPassed","outputs":[{"name":"","type":"bool"}],"type":"function"},{"inputs":[{"name":"_air","type":"address"},{"name":"_reward","type":"uint256"}],"type":"constructor"}]
+
+```  
+Выполните самостоятельно. Если всё сделано правильно, вы получите 100 Air.
