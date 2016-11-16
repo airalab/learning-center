@@ -1,10 +1,10 @@
-# Ethereum Wallet - Lesson 1 
+# Ethereum Wallet - Lesson 1
 
 First, let's add an Air token to the token list. These tokens are used as a reward for the completion of the lesson. Click the `Contracts` -> `Watch token` button.
 
 ![Screenshot 10](/img/Screenshot_10.png)
 
-Token Address is `0xf307308cf0da2297e03401f65891b7e3052d234b`  
+Token Address is `0x57f7e2ce8f58269a3ce9e998f49c6d79ec1b3b25`  
 
 In order to create the `DAO core` and the `Shareholder token` we need to send a transaction to the `Aira BuilderDAO` builder from the `DAO factory`. First, add the `Factory Core` contract to your Contracts list:
 
@@ -27,7 +27,7 @@ And add it to your contracts list:
 ![Screenshot 6](/img/Screenshot_6.png)
 
 Contract Name: `Aira BuilderDAO`  
-Address: `0xb814efd3B486927FA2bA2ca9Ea6a699bC8a09A0a`  
+Address: `0x05Bc6aeF81428D6F6476d9B6005071C267528D3B`  
 
 Abi:
 ```js
@@ -40,7 +40,7 @@ Now we are ready to create a new DAO. Call the `Aira BuilderDAO` -> `Create` fun
 
 Fill in dao_name, dao_desc, etc. Please double check the correctness of the address. This account will be the owner of the DAO. You need to include a small amount of ETH with that transaction. The builder will send you back the change, so any >0.01 ETH amount will suffice. Click the `Execute` button.
 
-Please wait a little bit in order for the transaction to be confirmed by the Ethereum network. Now you should go to the `BuilderDAO` -> `Latest Events` list. 
+Please wait a little bit in order for the transaction to be confirmed by the Ethereum network. Now you should go to the `BuilderDAO` -> `Latest Events` list.
 
 ![Screenshot 8](/img/Screenshot_8.png)
 
@@ -59,15 +59,15 @@ Abi:
 
 Let's add the `Shareholder token` to the token list. Go to the `DAO Core` contract -> `First Module`. The first module address is the address of the `Shareholder token`.
 
-We have created the `DAO Core`! Now let's finish our lesson. 
+We have created the `DAO Core`! Now let's finish our lesson.
 In order to do that, add the `Lesson 1` contract to your contract list.
 
 Contract Name - Lesson 1  
-Address - `0xab6585e43262de17f0e2b4f3674c98899569d3c3`
+Address - `0xc8905A71DF171a55ad235F1409a99300Efbd2505`
 
 Abi:
 ```js
- [{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"accountOf","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":false,"inputs":[{"name":"_dao","type":"address"},{"name":"_shares","type":"address"},{"name":"_shares_name","type":"string"}],"name":"execute","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"emissionRegulator","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[{"name":"_emissionRegulator","type":"address"}],"type":"constructor"}]
+ [{"constant":false,"inputs":[{"name":"_air","type":"address"}],"name":"setToken","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"reward","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[],"name":"air","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_reward","type":"uint256"}],"name":"setReward","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_dao","type":"address"}],"name":"execute","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_owner","type":"address"}],"name":"delegate","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"isPassed","outputs":[{"name":"","type":"bool"}],"type":"function"},{"inputs":[{"name":"_air","type":"address"},{"name":"_reward","type":"uint256"}],"type":"constructor"}]
  ```
 
 Then call the `Execute` function specifying the address of the `DAO core`, the address of the `Shareholder token`, and the token name.

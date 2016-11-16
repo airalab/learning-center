@@ -4,7 +4,7 @@
 
 ![Screenshot 10](/img/Screenshot_10.png)
 
-Token Address - `0xf307308cf0da2297e03401f65891b7e3052d234b`  
+Token Address - `0x57f7e2ce8f58269a3ce9e998f49c6d79ec1b3b25`  
 
 Для того, чтобы создать `DAO core` и `Shareholder token` необходимо обратиться к фабрике DAO отправив транзакцию со своего аккаунта к сборщику `Aira BuilderDAO` из реестра `DAO factory`. Чтобы это сделать, сначала нужно добавить контракт `Factory Core` в список ваших контрактов в разделе `Contracts`.
 
@@ -27,7 +27,7 @@ Abi:
 ![Screenshot 6](/img/Screenshot_6.png)
 
 Contract Name: `Aira BuilderDAO`  
-Address: `0xb814efd3B486927FA2bA2ca9Ea6a699bC8a09A0a`  
+Address: `0x05Bc6aeF81428D6F6476d9B6005071C267528D3B`  
 
 Abi:
 ```js
@@ -62,11 +62,11 @@ Abi:
 `DAO Core` создано, осталось завершить урок, для этого нужно добавить контракт урока `Lesson 1` в список ваших контрактов.
 
 Contract Name - Lesson 1  
-Address - `0xab6585e43262de17f0e2b4f3674c98899569d3c3`
+Address - `0xc8905A71DF171a55ad235F1409a99300Efbd2505`
 
 Abi:
 ```js
- [{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"accountOf","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":false,"inputs":[{"name":"_dao","type":"address"},{"name":"_shares","type":"address"},{"name":"_shares_name","type":"string"}],"name":"execute","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"emissionRegulator","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[{"name":"_emissionRegulator","type":"address"}],"type":"constructor"}]
+ [{"constant":false,"inputs":[{"name":"_air","type":"address"}],"name":"setToken","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"reward","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[],"name":"air","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_reward","type":"uint256"}],"name":"setReward","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_dao","type":"address"}],"name":"execute","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_owner","type":"address"}],"name":"delegate","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"isPassed","outputs":[{"name":"","type":"bool"}],"type":"function"},{"inputs":[{"name":"_air","type":"address"},{"name":"_reward","type":"uint256"}],"type":"constructor"}]
  ```
 
 Теперь вызовем в нем, функцию `Execute`, указав адрес `DAO core`, адрес `Shareholder token` и его название.
