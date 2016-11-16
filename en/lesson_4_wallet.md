@@ -2,7 +2,7 @@
 
 We are going to create a `SharesSale` contract to sell some DAO shares (in exchange for ETH) in this lesson.
 
-Find the `Factory Core` -> `Aira BuilderShareSale` builder address. Please check previous lessons if you don't know how to do that. 
+Find the `Factory Core` -> `Aira BuilderShareSale` builder address. Please check previous lessons if you don't know how to do that.
 
 Add the `Aira BuilderShareSale` contract to your contracts list.
 
@@ -16,7 +16,7 @@ Let's create the `ShareSale` contract with the help of the `Aira BuilderShareSal
 **Please specify these arguments:**
 
 - Address of the ETH Receiver
-- Address of the `Ether funds` contract 
+- Address of the `Ether funds` contract
 - Address of the `Shareholder token` contract
 - Price of a single share (in `Wei`).
 
@@ -58,7 +58,7 @@ In order to complete the lesson and get a reward, you must call the `Lesson 4` -
 Address of the `Lesson 4` contract is `0x892bec692f4c7121b396f70f7a3b1b88e6dc3000`  
 Abi:
 ```js
-[{"constant":false,"inputs":[{"name":"_shareSale","type":"address"}],"name":"execute","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"accountOf","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"emissionRegulator","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[{"name":"_emissionRegulator","type":"address"}],"type":"constructor"}]
+[{"constant":false,"inputs":[{"name":"_air","type":"address"}],"name":"setToken","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"reward","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[],"name":"air","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_reward","type":"uint256"}],"name":"setReward","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_shareSale","type":"address"}],"name":"execute","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_owner","type":"address"}],"name":"delegate","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"isPassed","outputs":[{"name":"","type":"bool"}],"type":"function"},{"inputs":[{"name":"_air","type":"address"},{"name":"_reward","type":"uint256"}],"type":"constructor"}]
 
 ```  
 
