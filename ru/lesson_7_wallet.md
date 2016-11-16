@@ -35,8 +35,8 @@ Abi:
 Мы готовы добавить этот модуль в реестр модулей вашего DAO. Для этого откроем контракт `DAO Core` (в уроке 1 мы его создали как `My Test DAO`). Выберем функцию `Set Module`. Указываем:
 
     наименование - MarketRegulator
-    адрес модуля
-    Abi - github.com/airalab/core/blob/master/abi/modules/DAOMarketRegulator.json  
+    module - адрес модуля
+    interface - ссылку github.com/airalab/core/blob/master/abi/modules/DAOMarketRegulator.json  
 
 Транзакция должна быть отправлена с аккаунта, который указан как `Owner` в вашем DAO. Проверьте наличие модуля в вашем DAO, указав название модуля `MarketRegulator` в функции `Get Module`, в контракте `DAO Core` и получив его адрес.
 
@@ -74,4 +74,13 @@ Abi:
 
 ![Screenshot 52](/img/Screenshot_52.png)
 
-## Завершение урока (TO DO)
+## Завершение урока
+
+Чтобы завершить урок, необходимо обратиться к контракту `Lesson 7` для вызова функции `Execute`, передав адрес созданного контракта `Market` и адрес контракта `MarketRegulator`.
+Address Lesson 7 - `0x989cF0A0Af693cfDb87262c27B01ad3473aa4861`  
+Abi:
+```js
+[{"constant":false,"inputs":[{"name":"_air","type":"address"}],"name":"setToken","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"reward","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[],"name":"air","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_reward","type":"uint256"}],"name":"setReward","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_owner","type":"address"}],"name":"delegate","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"isPassed","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":false,"inputs":[{"name":"_market","type":"address"},{"name":"_regulator","type":"address"}],"name":"execute","outputs":[],"type":"function"},{"inputs":[{"name":"_air","type":"address"},{"name":"_reward","type":"uint256"}],"type":"constructor"}]
+
+```  
+Выполните самостоятельно. Если всё сделано правильно, вы получите 100 Air.

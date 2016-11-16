@@ -1,6 +1,6 @@
 # Ethereum Wallet - Lesson 7
 
-In this lesson we will create the regulator for the `DAO market`. The regulator is used to check that clients are adding lots that meet some special conditions. It will only allow lots that sell tokens that are in the `DAO core` registry. 
+In this lesson we will create the regulator for the `DAO market`. The regulator is used to check that clients are adding lots that meet some special conditions. It will only allow lots that sell tokens that are in the `DAO core` registry.
 In addition, `DAO MarketRegulator` creates new lots through `DAO Credits` only.
 
 Find the `Aira BuilderDAOMarketRegulator` builder in the `Factory Core` contract. Please check previous lessons if you don't know how to do that.
@@ -22,7 +22,7 @@ Create the `DAO MarketRegulator` module with the help of the `Aira BuilderDAOMar
 - The address of the `Market` module
 - The address of the `Credits` module
 
-Send 0.01 ETH to builder. 
+Send 0.01 ETH to builder.
 
 ![Screenshot 43](/img/Screenshot_43.png)
 
@@ -39,8 +39,8 @@ Abi:
 Now we are ready to add this module to the DAO registry. Open the `DAO Core` account (`My Test DAO` that was created in the first lesson). Select the `Set Module` function. Pass these parameters:
 
 - Name - MarketRegulator
-- Address of the module 
-- Abi - [github.com/airalab/core/blob/master/abi/modules/DAOMarketRegulator.json](github.com/airalab/core/blob/master/abi/modules/DAOMarketRegulator.json)
+- module - Address of the module
+- interface - Link [github.com/airalab/core/blob/master/abi/modules/DAOMarketRegulator.json](github.com/airalab/core/blob/master/abi/modules/DAOMarketRegulator.json)
 
 Send that transaction from the `Owner` account. Check that everything is OK by getting the address of the `MarketRegulator` module from the `DAO Core`.
 
@@ -48,8 +48,8 @@ Send that transaction from the `Owner` account. Check that everything is OK by g
 
 ![Screenshot 45](/img/Screenshot_45.png)
 
-Now switch the market into `regulated` mode. Call the `Market` -> `Set regulator` function. 
-Send that transaction from the `Market`'s `Owner` account. 
+Now switch the market into `regulated` mode. Call the `Market` -> `Set regulator` function.
+Send that transaction from the `Market`'s `Owner` account.
 
 ![Screenshot 46](/img/Screenshot_46.png)
 
@@ -67,7 +67,7 @@ Make sure that `Market` is now under the regulator control.
 
 > Warning: after control is passed to the regulator, lots can be created only through `DAO MarketRegulator`.
 
-Try to sell some `EthToken`s. We haven't added `EthToken` to `DAO Core` before, so this lot will be blocked by the regulator. As an alternative to `EthToken`, you can create any other token just for a test. 
+Try to sell some `EthToken`s. We haven't added `EthToken` to `DAO Core` before, so this lot will be blocked by the regulator. As an alternative to `EthToken`, you can create any other token just for a test.
 
 ![Screenshot 50](/img/Screenshot_50.png)
 
@@ -79,3 +79,13 @@ Selling some `Shares` (that were added to the `DAO Core` registry before) should
 
 ![Screenshot 52](/img/Screenshot_52.png)
 
+## Complete the lesson
+
+Чтобы завершить урок, необходимо обратиться к контракту `Lesson 7` для вызова функции `Execute`, передав адрес созданного контракта `Market` и адрес контракта `MarketRegulator`.
+Address Lesson 7 - `0x989cF0A0Af693cfDb87262c27B01ad3473aa4861`  
+Abi:
+```js
+[{"constant":false,"inputs":[{"name":"_air","type":"address"}],"name":"setToken","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"reward","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[],"name":"air","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_reward","type":"uint256"}],"name":"setReward","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_owner","type":"address"}],"name":"delegate","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"isPassed","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":false,"inputs":[{"name":"_market","type":"address"},{"name":"_regulator","type":"address"}],"name":"execute","outputs":[],"type":"function"},{"inputs":[{"name":"_air","type":"address"},{"name":"_reward","type":"uint256"}],"type":"constructor"}]
+
+```  
+Выполните самостоятельно. Если всё сделано правильно, вы получите 100 Air.
