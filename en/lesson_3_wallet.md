@@ -1,6 +1,6 @@
 # Ethereum Wallet - Lesson 3
 
-In this lesson we are going to create the DAO module that will accumulate all ETH. You can treat ETH as a single Eth token. Aira has a special `TokenEther` token for that. 
+In this lesson we are going to create the DAO module that will accumulate all ETH. You can treat ETH as a single Eth token. Aira has a special `TokenEther` token for that.
 
 First, let's find the `Aira BuilderTokenEther` contract in `Factory Core`. Please check previous lessons if you don't know how to do that.
 
@@ -14,7 +14,7 @@ Abi:
 
 Create the `TokenEther` module using the `Aira BuilderTokenEther` -> `Create` function. We have discussed that in a previous lesson. Don't forget to include a small amount of ETH for the builder fee (0.01 ETH).
 
-Add the `TokenEther` module to the watched contracts list. Let's call it `Ether Funds`. 
+Add the `TokenEther` module to the watched contracts list. Let's call it `Ether Funds`.
 You can find the `TokenEhter` address in `Aira BuilderTokenEther` -> `Latest Events`.
 
 Abi:
@@ -33,7 +33,7 @@ Lesson contract address is `0xdc6471214d3d28fb5cbd95f39414a59e7eeda423`
 
 Abi:
 ```js
-[{"constant":false,"inputs":[{"name":"_token","type":"address"}],"name":"execute","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"accountOf","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":true,"inputs":[],"name":"emissionRegulator","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[],"name":"airalab_learning_center","outputs":[{"name":"","type":"address"}],"type":"function"},{"inputs":[{"name":"_emissionRegulator","type":"address"}],"type":"constructor"}]
+[{"constant":false,"inputs":[{"name":"_air","type":"address"}],"name":"setToken","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"reward","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[],"name":"air","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_reward","type":"uint256"}],"name":"setReward","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_token","type":"address"}],"name":"execute","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_owner","type":"address"}],"name":"delegate","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"isPassed","outputs":[{"name":"","type":"bool"}],"type":"function"},{"inputs":[{"name":"_air","type":"address"},{"name":"_reward","type":"uint256"}],"type":"constructor"}]
 ```  
 
 You should now get 50 AIR as a reward.
