@@ -26,7 +26,7 @@ Create the `TestCredits` module with the help of the `Aira BuilderTokenEmission`
 
 ![Screenshot 29](/img/Screenshot_29.png)
 
-Send 0.01 ETH to builder. 
+Send 0.01 ETH to builder.
 
 Get the created `Credits` contract address in the `Aira BuilderTokenEmission` -> `Latest Events` list.
 
@@ -37,8 +37,8 @@ Add the `Credits` contract to the contracts list.
 Now we are ready to add this module to the DAO registry. Open the `DAO Core` account (`My Test DAO` that was created in the first lesson). Select the `Set Module` function. Pass these parameters:
 
 - Name - TestCredits
-- Address of the module
-- ABI - [github.com/airalab/core/blob/master/abi/modules/TokenEmission.json](github.com/airalab/core/blob/master/abi/modules/TokenEmission.json)
+- module - Address of the module
+- interface - Link [github.com/airalab/core/blob/master/abi/modules/TokenEmission.json](github.com/airalab/core/blob/master/abi/modules/TokenEmission.json)
 
 Send that transaction from the `Owner` account. Check that everything is OK by getting the address of the `Credits` module from the `DAO Core`.
 

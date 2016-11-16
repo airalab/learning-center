@@ -36,8 +36,8 @@ Abi:
 Мы готовы добавить этот модуль в реестр модулей вашего DAO. Для этого откроем контракт `DAO Core` (в уроке 1 мы его создали как `My Test DAO`). Выберем функцию `Set Module`. Указываем:
 
     наименование - TestCredits
-    адрес модуля
-    Abi - github.com/airalab/core/blob/master/abi/modules/TokenEmission.json  
+    module - адрес модуля
+    interface - ссылку github.com/airalab/core/blob/master/abi/modules/TokenEmission.json  
 
 Транзакция должна быть отправлена с аккаунта, который указан как `Owner` в вашем DAO. Проверьте наличие модуля в вашем DAO, указав название модуля `Credits` в функции `Get Module`, в контракте `DAO Core` и получив его адрес.
 
