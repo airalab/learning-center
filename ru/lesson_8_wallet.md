@@ -20,6 +20,13 @@
 
 ![Screenshot 55](/img/Screenshot_55.png)
 
+## Завершение урока
 
+Чтобы завершить урок, необходимо обратиться к контракту `Lesson 8` для вызова функции `Execute`, передав адрес контракта `Market` и адрес созданного контракта `MarketAgent`.
+Address Lesson 8 - `0xBF5dC2067Cc97d9DBb5D4E22F56095B605025671`  
+Abi:
+```js
+[{"constant":false,"inputs":[{"name":"_air","type":"address"}],"name":"setToken","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"reward","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[],"name":"air","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_reward","type":"uint256"}],"name":"setReward","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_owner","type":"address"}],"name":"delegate","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"isPassed","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":false,"inputs":[{"name":"_market","type":"address"},{"name":"_agent","type":"address"}],"name":"execute","outputs":[],"type":"function"},{"inputs":[{"name":"_air","type":"address"},{"name":"_reward","type":"uint256"}],"type":"constructor"}]
 
-## Завершение урока (TO DO)
+```  
+Выполните самостоятельно. Если всё сделано правильно, вы получите 100 Air.
