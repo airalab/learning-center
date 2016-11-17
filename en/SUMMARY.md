@@ -40,6 +40,7 @@
     * [Practice: youtube](lesson_9_youtube_eng.md)
   * [Lesson 10: Increase DAO token liquidity ](lesson_10_eng.md)
     * [Practice: geth](lesson_10_geth_eng.md)
+    * [Practice: Ethereum Wallet](lesson_10_wallet_eng.md)
     * [Practice: youtube](lesson_10_youtube_eng.md)
   * [Lesson 11: Create Board of Directors](lesson_11_eng.md)
     * [Practice: geth](lesson_11_geth_eng.md)
