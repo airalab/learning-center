@@ -17,7 +17,7 @@ Create the `MarketRuleConstant` module with the help of the `Aira BuilderMarketR
 
     Emission - the amount of tokens to be emited for each deal.
 
-Send 0.01 ETH to builder. 
+Send 0.01 ETH to builder.
 
 ![Screenshot 56](/img/Screenshot_56.png)
 
@@ -26,8 +26,8 @@ Get the created `MarketRuleConstant` contract address in the `Aira BuilderMarket
 Now we are ready to add this module to the DAO registry. Open the `DAO Core` account (`My Test DAO` that was created in the first lesson). Select the `Set Module` function. Pass these parameters:
 
 - Name - MarketRuleConstant
-- Address of the module
-- Abi - github://airalab/core/market/MarketRuleConstant.sol
+- module - Address of the module
+- interface - Link github://airalab/core/market/MarketRuleConstant.sol
 
 Send that transaction from the `Owner` account. Check that everything is OK by getting the address of the `MarketRuleConstant` module from the `DAO Core`.
 
@@ -52,7 +52,7 @@ Send the transaction from the account that has some `Shares`.
 Vote for the rule. Call `Poll Up` function. Please specify:
 
 - The address of an emitted asset - `Credits`
-- The address of the rule 
+- The address of the rule
 - Count of shares to vote with - 1
 
 ![Screenshot 61](/img/Screenshot_61.png)
@@ -61,3 +61,13 @@ The last thing to do: allow the `Market regulator` to control `Credits`. Call `C
 
 ![Screenshot 62](/img/Screenshot_62.png)
 
+## Complete the lesson
+
+Чтобы завершить урок, необходимо обратиться к контракту `Lesson 9` для вызова функции `Execute`, передав адрес контракта `Market regulator`, адрес `Credits` и адрес созданного контракта `Market rule constant`.
+Address Lesson 9 - `0x3C43cE2B6469243Aa5F5F44053CFc689c6AcbDAd`  
+Abi:
+```js
+[{"constant":false,"inputs":[{"name":"_air","type":"address"}],"name":"setToken","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"reward","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":true,"inputs":[],"name":"air","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_reward","type":"uint256"}],"name":"setReward","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_owner","type":"address"}],"name":"delegate","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"isPassed","outputs":[{"name":"","type":"bool"}],"type":"function"},{"constant":false,"inputs":[{"name":"_regulator","type":"address"},{"name":"_asset","type":"address"},{"name":"_rule","type":"address"}],"name":"execute","outputs":[],"type":"function"},{"inputs":[{"name":"_air","type":"address"},{"name":"_reward","type":"uint256"}],"type":"constructor"}]
+
+```  
+Выполните самостоятельно. Если всё сделано правильно, вы получите 200 Air.
