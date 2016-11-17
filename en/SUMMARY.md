@@ -44,6 +44,7 @@
     * [Practice: youtube](lesson_10_youtube_eng.md)
   * [Lesson 11: Create Board of Directors](lesson_11_eng.md)
     * [Practice: geth](lesson_11_geth_eng.md)
+    * [Practice: Ethereum Wallet](lesson_11_wallet_eng.md)
     * [Practice: youtube](lesson_11_youtube_eng.md)
   * [Lesson 12: Crowdsale](lesson_12_eng.md)
     * [Practice: geth](lesson_12_geth_eng.md)

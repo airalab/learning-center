@@ -45,6 +45,7 @@
     * [Практика: Youtube](lesson_10_youtube.md)
   * [Урок 11: Совет директоров организации](lesson_11.md)
     * [Практика: geth](lesson_11_geth.md)
+    * [Практика: Ethereum Wallet](lesson_11_wallet.md)
     * [Практика: Youtube](lesson_11_youtube.md)
   * [Урок 12: Проведение crowdsale](lesson_12.md)
     * [Практика: geth](lesson_12_geth.md)
