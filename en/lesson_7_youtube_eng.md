@@ -1,3 +1,3 @@
 ## Practice: youtube
 
-{% youtube %}https://youtu.be/ZvbxmosGQ6g{% endyoutube %}
+{% youtube %}https://www.youtube.com/watch?v=ooq0-QsjeK0{% endyoutube %}

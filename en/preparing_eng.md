@@ -19,8 +19,8 @@ After 0.01 `ether` is received, try to call the `Lesson 0` contract (in a testne
 ### Example
 
 ```js
-var learning_center = eth.contract(Core).at("0x73c5f07b929867951aa2b61f30773dba627d4779");
+var learning_center = eth.contract(Core).at("0x0144127bf682d4c270091ddcdeabfd79b847a6de");
 var Lesson_0 = [{"constant":false,"inputs":[],"name":"ping","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"isSended","outputs":[{"name":"","type":"bool"}],"type":"function"}];
-var lesson = web3.eth.contract(Lesson_0).at(learning_center.getModule("Lesson_0");
+var lesson = web3.eth.contract(Lesson_0).at(learning_center.get("Lesson_0");
 lesson.ping({from:web3.eth.accounts[0], gas:200000});
 ```

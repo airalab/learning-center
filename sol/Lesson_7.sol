@@ -1,15 +1,13 @@
+pragma solidity ^0.4.4;
 import './Lesson.sol';
-import 'market/Market.sol';
-import 'market/DAOMarketRegulator.sol';
+import 'cashflow/CrowdSale.sol';
 
 contract Lesson_7 is Lesson {
-    function Lesson_7(address _air, uint _reward)
-             Lesson(_air, _reward) {}
- 
-    function execute(Market _market, DAOMarketRegulator _regulator) {
-        if (_market.regulatorEnabled()
-         && _market.owner() == address(_regulator)
-         && _regulator.market() == _market)
+	function Lesson_7(address _dealer, uint _reward) 
+		     Lesson(_dealer, _reward) {}
+	
+    function execute(CrowdSale _crowdSale) {
+		if (_crowdSale.creditsOf(msg.sender) >= 5)
             passed(msg.sender);
     }
 }

@@ -1,14 +1,15 @@
-import 'token/TokenEmission.sol';
+pragma solidity ^0.4.4;
+import './Dealer.sol';
 
 /**
  * @title The lesson base contract
  */
 contract Lesson is Owned {
-    // Air token ref
-    TokenEmission public air;
+    // dealer
+    Dealer public dealer;
 
-    function setToken(TokenEmission _air) onlyOwner
-    { air = _air; }
+    function setDealer(Dealer _dealer) onlyOwner
+    { dealer = _dealer; }
     
     // Lesson reward
     uint public reward;
@@ -21,11 +22,11 @@ contract Lesson is Owned {
 
     /**
      * @dev The lesson base constructor
-     * @param _air is an air token
+     * @param _dealer is an dealer
      * @param _reward is a lesson reward
      */
-    function Lesson(address _air, uint _reward) {
-        air    = TokenEmission(_air);
+    function Lesson(address _dealer, uint _reward) {
+        dealer    = Dealer(_dealer);
         reward = _reward;
     }
 
@@ -38,7 +39,6 @@ contract Lesson is Owned {
         if (isPassed[_sender]) throw;
 
         isPassed[_sender] = true;
-        air.emission(reward);
-        air.transfer(_sender, reward);
+        dealer.pay(_sender, reward);
     }
 }
