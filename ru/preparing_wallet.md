@@ -19,10 +19,10 @@
 Укажем:
 
     Contract name - Lesson 0
-    Address - 0x8EA86cd7C5fE1Fc16d7d8c4B0179f8ceB9b7929E
+    Address - 0xf74B5840510cDBFc00426C8d732020F797F69B2D
     Json Interface(Abi):
 ``` js
-      [{"constant":false,"inputs":[],"name":"ping","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"isSended","outputs":[{"name":"","type":"bool"}],"type":"function"}]
+[ { "constant": true, "inputs": [], "name": "totalSupply", "outputs": [ { "name": "", "type": "uint256", "value": "50000000000000000000" } ], "payable": false, "type": "function" }, { "constant": false, "inputs": [], "name": "ping", "outputs": [], "payable": false, "type": "function" }, { "constant": true, "inputs": [ { "name": "", "type": "address" } ], "name": "isSended", "outputs": [ { "name": "", "type": "bool", "value": false } ], "payable": false, "type": "function" }, { "payable": true, "type": "fallback" } ]
 ```
 ![Screenshot 38](/img/Screenshot_38.png)
 
