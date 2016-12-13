@@ -1,3 +1,7 @@
+/* 
+DevConSchoolReward contract on Ethereum Blockchain mainnet at address: `0x1c7f480De8d766D637ba504AfA837ef92D168221`
+*/
+
 pragma solidity ^0.4.2;
 
 contract DevConSchoolReward {
