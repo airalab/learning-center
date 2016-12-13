@@ -13,7 +13,7 @@ contract DevConSchoolReward {
 
     /* This generates a public event on the blockchain that will notify clients */
     event newDev(address developer, string project);
-    event rewardPayed(address developer, string project);
+    event rewardPayed(address developer);
 
     /* Initializes contract */
     function DevConSchoolReward  (        ) {
@@ -33,7 +33,7 @@ contract DevConSchoolReward {
             if (!rewarded[msg.sender] && devActive[msg.sender]) {
             rewarded[msg.sender] = true;
             if(!msg.sender.send(100 finney)) throw;
-            rewardPayed(msg.sender, _project);
+            rewardPayed(msg.sender);
             return true;
             }
 
