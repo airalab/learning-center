@@ -2,7 +2,7 @@
 
 ## 1. Install Jaxx wallet  
 
-Download Jaxx Wallet for your platform by this link - [Jaxx.io](jaxx.io)  
+Download Jaxx Wallet for your platform by this link - [Jaxx.io](https://jaxx.io)  
 Unzip and start it.
 
 ![Screenshot 1](/img/Screenshot_1.png)
