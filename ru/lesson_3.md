@@ -8,7 +8,7 @@
 
 **Используемые для взаимодействия в данном уроке модули ДАО:**
 
-- `Aira BuilderTokenEther` ([abi](https://github.com/airalab/core/blob/master/abi/builder/BuilderTokenEther.json)
+- `Aira BuilderTokenEther` ([abi](https://github.com/airalab/core/blob/master/abi/builder/BuilderTokenEther.json))
 - `DAO core` ([abi](https://raw.githubusercontent.com/airalab/core/master/abi/modules/Core.json))
 - `Ether funds` ([abi](https://raw.githubusercontent.com/airalab/core/master/abi/modules/TokenEther.json))
 
@@ -18,7 +18,7 @@ Ethereum платформа позволяет создавать умные к�
 
 ### Проверка умений
 
-> Успешное выполнение урока в официальной сети даст: 50 `air`
+> Успешное выполнение урока в официальной сети даст: 50 `abt`
 
 **Чтобы успешно выполнить данный урок необходимо:**
 

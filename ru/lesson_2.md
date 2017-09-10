@@ -4,8 +4,8 @@
 
 **Используемые для взаимодействия в данном уроке модули ДАО:**
 
-- `Shareholder token` ([abi](https://raw.githubusercontent.com/airalab/core/master/abi/modules/TokenEmission.json))
-- `Aira BuilderShareholder` ([abi](https://github.com/airalab/core/blob/master/abi/builder/BuilderShareholder.json))
+- `Shareholder token` ([abi](https://raw.githubusercontent.com/airalab/core/master/abi/TokenEmission.json))
+- `Aira BuilderShareholder` ([abi](https://raw.githubusercontent.com/airalab/DAO-Factory/master/abi/BuilderShareholder.json))
 
 ### Описание урока
 
@@ -22,6 +22,6 @@
 
 ### Проверка умений
 
-> Успешное выполнение урока в официальной сети даст: 50 `air`
+> Успешное выполнение урока в официальной сети даст: 50 `abt`
 
 Чтобы успешно выполнить данный урок необходимо разрешить снятие  1 акции `Shareholder token` адресу `Airalab learning center` и обратиться к контракту `Lesson 2` для вызова функции `Execute()`.
