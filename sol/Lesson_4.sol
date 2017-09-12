@@ -1,6 +1,6 @@
 pragma solidity ^0.4.4;
 import './Lesson.sol';
-import 'cashflow/ShareSale.sol';
+import 'dao/ShareSale.sol';
 
 contract Lesson_4 is Lesson {    
     function Lesson_4(address _dealer, uint _reward) 
