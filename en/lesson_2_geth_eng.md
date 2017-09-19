@@ -11,7 +11,7 @@ shares.approve('0xd5ec7544753fcf759b4dd37210dab113fce76814', 1, {from:web3.eth.a
 Call "second lesson->Execute" with the dao address as an argument. You will receive 50 air
 
 ```js
-var learning_center = eth.contract(Core).at("0x0144127bf682d4c270091ddcdeabfd79b847a6de");
+var learning_center = web3.eth.contract(Core).at("0x0144127bf682d4c270091ddcdeabfd79b847a6de");
 var Lesson_2 = [{"constant":false,"inputs":[{"name":"_dealer","type":"address"}],"name":"setDealer","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"reward","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_reward","type":"uint256"}],"name":"setReward","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_owner","type":"address"}],"name":"delegate","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_dao","type":"address"},{"name":"_shares_name","type":"string"}],"name":"execute","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"isPassed","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"dealer","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"inputs":[{"name":"_dealer","type":"address"},{"name":"_reward","type":"uint256"}],"type":"constructor"}];
 var lesson = web3.eth.contract(Lesson_2).at(learning_center.get("Lesson_2");
 lesson.execute(dao_addr, "Mars colony shares", {from:web3.eth.accounts[0], gas:900000})

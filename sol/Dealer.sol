@@ -21,7 +21,7 @@ contract Dealer is Owned {
     { air = _air; }
 
     function delegateToken(address _address) onlyOwner
-    { air.delegate(_address); }
+    { air.setOwner(_address); }
 
     /**
      * @dev This function called when lesson assertion passed

@@ -42,7 +42,7 @@ crowdSale.deal({from: web3.eth.accounts[0], gas: 3000000})
 Запускаем выполнение урока передав адрес контракта совета директоров
 
 ```js
-var learning_center = eth.contract(Core).at("0x0144127bf682d4c270091ddcdeabfd79b847a6de");
+var learning_center = web3.eth.contract(Core).at("0x0144127bf682d4c270091ddcdeabfd79b847a6de");
 var Lesson_7 = [{"constant":false,"inputs":[{"name":"_dealer","type":"address"}],"name":"setDealer","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"reward","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_reward","type":"uint256"}],"name":"setReward","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_crowdSale","type":"address"}],"name":"execute","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_owner","type":"address"}],"name":"delegate","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"isPassed","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"dealer","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"inputs":[{"name":"_dealer","type":"address"},{"name":"_reward","type":"uint256"}],"type":"constructor"}];
 var lesson = web3.eth.contract(Lesson_7).at(learning_center.get("Lesson_7"));
 lesson.execute(crowdSale_addr, {from:web3.eth.accounts[0], gas:900000})
