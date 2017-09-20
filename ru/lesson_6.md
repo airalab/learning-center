@@ -4,10 +4,11 @@
 
 **Создаваемые на данном уроке модули ДАО:**
 
-- `Board of Directors`
-- `Directors voting token`
+- `Congress`
 
 **Используемые для взаимодействия в данном уроке модули ДАО:**
+
+- `Congress builder`
 
 - `Board of Directors builder`
 - `Board of Directors`
