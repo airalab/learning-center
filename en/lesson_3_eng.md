@@ -8,9 +8,9 @@
 
 **These Aira DAO Modules will be used:**
 
-- `Aira BuilderTokenEther` ([abi](https://github.com/airalab/core/blob/master/abi/builder/BuilderTokenEther.json)
-- `DAO core` ([abi](https://raw.githubusercontent.com/airalab/core/master/abi/modules/Core.json))
-- `Ether funds` ([abi](https://raw.githubusercontent.com/airalab/core/master/abi/modules/TokenEther.json))
+- `Aira BuilderTokenEther` ([abi](https://raw.githubusercontent.com/airalab/DAO-Factory/master/abi/BuilderTokenEther.json))
+- `DAO core` ([abi](https://raw.githubusercontent.com/airalab/core/master/abi/Core.json))
+- `Ether funds` ([abi](https://raw.githubusercontent.com/airalab/core/master/abi/TokenEther.json))
 
 ### Lesson Description 
 
@@ -18,7 +18,7 @@ We can accumulate all invested ETH (by shareholders) in a single contract. All E
 
 ### Skill test 
 
-> Complete this lesson and get 50 `air` tokens! 
+> Complete this lesson and get 50 `ABT` tokens! 
 
 **Instructions:**
 

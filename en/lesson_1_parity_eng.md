@@ -18,7 +18,7 @@ var core = web3.eth.contract(Core).at(dao_addr);
 core.get('Mars colony shares');
 ```
 
-Call the "first lesson->Execute" passing dao address. We will get back 50 air tokens.
+Call the "first lesson->Execute" passing dao address. We will get back 50 ABT tokens.
 
 ```js
 var learning_center = web3.eth.contract(Core).at("0x4bdf1c4A800CE5408e0D95F52787C6924e07F5A3");

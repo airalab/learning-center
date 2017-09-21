@@ -36,7 +36,7 @@ In order to do that in a way that is safe for all parties, you need to use the [
 
 ### Skill test 
 
-> Complete this lesson and get 100 `air` tokens! 
+> Complete this lesson and get 100 `ABT` tokens! 
 
 To complete this lesson you need to sell your shares and receive ETH. Then call the `Execute()` function of the `Lesson 4` contract. Please specify the `ShareSale` contract address.
 

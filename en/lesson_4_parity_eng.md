@@ -50,7 +50,7 @@ var lesson = web3.eth.contract(Lesson_4).at(lesson_addr);
 lesson.execute(shareSale_addr, {from:web3.eth.accounts[0], gas:900000})
 ```
 
-Check the air balance
+Check the ABT balance
 
 ```js
 var tokenabt = web3.eth.contract(TokenEmission).at(tokenemission_addr);

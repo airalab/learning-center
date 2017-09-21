@@ -10,7 +10,7 @@ var shares = web3.eth.contract(TokenEmission).at(core.get('Mars colony shares'))
 shares.approve(learning_center.get("Lesson_2"), 1, {from:web3.eth.accounts[0], gas:900000})
 ```
 
-Call "second lesson->Execute" with the dao address as an argument. You will receive 50 air
+Call "second lesson->Execute" with the dao address as an argument. You will receive 50 ABT
 
 ```js
 var lesson_addr = learning_center.get("Lesson_2");

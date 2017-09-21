@@ -9,9 +9,9 @@
 
 **These Aira DAO Modules will be used:**
 
-- `Aira BuilderDAO` ([abi](https://raw.githubusercontent.com/airalab/core/master/abi/builder/BuilderDAO.json))
-- `DAO core` ([abi](https://raw.githubusercontent.com/airalab/core/master/abi/modules/Core.json))
-- `Shareholder token` ([abi](https://raw.githubusercontent.com/airalab/core/master/abi/modules/TokenEmission.json))
+- `Aira BuilderDAO` ([abi](https://raw.githubusercontent.com/airalab/DAO-Factory/master/abi/BuilderDAO.json))
+- `DAO core` ([abi](https://raw.githubusercontent.com/airalab/core/master/abi/Core.json))
+- `Shareholder token` ([abi](https://raw.githubusercontent.com/airalab/core/master/abi/TokenEmission.json))
 
 ### Lesson Description 
 
@@ -29,7 +29,7 @@ Argument| Description | Sample
 
 ### Skill test 
 
-> Complete this lesson and get 50 `air` tokens! 
+> Complete this lesson and get 50 `ABT` tokens! 
 
 **Instructions:**
 

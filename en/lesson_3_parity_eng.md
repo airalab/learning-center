@@ -25,7 +25,7 @@ Send 0.1 ETH to the contract
 web3.eth.sendTransaction({from:web3.eth.accounts[0], to:core.get('Ether funds'), value: web3.toWei('0.1', 'ether')})
 ```
 
-Call "third lesson->Execute". You will receive 50 air
+Call "third lesson->Execute". You will receive 50 ABT
 
 ```js
 var learning_center = web3.eth.contract(Core).at("0x4bdf1c4A800CE5408e0D95F52787C6924e07F5A3");

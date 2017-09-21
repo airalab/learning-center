@@ -35,6 +35,6 @@ Currently your DAO has no elected board of directors. Each shareholder can decid
 
 ## Skill test 
 
-> Complete this lesson and get 200 `air` tokens! 
+> Complete this lesson and get 200 `ABT` tokens! 
 
 To complete this lesson you need to call the `Execute()` function of the `Lesson 11` contract. Please specify the `board of directors` contract address. Notice that at least **1** proposal is needed to be accepted by Board of directors.

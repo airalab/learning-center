@@ -37,7 +37,7 @@ To increase the `DAO credit` token quantity you can use [BuilderCrowdsale](https
 
 ## Skill test 
 
-> Complete this lesson and get 200 `air` tokens! 
+> Complete this lesson and get 200 `ABT` tokens! 
 
 To complete this lesson you need to send 5 ETH from any account (that later will be the owner of the new `DAO credit` tokens). Then call `Execute()` function of `Lesson 12` contract. 
 
