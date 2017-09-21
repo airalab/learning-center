@@ -1,4 +1,4 @@
-## Practice: geth
+## Practice: parity
 
 Create the BoardOfDirectors contract using the builder
 
