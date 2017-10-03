@@ -19,18 +19,18 @@ The primary goal of any DAO is to increase the liquidity of it's internal curren
 **Instructions:**
 - Call `DAO factory` for the `Aira BuilderCrowdfunding` contract. You should pass the following:
 
-- _fund - congress address
-- _bounty - `DAO credit` address
-- _reference - whitepaper reference
-- _startBlock - funding start block number
-- _stopBlock - funding stop block number
-- _minValue - minimal funded value in wei
-- _maxValue - maximal funded value in wei
-- _scale - bounty scaling factor by funded value
-- _startRatio - initial bounty ratio
-- _reductionStep - bounty reduction step in blocks 
-- _reductionValue - bounty reduction value
-- _client - congress address
+- `_fund` - congress address
+- `_bounty` - `DAO credit` address
+- `_reference` - whitepaper reference
+- `_startBlock` - funding start block number
+- `_stopBlock` - funding stop block number
+- `_minValue` - minimal funded value in wei
+- `_maxValue` - maximal funded value in wei
+- `_scale` - bounty scaling factor by funded value
+- `_startRatio` - initial bounty ratio
+- `_reductionStep` - bounty reduction step in blocks 
+- `_reductionValue` - bounty reduction value
+- `_client` - congress address
 
 > Crowdfunding contract should be owner of `DAO credit` to emisse tokens
 
