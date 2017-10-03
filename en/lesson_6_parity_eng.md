@@ -20,7 +20,8 @@ core.get("Congress")
 Add members
 
 ```js
-var Congress = // it's too big to place it here, so get it from https://raw.githubusercontent.com/airalab/core/master/abi/Congress.json;
+var congress_addr = factory.get("Congress");    // The Congress is for test purpose only
+var Congress = JSON.parse(factory.abiOf(congress_addr));
 var congress = web3.eth.contract(Congress).at(core.get("Congress"));
 congress.addMember(web3.eth.accounts[1], "Member2", {from: web3.eth.accounts[0], gas: 300000});
 congress.addMember(web3.eth.accounts[2], "Member3", {from: web3.eth.accounts[0], gas: 300000});
