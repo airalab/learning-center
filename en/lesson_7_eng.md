@@ -1,4 +1,4 @@
-## Lesson 12: Crowdsale
+## Lesson 12: Crowdfunding
 
 > Difficulty: high.
 

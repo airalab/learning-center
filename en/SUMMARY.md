@@ -20,7 +20,7 @@
   * [Lesson 6: Create Board of Directors](lesson_6_eng.md)
     * [Practice: parity](lesson_6_parity_eng.md)
     * [Practice: youtube](lesson_6_youtube_eng.md)
-  * [Lesson 7: Crowdsale](lesson_7_eng.md)
+  * [Lesson 7: Crowdfunding](lesson_7_eng.md)
     * [Practice: parity](lesson_7_parity_eng.md)
     * [Practice: youtube](lesson_7_youtube_eng.md)
   * [Conclusion](conclusion_eng.md)

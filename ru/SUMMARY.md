@@ -21,7 +21,7 @@
   * [Урок 6: Совет директоров организации](lesson_6.md)
     * [Практика: parity](lesson_6_parity.md)
     * [Практика: Youtube](lesson_6_youtube.md)
-  * [Урок 7: Проведение crowdsale](lesson_7.md)
+  * [Урок 7: Проведение Crowdfunding](lesson_7.md)
     * [Практика: parity](lesson_7_parity.md)
     * [Практика: Youtube](lesson_7_youtube.md)
   * [Заключение](conclusion.md)
