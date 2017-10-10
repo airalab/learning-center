@@ -7,7 +7,7 @@ var crowdbuilder_addr = factory.get("Aira BuilderCrowdfunding");
 var BuilderCrowdfunding = JSON.parse(factory.abiOf(crowdbuilder_addr));
 var builder = web3.eth.contract(BuilderCrowdfunding).at(crowdbuilder_addr);
 var event = builder.Builded(function(error, result) { if(!error) crowd_addr = result.args.instance; else console.log(error); });
-builder.create(core.get("Congress"), core.get("DAO credit"), "aira.life", 3920000, 3921000, web3.toWei(0.1, "ether"), web3.toWei(5, "ether"), web3.toWei(0.01, "ether"), 1, 0, 0, congress_addr, {from: web3.eth.accounts[0]});)
+builder.create(core.get("Congress"), core.get("DAO credit"), "aira.life", 3920000, 3921000, web3.toWei(0.1, "ether"), web3.toWei(5, "ether"), web3.toWei(0.01, "ether"), 1, 1, 0, congress_addr, {from: web3.eth.accounts[0]})
 ```
 
 Make `Crowdfunding` owner of `DAO credit`
@@ -20,10 +20,16 @@ var daocredit = web3.eth.contract(TokenEmission).at(core.get("DAO credit"));
 daocredit.setOwner(crowd_addr, {from: web3.eth.accounts[0]});
 ```
 
+Check the `DAO credit` balance
+
+```js
+daocredit.balanceOf(web3.eth.accounts[0]);
+```
+
 Send 0.1 ETH to `Crowdfunding`
 
 ```js
-web3.sendTransaction({from:web3.eth.accounts[0], to:crowd_addr, value:web3.toWei(0.1, "ether")});
+web3.eth.sendTransaction({from:web3.eth.accounts[0], to:crowd_addr, value:web3.toWei(0.1, "ether")});
 ```
 
 In return we should get `DAO credit` tokens

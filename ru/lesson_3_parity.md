@@ -35,7 +35,7 @@ var lesson = web3.eth.contract(Lesson_3).at(lesson_addr);
 lesson.execute(core.get('Ether funds'), {from:web3.eth.accounts[0], gas:900000})
 ```
 
-Проверяем баланс air
+Проверяем баланс ABT
 
 ```js
 var tokenemission_addr = learning_center.get("Token ABT");
