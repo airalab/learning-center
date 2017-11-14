@@ -4,8 +4,8 @@
 
 **These Aira DAO Modules will be used:**
 
-- `Shareholder token` ([abi](https://raw.githubusercontent.com/airalab/core/master/abi/modules/TokenEmission.json))
-- `Aira BuilderShareholder` ([abi](https://github.com/airalab/core/blob/master/abi/builder/BuilderShareholder.json))
+- `Shareholder token` ([abi](https://raw.githubusercontent.com/airalab/core/master/abi/TokenEmission.json))
+- `Aira BuilderShareholder` ([abi](https://raw.githubusercontent.com/airalab/DAO-Factory/master/abi/BuilderShareholder.json))
 
 ### Lesson Description 
 
@@ -22,7 +22,7 @@ The main difference is that, in the first case, the `recipient` becomes a shareh
 
 ### Skill test 
 
-> Complete this lesson and get 50 `air` tokens! 
+> Complete this lesson and get 50 `ABT` tokens! 
 
 **Instructions:**
 

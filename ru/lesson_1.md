@@ -9,9 +9,9 @@
 
 **Используемые для взаимодействия в данном уроке модули ДАО:**
 
-- `Aira BuilderDAO` ([abi](https://raw.githubusercontent.com/airalab/core/master/abi/builder/BuilderDAO.json))
-- `DAO core` ([abi](https://raw.githubusercontent.com/airalab/core/master/abi/modules/Core.json))
-- `Shareholder token` ([abi](https://raw.githubusercontent.com/airalab/core/master/abi/modules/TokenEmission.json))
+- `Aira BuilderDAO` ([abi](https://raw.githubusercontent.com/airalab/DAO-Factory/master/abi/BuilderDAO.json))
+- `DAO core` ([abi](https://raw.githubusercontent.com/airalab/core/master/abi/Core.json))
+- `Shareholder token` ([abi](https://raw.githubusercontent.com/airalab/core/master/abi/TokenEmission.json))
 
 ### Описание урока
 
@@ -31,7 +31,7 @@
 
 ### Проверка умений
 
-> Успешное выполнение урока даст: 50 `air`
+> Успешное выполнение урока даст: 50 `ABT`
 
 **Чтобы успешно выполнить данный урок необходимо:**
 

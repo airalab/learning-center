@@ -55,4 +55,4 @@ Abi:
 
 ```  
 
-You should now get 50 AIR as a reward.
+You should now get 50 ABT as a reward.
