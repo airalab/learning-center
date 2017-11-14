@@ -1,5 +1,5 @@
 # Оглавление
-* [AIRA](introducing_0_11.md)
+* [AIRA](aira.md)
   * [Знакомство с релизом AIRA 0.11](introducing_0_11.md)
 * [Учебный центр Airalab на русском языке](README.md)
   * [Подготовка к работе](preparing.md)

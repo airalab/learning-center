@@ -1,7 +1,7 @@
 # Оглавление
-* [AIRA](introducing_0_11.md)
-  * [Introducing AIRA 0.11](introducing_0_11.md)
-* [Airalab learning center in English](README_eng.md)
+* [AIRA](aira.md)
+  * [Introducing AIRA 0.11](introducing_0_11_en.md)
+* [Airalab learning center in English](README.md)
   * [Preparing for work](preparing_eng.md)
     * [Practice: youtube](preparing_youtube_eng.md)
   * [Lesson 1: Create your own DAO](lesson_1_eng.md)
