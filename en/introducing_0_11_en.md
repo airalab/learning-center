@@ -8,7 +8,7 @@
 - Air tokens
 - USB-stick 16Gb and more, if you’re going to launch Aira on Raspberry Pi
 
-It’s convenient to create an account in [Metamask](https://chrome.google.com/webstore/detail/nkbihfbeogaeaoehlefnkodbefgpgknn) Chrome extension. You can ask [@vourhey](https://t.me/vourhey) and @Pad1a_evil](https://t.me/Pad1a_evil) in Telegram for Ether and Air tokens.
+It’s convenient to create an account in [Metamask](https://chrome.google.com/webstore/detail/nkbihfbeogaeaoehlefnkodbefgpgknn) Chrome extension. You can ask [@vourhey](https://t.me/vourhey) and [@Pad1a_evil](https://t.me/Pad1a_evil) in Telegram for Ether and Air tokens.
 
 ### Obtaining Aira
 Go to [https://github.com/airalab/aira](https://github.com/airalab/aira) and download the latest raw image.
