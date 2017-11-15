@@ -4,7 +4,7 @@
 
 ### Lesson Description
 
-In order to complete this lesson you need to install the Ethereum console client. We recommend or [parity](https://ethcore.io/parity.html).
+In order to complete this lesson you need to install the Ethereum console client. We recommend [parity](https://ethcore.io/parity.html).
 
 Then you need to syncronize it with the **testnet kovan** and get a bit of **ether**. The ether will be then used to send a transaction. You can do that in several ways:
 
