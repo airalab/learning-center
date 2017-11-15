@@ -3,8 +3,6 @@
   * [Знакомство с релизом AIRA 0.11](introducing_0_11.md)
 * [Учебный центр Airalab на русском языке](README.md)
   * [Подготовка к работе](preparing.md)
-    * [Практика: Ethereum Wallet](preparing_wallet.md)
-    * [Практика: Youtube](preparing_youtube.md)
   * [Урок 1: Создание организации](lesson_1.md)
     * [Практика: parity](lesson_1_parity.md)
     * [Практика: Youtube](lesson_1_youtube.md)
