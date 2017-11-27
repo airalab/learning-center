@@ -6,9 +6,7 @@ If you have completed all the steps correctly, the final DAO model will include 
 - `Shareholder token`
 - `Ether funds`
 - `DAO credit`
-- `DAO market`
-- `Market regulator`
-- `Board of Directors`
+- `Congress`
 
-**This does not include the `Crowdsale` and the `ShareSale` contracts because they were used onlye occasionally**
+**This does not include the `Crowdfunding` and the `ShareSale` contracts because they were used only occasionally**
 

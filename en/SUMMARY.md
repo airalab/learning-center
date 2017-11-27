@@ -3,7 +3,6 @@
   * [Introducing AIRA 0.11](introducing_0_11_en.md)
 * [Airalab learning center in English](README.md)
   * [Preparing for work](preparing_eng.md)
-    * [Practice: youtube](preparing_youtube_eng.md)
   * [Lesson 1: Create your own DAO](lesson_1_eng.md)
     * [Practice: parity](lesson_1_parity_eng.md)
     * [Practice: youtube](lesson_1_youtube_eng.md)
