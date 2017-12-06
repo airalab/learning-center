@@ -1,6 +1,10 @@
 # Оглавление
 * [AIRA](aira.md)
   * [Знакомство с релизом AIRA 0.11](introducing_0_11.md)
+  * [Сервисы AIRA](services_aira.md)
+    * [Github-IPFS](service_github_ipfs.md)
+    * [Parity](service_parity.md)
+    * [Railway-Game](service_railway_game.md)
 * [Учебный центр Airalab на русском языке](README.md)
   * [Подготовка к работе](preparing.md)
   * [Урок 1: Создание организации](lesson_1.md)
