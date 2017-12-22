@@ -29,25 +29,39 @@
 
 1. Подключаем сенсор 
 2. Создаем папку /storage
-    `$ sudo mkdir -p /storage/data`
-    `$ sudo mkdir -p /storage/images`
+    ```
+    $ sudo mkdir -p /storage/data
+    $ sudo mkdir -p /storage/images
+    ```
 3. Скачиваем и устанавливаем rrdtool (https://goo.gl/fmgFfH) 
 4. Скачиваем драйверы для SMG2 (https://goo.gl/qZ4Zuf)
 5. В файле build меняем папку `/var/rrd` на `/storage/data`
 6. Собираем драйвер
-    `$ ./build`
+    ```
+    $ ./build
+    ```
 7. Полученный файл `SMG2` перемещаем в `/bin/SMG2`
-    `$ sudo mv SMG2 /bin/SMG2`
+    ```
+    $ sudo mv SMG2 /bin/SMG2
+    ```
 8. Копируем файл smg2.service (https://goo.gl/pdNpwb) в `/etc/systemd/system/` и запускаем
-    `$ sudo systemctl enable smg2.service`
+    ```
+    $ sudo systemctl enable smg2.service
+    ```
 9. Скачиваем и собираем cjdns (https://github.com/cjdelisle/cjdns). После этого добавляем сервисы и исполняемый файл в систему
-    `$ sudo cp cjdns/contrib/systemd/* /etc/systemd/system/`
-    `$ sudo cp cjdns/cjdroute /usr/bin/`
+    ```
+    $ sudo cp cjdns/contrib/systemd/* /etc/systemd/system/
+    $ sudo cp cjdns/cjdroute /usr/bin/
+    ```
 10. Запускаем сервис. Должен появиться файл `/etc/cjdroute.conf`
-    `$ sudo systemctl enable cjdns`
+    ```
+    $ sudo systemctl enable cjdns
+    ```
 11. Добавляем публичных пиров в файл `/etc/cjdroute.conf` в раздел “connectTo” (см выше). На этом этапе у нас должен быть IPv6 адрес, он нам понадобится в дальше
 12. Скачиваем дополнительные скрипты, делаем их исполняемыми и кладем в папку `/usr/bin/`
     gettimestamp.sh (https://goo.gl/TYjRMT) 
     render.sh (https://goo.gl/6kdgok) 
 13. Добавляем задачу в crontab
-    ```*/15 *  * * *   root     render.sh /storage/data/radiation.rrd /storage/images/`gettimestamp.sh`.png "Radiation"```
+    ```
+    */15 *  * * *   root     render.sh /storage/data/radiation.rrd /storage/images/`gettimestamp.sh`.png "Radiation"
+    ```
