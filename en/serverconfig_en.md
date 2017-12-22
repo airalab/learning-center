@@ -1,14 +1,14 @@
-## Настройка сервера
+## Server configuration
 
-Сервер под управлением NixOS
+NixOS is installed on server
 
-1. Подключаемся по ssh
-2. Добавляем канал hydra.aria.life и binary cache
+1. Connect by ssh
+2. Add the channel hydra.aria.life and binary cache
     ```
     $ nix-channel --add https://hydra.aira.life/project/aira/channel/latest
     $ nix-channel --update
     ```
-3. Редактируем файл configuration.nix
+3. Edit configuration.nix
     ```
     networking.firewall.allowedTCPPorts = [ 4001 30303 ];
     networking.firewall.allowedUDPPorts = [ 30303 42000 ];
@@ -33,47 +33,47 @@
           };
         };
     ```
-4. Обновляем в соответствии с новой конфигурацией
+4. Update with new configurationО
     ```
     $ nixos-rebuild switch
     ```
-5. Устанавливаем parity, ipfs
+5. Install parity, ipfs
     ```
     $ nix-env -i parity-1.8.2 ipfs
     ```
-6. Монтируем /storage от RaspberryPi в локальную папку. Используем адрес из пункта по настройке cjdns
+6. Mount /storage from RaspberryPi locally. Use the address from cjdns configuration step
     ```
     $ sshfs pi@[<IPv6>]:/storage storage/
     ```
-7. Создаем аккаунт в parity 
+7. Create new parity account
     ```
     $ parity --chain ropsten account new
     ```
-8. Сохраняем пароль в файл
+8. Save the password
     ```
     $ echo “*********” > pass
     ```
-9. Пополняем баланс аккаунта из пункта 7.
-10. Отправляем эфир контракту `0xC00Fd9820Cd2898cC4C054B7bF142De637ad129A`. Он вернет на баланс, с которого была отправлена транзакция, WETH равное полученному ETH. Ещё понадобиться токен utility (`0x5df531240f97049ee8d28a8e51030a3b5a8e8ce4`). Его можно попросить у команды Airalab.
-11. Запускаем Parity
+9. Send ETH to the account from step 7
+10. Send ETH to `0xC00Fd9820Cd2898cC4C054B7bF142De637ad129A` smart-contract. It will send WETH back to you according your ETH value. Also you need to get utility token (`0x5df531240f97049ee8d28a8e51030a3b5a8e8ce4`). You can ask for it Airalab's engineers.
+11. Launch Parity
     ```
     $ parity --chain ropsten --unlock <account> --password pass
     ```
-12. Запускаем IPFS
+12. Launch IPFS
     ```
     $ ipfs daemon --enable-pubsub-experiment
     $ ipfs pubsub sub aira_market
     ```
-13. Запускаем robonomics_market
+13. Launch robonomics_market
     ```
     $ source .nix-profile/setup.bash
     $ roslaunch robonomics_market market.launch
     ```
-14. Запускаем robonomics_liability
+14. Launch robonomics_liability
     ```
     $ roslaunch robonomics_liability liability.launch
     ```
-15. Нам понадобится скрипт, который будет публиковать данные в IPFS (https://goo.gl/LWuN3X)
+15. You are needed a script to publish the data to IPFS (https://goo.gl/LWuN3X)
     ```
     $ ./publishnode.py
     ```
