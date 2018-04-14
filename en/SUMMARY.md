@@ -1,6 +1,7 @@
 # Оглавление
 * [AIRA](aira.md)
   * [Introducing AIRA 0.11](introducing_0_11_en.md)
+  * [Launch AIRA 0.12](release_aira_0_12_en.md)
   * [Services](services_aira_en.md)
     * [Github-IPFS](service_github_ipfs_en.md)
     * [Parity](service_parity_en.md)
