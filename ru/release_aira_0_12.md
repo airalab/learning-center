@@ -4,13 +4,13 @@
 
 > Только если нужен новый маяк. Можно подключиться к уже существующему
 
-Переходим на страницу (robonomics.network/net)[https://robonomics.network/net/] и нажимает "create your own". Необходимо будет подтвердить транзакцию и вы увидите адрес нового маяка в списке.
+Переходим на страницу [robonomics.network/net](https://robonomics.network/net/) и нажимает "create your own". Необходимо будет подтвердить транзакцию и вы увидите адрес нового маяка в списке.
 
 ![Create a lighthouse](/img/aira012/Screenshot_1.png "Создаем новый маяк")
 
 ### Получение образа
 
-Релиз размещен на (Github)[https://github.com/airalab/aira/releases/tag/0.12]. Качаем образ для виртуальной машины.
+Релиз размещен на [Github](https://github.com/airalab/aira/releases/tag/0.12). Качаем образ для виртуальной машины.
 
 ![Obtain vm](/img/aira012/Screenshot_2.png "Получаем образ")
 
@@ -27,7 +27,7 @@
 
 ![Syncing](/img/aira012/Screenshot_4.png "Конец синхронизации")
 
-Для удобства можно воспользоваться сервисом (Robonomics faucet)[https://robonomics.network/faucet/]. В поле ввода вставляем адрес и ждем поступления средств на счет клиента AIRA. 
+Для удобства можно воспользоваться сервисом [Robonomics faucet](https://robonomics.network/faucet/). В поле ввода вставляем адрес и ждем поступления средств на счет клиента AIRA. 
 
 Следующий шаг - выбор маяка:
 ![Choose a lighthouse](/img/aira012/Screenshot_5.png "Выбор маяка")
